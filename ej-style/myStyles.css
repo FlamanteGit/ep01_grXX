@@ -4,9 +4,10 @@
 
 
 }
-
+@media screen and (min-width: 480px) {
 body {
     margin: 0%;
+    background-color: green;
 }
 
 li{
@@ -57,9 +58,15 @@ box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.41);
 #content div {
     background-color: grey;
     padding: 30px;
+    -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+    margin: 1px;
+
 }
 
 #content div:nth-child(even) {
     background-color: red;
 
+}
 }
