@@ -1,8 +1,6 @@
 *{
     font-family: 'Noto Sans', sans-serif;
     box-sizing: border-box;
-
-
 }
 @media screen and (min-width: 480px) {
 body {
@@ -10,10 +8,15 @@ body {
     background-color: green;
 }
 
-li{
-    float: left;
+#navegacion li{
     list-style: none;
     padding: 10px;
+    float: left; 
+}
+
+#left_column li{
+    list-style: none;
+    padding: 10%;
 }
 nav{
     float: right;
@@ -59,7 +62,7 @@ box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.41);
 
 }
 #content div {
-    background-color: grey;
+    background-color: #ffad1f;
     padding: 30px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
