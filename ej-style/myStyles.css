@@ -1,10 +1,12 @@
 *{
     font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+
+
 }
 
 body {
     margin: 0%;
-    background-color: white;
 }
 
 li{
@@ -42,4 +44,22 @@ box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.41);
     margin-top: 1%;
     margin-left: 3%;
     margin-bottom: 1%;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+#content div {
+    background-color: grey;
+    padding: 30px;
+}
+
+#content div:nth-child(even) {
+    background-color: red;
+
 }
