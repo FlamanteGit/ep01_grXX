@@ -1,6 +1,9 @@
 * {
     font-family: 'Noto Sans', sans-serif;
     box-sizing: border-box;
+    padding: 0mm;
+    margin: 0mm;
+    border: 0mm;
 }
 
 body {
