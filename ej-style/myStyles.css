@@ -58,28 +58,6 @@ header {
     margin: 1px;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        margin: 0%;
-        background-color: indigo;
-    }
-    .topnav.responsive {
-        position: relative;
-    }
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        margin: 0%;
-        background-color: olive;
-    }
-}
-
 /* Barra de navegación */
 
 /* Padre */
@@ -111,4 +89,26 @@ header {
 
 .topnav .icon {
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0%;
+        background-color: indigo;
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0%;
+        background-color: olive;
+    }
 }
