@@ -1,103 +1,62 @@
-* {
-    font-family: 'Noto Sans', sans-serif;
+*{
     box-sizing: border-box;
-    padding: 0mm;
-    margin: 0mm;
-    border: 0mm;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    border: 0;
+    margin: 0;
 }
-
-body {
-    margin: 0%;
-    background-color: green;
-}
-
-#navegacion li {
-    list-style: none;
-    float: left;
-}
-
-
-
-#left_column li {
-    list-style: none;
-    padding: 10%;
-}
-
-header {
-    padding: 10px;
-    margin: 10px;
-    background: black;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    -webkit-box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.41);
-    -moz-box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.41);
-    box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.41);
-}
-
-#logo {
-    height: 90%;
-    display: block;
-    margin: auto;
-}
-
-#content {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    overflow: hidden;
-    align-content: center;
-}
-
-#content div {
-    background-color: #ffad1f;
-    padding: 30px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    margin: 1px;
-}
-
-/* Barra de navegación */
-
-/* Padre */
-.topnav {
-    overflow: hidden; /* Tapa lo que hay debajo */
-    display: flex; /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-    justify-content: center;
-    align-items: center;
-}
-
-/* Hijo */
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+a{
     text-decoration: none;
-    font-size: 17px;
+    padding: 13px;
+}
+a.navegation{
+    color:white;
+}
+a.navegation:hover{
+    color: black;
+    background-color:rgb(228, 164, 4);
     border-radius: 10px;
 }
+nav{
+    float: right;
+    width: 90%;
+}
+header{
+    background-color: black;
+    margin: 5px;
+    border-radius: 10px;
+    position: fixed;
+    height: 75px;
 
-.topnav a:hover {
-    background-color: #ffad1f;
-    color: black;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.contenedor{
+    width: 85%;
+    margin: 0 auto;
+}
+.contenedornav{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        margin: 0%;
-        background-color: indigo;
-    }
-        
-}
 
-@media screen and (max-width: 600px) {
-    body {
-        margin: 0%;
-        background-color: olive;
-    }
+
+
+
+
+
+
+
+
+
+
+/*tablet*/
+@media only screen and (max-width: 768px){
+
+}
+/*mobile*/
+@media only screen and (max-width: 600px){
+
 }
