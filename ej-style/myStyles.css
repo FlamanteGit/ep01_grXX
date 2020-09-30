@@ -8,6 +8,7 @@
 
 body{
     background-color:rgb(228, 164, 4);
+    display: block;
 }
 
 a{
@@ -36,11 +37,15 @@ header{
 }
 .contenedor{
     width: 85%;
-    margin: 0 auto;    
+    margin: 0 auto; 
+    margin-top: 115px; 
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
 }
 .navContenedor{
     float: right;
-    padding: 3px;
+    padding-top: 1%;
+    padding-right: 10%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     text-align: center;
@@ -50,6 +55,17 @@ header{
 .logo {
     padding: 10px;
 }
+
+#left-column{
+    background-color: aliceblue;
+}
+#right-column{
+    background-color: aliceblue;
+}
+#main-block{
+    background-color: chocolate;
+}
+
 
 /*tablet*/
 @media only screen and (max-width: 768px){
@@ -63,6 +79,9 @@ header{
         flex-wrap: wrap;
     }
     
+    .navContenedor{
+        padding-right: 0%;
+    }
     
 
 }
@@ -70,5 +89,8 @@ header{
 @media only screen and (max-width: 600px){
     body {
         background-color: blue;
+    }
+    .contenedor{
+        margin-top: 150px;
     }
 }
