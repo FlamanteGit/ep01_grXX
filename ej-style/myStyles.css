@@ -11,6 +11,8 @@ a{
 }
 a.navegation{
     color:white;
+    padding: 15px;
+    
 }
 a.navegation:hover{
     color: black;
@@ -19,15 +21,14 @@ a.navegation:hover{
 }
 nav{
     float: right;
-    width: 90%;
+    width: 100%;
+    padding: 10px;
 }
 header{
     background-color: black;
     margin: 5px;
     border-radius: 10px;
     position: fixed;
-    height: 75px;
-
     left: 0;
     top: 0;
     right: 0;
@@ -35,25 +36,29 @@ header{
 .contenedor{
     width: 85%;
     margin: 0 auto;
+    background-color: green;
+    
 }
-.contenedornav{
+.navContenedor{
+    float: right;
+    padding: 3px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    justify-content: start;
+    align-items: center;
+    column-gap: 10px;
+    justify-items: center
+    
 }
 
-
-
-
-
-
-
-
-
-
-
+.logo {
+    padding: 10px;
+}
 
 /*tablet*/
 @media only screen and (max-width: 768px){
+    
 
 }
 /*mobile*/
