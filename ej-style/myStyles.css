@@ -44,10 +44,7 @@ header{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     text-align: center;
-    justify-content: start;
     justify-items: center;
-    
-    
 }
 
 .logo {
