@@ -79,18 +79,12 @@ header {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
 }
 
 .topnav a:hover {
     background-color: #ffad1f;
     color: black;
-}
-
-.topnav .icon {
-    display: none;
 }
 
 @media screen and (max-width: 768px) {
