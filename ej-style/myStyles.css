@@ -115,6 +115,14 @@ li {
     body {
         background-color: red;
     }
+    
+
+/*mobile*/
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: blue;
+    }
     nav {
         display: flex;
         justify-content: center;
@@ -170,51 +178,5 @@ li {
         background-color: orange;
     }
 }
-
-/*mobile*/
-
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: blue;
-    }
-    .contenedor {
-        /*margin-top: 115px;*/
-        grid-template-rows: 1fr 1fr 1fr;
-    } 
     
-    #left-column {
-        background-color: orange;
-    }
-    
-    section {
-        padding-top: 115px;
-    }
-    
-    h2 {
-        color: black;
-        border-style: solid;
-        border-width: 0 0 2px 0;
-        padding-bottom: 5px;
-    }
-    
-    ul {
-        list-style-type: none;
-        text-align: left;
-        margin-left: 30px;
-        margin-top: 20px;
-    }
-    
-    li {
-        padding: 25px
-    }
-    
-    #main-block {
-        color: white;
-        background-color: rgb(39, 35, 35);
-        padding: 120px 20px 0 20px;
-    }
-    
-    #right-column {
-        background-color: orange;
-    }
 }
