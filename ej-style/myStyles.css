@@ -62,8 +62,26 @@ header {
 .contenedor {
     /*margin-top: 115px;*/
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
     column-gap: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 70% 7%;
+    grid-template-areas: 
+        "left-column main-block righ-column"
+        "footer footer footer"
+}
+
+#auxiliar {
+    grid-area: none;
+    background-color: orange;
+}
+
+#footer {
+    grid-area: footer;
+    color: orange;
+}
+
+footer {
+    padding: 20px;
 }
 
 #curso {
@@ -77,6 +95,7 @@ header {
 
 #left-column {
     background-color: orange;
+    grid-area: left-column;
 }
 
 section {
@@ -115,6 +134,7 @@ li {
     color: white;
     background-color: rgb(39, 35, 35);
     padding: 120px 20px 0 20px;
+    grid-area: main-block;
 }
 
 .introTema {
@@ -163,6 +183,7 @@ p {
 
 #right-column {
     background-color: orange;
+    grid-area: righ-column;
 }
 
 #noticias {
@@ -195,22 +216,10 @@ p {
     .contenedor {
         margin-top: 60px;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "left-column main-block" "righ-column main-block" "none main-block"
+        grid-template-rows: 1fr 1fr 1fr 50px;
+        grid-template-areas: "left-column main-block" "righ-column main-block" "none main-block" "footer footer"
     }
-    #auxiliar {
-        grid-area: none;
-        background-color: orange;
-    }
-    #main-block {
-        grid-area: main-block;
-    }
-    #left-column {
-        grid-area: left-column;
-    }
-    #righ-column {
-        grid-area: righ-column;
-    }
+
     #noticias {
         padding-top: 20px;
     }
