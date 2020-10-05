@@ -144,6 +144,13 @@ ul {
     margin-top: 20px;
 }
 
+#foro {
+    background-color: orange;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
 li {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -234,13 +241,13 @@ th {
     margin-top: 20px;
 }
 
+#contact {
+    margin: 20px;
+}
 
 /*tablet*/
 
 @media only screen and (max-width: 768px) {
-    body {
-        background-color: red;
-    }
     ul {
         margin-left: 0;
     }
@@ -330,15 +337,15 @@ th {
     td:nth-of-type(5):before {
         content: "Msg";
     }
+
+    
 }
 
 
 /*mobile*/
 
 @media only screen and (max-width: 600px) {
-    body {
-        background-color: blue;
-    }
+
     nav {
         display: flex;
         justify-content: center;
