@@ -8,7 +8,7 @@
 
 body {
     /*background-color:rgb(228, 164, 4);*/
-    background-color: black;
+    background-color: #242424;
     display: block;
     max-width: 100%;
     overflow-x: hidden;
@@ -62,26 +62,28 @@ header {
 .contenedor {
     /*margin-top: 115px;*/
     display: grid;
-    column-gap: 10px;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 70% 7%;
-    grid-template-areas: 
-        "left-column main-block righ-column"
+    grid-template-rows: 1fr 70px 0px;
+    column-gap: 10px;
+    padding-top: 100px;
+    grid-template-areas:
+        "left-column main-block right-column"
         "footer footer footer"
+        "none none none"
+
 }
 
 #auxiliar {
+    display: none;
     grid-area: none;
-    background-color: orange;
 }
 
 #footer {
-    grid-area: footer;
-    color: orange;
-}
-
-footer {
     padding: 20px;
+    color: orange;
+    margin-top: 10px;
+    background-color: black;
+    grid-area: footer;
 }
 
 #curso {
@@ -98,8 +100,20 @@ footer {
     grid-area: left-column;
 }
 
+#main-block {
+    color: white;
+    background-color: black;
+    padding: 20px 20px 0 20px;
+    grid-area: main-block;
+}
+
+#right-column {
+    background-color: orange;
+    grid-area: right-column;
+}
+
 section {
-    padding-top: 115px;
+    padding-top: 20px;
 }
 
 h2 {
@@ -128,13 +142,6 @@ ul {
 li {
     padding-top: 25px;
     padding-bottom: 25px;
-}
-
-#main-block {
-    color: white;
-    background-color: rgb(39, 35, 35);
-    padding: 120px 20px 0 20px;
-    grid-area: main-block;
 }
 
 .introTema {
@@ -181,11 +188,6 @@ p {
     max-width: 100%;
 }
 
-#right-column {
-    background-color: orange;
-    grid-area: righ-column;
-}
-
 #noticias {
     width: 100%;
     max-width: 100%;
@@ -214,12 +216,26 @@ p {
         grid-template-columns: 40% 60%;
     }
     .contenedor {
-        margin-top: 60px;
+        padding-top: 140px;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 1fr 1fr 50px;
-        grid-template-areas: "left-column main-block" "righ-column main-block" "none main-block" "footer footer"
+        grid-template-rows: 1fr 1fr 1fr 70px;
+        grid-template-areas: "left-column main-block" "right-column main-block" "none main-block" "footer footer"
     }
 
+    #auxiliar {
+        display: block;
+        grid-area: none;
+        background-color: orange;
+    }
+    #main-block {
+        grid-area: main-block;
+    }
+    #left-column {
+        grid-area: left-column;
+    }
+    #righ-column {
+        grid-area: righ-column;
+    }
     #noticias {
         padding-top: 20px;
     }
@@ -253,31 +269,26 @@ p {
     }
     .contenedor {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto 0px;
-        grid-template-areas: "left-column" "main-block" "righ-column" "none"
+        grid-template-rows: auto auto auto  70px 0px;
+        grid-template-areas: "left-column" "main-block" "right-column" "footer" "none"
     }
     #main-block {
-        grid-area: main-block;
+        margin-top: 10px;
         color: white;
         background-color: rgb(39, 35, 35);
         padding: 30px 20px 0 20px;
     }
     #left-column {
-        background-color: orange;
-        grid-area: left-column;
+        margin-top: 10px;
     }
-    #righ-column {
-        grid-area: righ-column;
-        background-color: orange;
+    #right-column {
+        margin-top: 10px;
     }
     #auxiliar {
         grid-area: none;
-        background-color: orange;
         visibility: hidden;
     }
-    section {
-        padding-top: 115px;
-    }
+    
     h2 {
         color: black;
         border-style: solid;
