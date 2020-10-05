@@ -108,6 +108,14 @@ header {
     grid-area: right-column;
 }
 
+#content-news {
+    padding: 20px;
+}
+
+#content-news p {
+    margin: 0;
+}
+
 section {
     padding-top: 20px;
 }
@@ -194,6 +202,37 @@ p {
     text-align: center;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-of-type(odd) {
+    background: orange;
+}
+
+th {
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+th img {
+    border-radius: 45%;
+    width: 60px;
+    height: auto;
+}
+
+td,
+th {
+    padding: 6px;
+    text-align: left;
+}
+
+#estudiantes {
+    margin-top: 20px;
+}
+
 
 /*tablet*/
 
@@ -244,6 +283,51 @@ p {
     }
     .vregion iframe {
         padding-left: 13px;
+    }
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid orange;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid orange;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    td:nth-of-type(1):before {
+        content: "Foto";
+    }
+    td:nth-of-type(2):before {
+        content: "Nombre";
+    }
+    td:nth-of-type(3):before {
+        content: "Apellidos";
+    }
+    td:nth-of-type(4):before {
+        content: "Correo";
+    }
+    td:nth-of-type(5):before {
+        content: "Msg";
     }
 }
 
