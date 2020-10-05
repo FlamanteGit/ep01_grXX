@@ -47,6 +47,8 @@ header {
     left: 0;
     top: 0;
     right: 0;
+    z-index: 10;
+
 }
 
 .navContenedor {
@@ -314,20 +316,34 @@ th {
         padding-right: 10px;
         white-space: nowrap;
     }
-    td:nth-of-type(1):before {
+    #estudiantes td:nth-of-type(1):before {
         content: "Foto";
     }
-    td:nth-of-type(2):before {
+    #estudiantes td:nth-of-type(2):before {
         content: "Nombre";
     }
-    td:nth-of-type(3):before {
+    #estudiantes td:nth-of-type(3):before {
         content: "Apellidos";
     }
-    td:nth-of-type(4):before {
+    #estudiantes td:nth-of-type(4):before {
         content: "Correo";
     }
-    td:nth-of-type(5):before {
+    #estudiantes td:nth-of-type(5):before {
         content: "Msg";
+    }
+
+    #calificaciones td:nth-of-type(1):before {
+        content: "NIA";
+    }
+    #calificaciones td:nth-of-type(2):before {
+        content: "Parcial 1";
+    }
+    #calificaciones td:nth-of-type(3):before {
+        content: "Parcial 2";
+    }
+
+    #calificaciones td:nth-of-type(4):before {
+        content: "Practica final";
     }
 }
 
