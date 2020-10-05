@@ -1,417 +1,426 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    padding: 0;
-    border: 0;
-    margin: 0;
-}
-
-body {
-    /*background-color:rgb(228, 164, 4);*/
-    background-color: #242424;
-    display: block;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    padding: 15px;
-    font-weight: bolder;
-}
-
-.contenedor a:hover {
-    color: orange;
-    background-color: black;
-    border-radius: 10px;
-}
-
-a.navegation {
-    color: white;
-    padding: 15px;
-}
-
-a.navegation:hover {
-    color: rgb(228, 164, 4);
-}
-
-nav {
-    width: 100%;
-    padding: 10px;
-}
-
-header {
-    background-color: black;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
-
-.navContenedor {
-    float: right;
-    padding-top: 1%;
-    padding-right: 10%;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    text-align: center;
-    justify-items: center;
-}
-
-.contenedor {
-    /*margin-top: 115px;*/
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 70px 0px;
-    column-gap: 10px;
-    padding-top: 100px;
-    grid-template-areas: "left-column main-block right-column" "footer footer footer" "none none none"
-}
-
-#auxiliar {
-    display: none;
-    grid-area: none;
-}
-
-#footer {
-    padding: 20px;
-    color: orange;
-    margin-top: 10px;
-    background-color: black;
-    grid-area: footer;
-}
-
-#curso {
-    text-align: center;
-}
-
-.logo {
-    padding: 10px;
-    object-fit: cover;
-}
-
-#left-column {
-    background-color: orange;
-    grid-area: left-column;
-}
-
-#main-block {
-    color: white;
-    background-color: black;
-    padding: 20px 20px 0 20px;
-    grid-area: main-block;
-}
-
-#right-column {
-    background-color: orange;
-    grid-area: right-column;
-}
-
-#content-news {
-    padding: 20px;
-}
-
-#content-news p {
-    margin: 0;
-}
-
-section {
-    padding-top: 20px;
-}
-
-h2 {
-    color: black;
-    border-style: solid;
-    border-width: 0 0 2px 0;
-    padding-bottom: 5px;
-}
-
-h1,
-h3 {
-    color: orange;
-}
-
-p {
-    margin: 10px;
-}
-
-ul {
-    list-style-type: none;
-    text-align: left;
-    margin-left: 10%;
-    margin-top: 20px;
-}
-
-#foro {
-    background-color: orange;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-}
-
-li {
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-.introTema {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 10px;
-    margin: 2%;
-}
-
-p {
-    padding: 10px;
-    text-align: justify;
-}
-
-.introTema p {
-    border: 2px solid orange;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.imagenTema {
-    max-width: 98%;
-    height: auto;
-    border-radius: 5px;
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.videos {
-    max-width: 90%;
-    height: auto;
-    margin-top: 30px;
-}
-
-.vregion {
-    display: inline-grid;
-    grid-template-columns: 35% 65%;
-    padding: 20px;
-    column-gap: 10px;
-}
-
-.vregion iframe {
-    max-width: 100%;
-}
-
-#noticias {
-    width: 100%;
-    max-width: 100%;
-    margin-right: 20px;
-}
-
-#noticias h2 {
-    text-align: center;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-tr:nth-of-type(odd) {
-    background: orange;
-}
-
-th {
-    background: black;
-    color: white;
-    font-weight: bold;
-}
-
-th img {
-    border-radius: 45%;
-    width: 60px;
-    height: auto;
-}
-
-td,
-th {
-    padding: 6px;
-    text-align: left;
-}
-
-#estudiantes {
-    margin-top: 20px;
-}
-
-#contact {
-    margin: 20px;
-}
-
-
-/*tablet*/
-
-@media only screen and (max-width: 768px) {
-    ul {
-        margin-left: 0;
-    }
-    li {
-        padding: 20px 15px 20px 20px;
-    }
-    .introTema {
-        display: grid;
-        grid-template-columns: 40% 60%;
-    }
-    .contenedor {
-        padding-top: 140px;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 1fr 1fr 70px;
-        grid-template-areas: "left-column main-block" "right-column main-block" "none main-block" "footer footer"
-    }
-    #auxiliar {
-        display: block;
-        grid-area: none;
-        background-color: orange;
-    }
-    #main-block {
-        grid-area: main-block;
-    }
-    #left-column {
-        grid-area: left-column;
-    }
-    #righ-column {
-        grid-area: righ-column;
-    }
-    #noticias {
-        padding-top: 20px;
-    }
-    .vregion {
-        display: block;
-    }
-    .videos {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .vregion iframe {
-        padding-left: 13px;
-    }
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: block;
-    }
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-    tr {
-        border: 1px solid orange;
-    }
-    td {
-        border: none;
-        border-bottom: 1px solid orange;
-        position: relative;
-        padding-left: 50%;
-    }
-    td:before {
-        position: absolute;
-        top: 6px;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-    }
-    #estudiantes td:nth-of-type(1):before {
-        content: "Foto";
-    }
-    #estudiantes td:nth-of-type(2):before {
-        content: "Nombre";
-    }
-    #estudiantes td:nth-of-type(3):before {
-        content: "Apellidos";
-    }
-    #estudiantes td:nth-of-type(4):before {
-        content: "Correo";
-    }
-    #estudiantes td:nth-of-type(5):before {
-        content: "Msg";
-    }
-    #calificaciones td:nth-of-type(1):before {
-        content: "NIA";
-    }
-    #calificaciones td:nth-of-type(2):before {
-        content: "Parcial 1";
-    }
-    #calificaciones td:nth-of-type(3):before {
-        content: "Parcial 2";
-    }
-    #calificaciones td:nth-of-type(4):before {
-        content: "Practica final";
-    }
-}
-
-
-/*mobile*/
-
-@media only screen and (max-width: 600px) {
-    nav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .navContenedor {
-        padding-right: 0%;
-    }
-    .contenedor {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto 70px 0px;
-        grid-template-areas: "left-column" "main-block" "right-column" "footer" "none"
-    }
-    #main-block {
-        margin-top: 10px;
-        color: white;
-        background-color: black;
-        padding: 30px 20px 0 20px;
-    }
-    #left-column {
-        margin-top: 20px;
-    }
-    #right-column {
-        margin-top: 10px;
-    }
-    #auxiliar {
-        grid-area: none;
-        visibility: hidden;
-    }
-    h2 {
-        color: black;
-        border-style: solid;
-        border-width: 0 0 2px 0;
-        padding-bottom: 5px;
-    }
-    ul {
-        list-style-type: none;
-        text-align: left;
-        margin-left: 30px;
-        margin-top: 20px;
-    }
-    li {
-        padding: 25px
-    }
-    .introTema {
-        display: block;
-    }
-    .imagenTema {
-        display: block;
-        max-width: 90%;
-        width: 45%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    h1 {
-        text-align: center;
-    }
-}
+                                    * {
+                                    box-sizing: border-box;
+                                    font-family: 'Roboto', sans-serif;
+                                    padding: 0;
+                                    border: 0;
+                                    margin: 0;
+                                }
+                                
+                                body {
+                                    /*background-color:rgb(228, 164, 4);*/
+                                    background-color: #242424;
+                                    display: block;
+                                    max-width: 100%;
+                                    overflow-x: hidden;
+                                }
+                                
+                                a {
+                                    text-decoration: none;
+                                    color: black;
+                                    padding: 15px;
+                                    font-weight: bolder;
+                                }
+                                
+                                .contenedor a:hover {
+                                    color: orange;
+                                    background-color: black;
+                                    border-radius: 10px;
+                                }
+                                
+                                a.navegation {
+                                    color: white;
+                                    padding: 15px;
+                                }
+                                
+                                a.navegation:hover {
+                                    color: rgb(228, 164, 4);
+                                }
+                                
+                                nav {
+                                    width: 100%;
+                                    padding: 10px;
+                                }
+                                
+                                header {
+                                    background-color: black;
+                                    position: fixed;
+                                    left: 0;
+                                    top: 0;
+                                    right: 0;
+                                    z-index: 10;
+                                }
+                                
+                                .navContenedor {
+                                    float: right;
+                                    padding-top: 1%;
+                                    padding-right: 10%;
+                                    display: grid;
+                                    grid-template-columns: 25% 25% 25% 25%;
+                                    text-align: center;
+                                    justify-items: center;
+                                }
+                                
+                                .contenedor {
+                                    /*margin-top: 115px;*/
+                                    display: grid;
+                                    grid-template-columns: 1fr 3fr 1fr;
+                                    grid-template-rows: 1fr 70px 0px;
+                                    column-gap: 10px;
+                                    padding-top: 100px;
+                                    grid-template-areas: "left-column main-block right-column" "footer footer footer" "none none none"
+                                }
+                                
+                                #auxiliar {
+                                    display: none;
+                                    grid-area: none;
+                                }
+                                
+                                #footer {
+                                    padding: 20px;
+                                    color: orange;
+                                    margin-top: 10px;
+                                    background-color: black;
+                                    grid-area: footer;
+                                }
+                                
+                                #curso {
+                                    text-align: center;
+                                }
+                                
+                                .logo {
+                                    padding: 10px;
+                                    object-fit: cover;
+                                }
+                                
+                                #left-column {
+                                    background-color: orange;
+                                    grid-area: left-column;
+                                }
+                                
+                                #main-block {
+                                    color: white;
+                                    background-color: black;
+                                    padding: 20px 20px 0 20px;
+                                    grid-area: main-block;
+                                }
+                                
+                                #right-column {
+                                    background-color: orange;
+                                    grid-area: right-column;
+                                }
+                                
+                                #content-news {
+                                    padding: 20px;
+                                }
+                                
+                                #content-news p {
+                                    margin: 0;
+                                }
+                                
+                                section {
+                                    padding-top: 20px;
+                                }
+                                
+                                h2 {
+                                    color: black;
+                                    border-style: solid;
+                                    border-width: 0 0 2px 0;
+                                    padding-bottom: 5px;
+                                }
+                                
+                                h1,
+                                h3 {
+                                    color: orange;
+                                }
+                                
+                                p {
+                                    margin: 10px;
+                                }
+                                
+                                ul {
+                                    list-style-type: none;
+                                    text-align: left;
+                                    margin-left: 10%;
+                                    margin-top: 20px;
+                                }
+                                
+                                #foro {
+                                    background-color: orange;
+                                    padding: 10px;
+                                    margin: 5px;
+                                    border-radius: 5px;
+                                }
+                                
+                                li {
+                                    padding-top: 25px;
+                                    padding-bottom: 25px;
+                                }
+                                
+                                .introTema {
+                                    display: grid;
+                                    grid-template-columns: 1fr 2fr;
+                                    column-gap: 10px;
+                                    margin: 2%;
+                                }
+                                
+                                p {
+                                    padding: 10px;
+                                    text-align: justify;
+                                }
+                                
+                                .introTema p {
+                                    border: 2px solid orange;
+                                    border-radius: 5px;
+                                    text-align: center;
+                                }
+                                
+                                .imagenTema {
+                                    max-width: 98%;
+                                    height: auto;
+                                    border-radius: 5px;
+                                    display: block;
+                                    margin-top: auto;
+                                    margin-bottom: auto;
+                                }
+                                
+                                .videos {
+                                    max-width: 90%;
+                                    height: auto;
+                                    margin-top: 30px;
+                                }
+                                
+                                .vregion {
+                                    display: inline-grid;
+                                    grid-template-columns: 35% 65%;
+                                    padding: 20px;
+                                    column-gap: 10px;
+                                }
+                                
+                                .vregion iframe {
+                                    max-width: 100%;
+                                }
+                                
+                                #noticias {
+                                    width: 100%;
+                                    max-width: 100%;
+                                    margin-right: 20px;
+                                }
+                                
+                                #noticias h2 {
+                                    text-align: center;
+                                }
+                                
+                                table {
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                }
+                                
+                                tr:nth-of-type(odd) {
+                                    background: orange;
+                                }
+                                
+                                th {
+                                    background: black;
+                                    color: white;
+                                    font-weight: bold;
+                                }
+                                
+                                th img {
+                                    border-radius: 45%;
+                                    width: 60px;
+                                    height: auto;
+                                }
+                                
+                                td,
+                                th {
+                                    padding: 6px;
+                                    text-align: left;
+                                }
+                                
+                                #estudiantes {
+                                    margin-top: 20px;
+                                }
+                                
+                                #contact {
+                                    margin: 20px;
+                                }
+                                /*tablet*/
+                                
+                                @media only screen and (max-width: 768px) {
+                                    ul {
+                                        margin-left: 0;
+                                    }
+                                    li {
+                                        padding: 20px 15px 20px 20px;
+                                    }
+                                    .introTema {
+                                        display: grid;
+                                        grid-template-columns: 40% 60%;
+                                    }
+                                    .contenedor {
+                                        padding-top: 140px;
+                                        grid-template-columns: 1fr 2fr;
+                                        grid-template-rows: 1fr 1fr 1fr 70px;
+                                        grid-template-areas: "left-column main-block" "right-column main-block" "none main-block" "footer footer"
+                                    }
+                                    #auxiliar {
+                                        display: block;
+                                        grid-area: none;
+                                        background-color: orange;
+                                    }
+                                    #main-block {
+                                        grid-area: main-block;
+                                    }
+                                    #left-column {
+                                        grid-area: left-column;
+                                    }
+                                    #righ-column {
+                                        grid-area: righ-column;
+                                    }
+                                    #noticias {
+                                        padding-top: 20px;
+                                    }
+                                    .vregion {
+                                        display: block;
+                                    }
+                                    .videos {
+                                        display: block;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                    }
+                                    .vregion iframe {
+                                        padding-left: 13px;
+                                    }
+                                    table,
+                                    thead,
+                                    tbody,
+                                    th,
+                                    td,
+                                    tr {
+                                        display: block;
+                                    }
+                                    thead tr {
+                                        position: absolute;
+                                        top: -9999px;
+                                        left: -9999px;
+                                    }
+                                    tr {
+                                        border: 1px solid orange;
+                                    }
+                                    td {
+                                        border: none;
+                                        border-bottom: 1px solid orange;
+                                        position: relative;
+                                        padding-left: 50%;
+                                    }
+                                    #foro tr {
+                                        border-bottom: 2px solid black;
+                                    }
+                                    td:before {
+                                        position: absolute;
+                                        top: 6px;
+                                        left: 6px;
+                                        width: 45%;
+                                        padding-right: 10px;
+                                        white-space: nowrap;
+                                    }
+                                    #estudiantes td:nth-of-type(1):before {
+                                        content: "Foto";
+                                    }
+                                    #estudiantes td:nth-of-type(2):before {
+                                        content: "Nombre";
+                                    }
+                                    #estudiantes td:nth-of-type(3):before {
+                                        content: "Apellidos";
+                                    }
+                                    #estudiantes td:nth-of-type(4):before {
+                                        content: "Correo";
+                                    }
+                                    #estudiantes td:nth-of-type(5):before {
+                                        content: "Msg";
+                                    }
+                                    #calificaciones td:nth-of-type(1):before {
+                                        content: "NIA";
+                                    }
+                                    #calificaciones td:nth-of-type(2):before {
+                                        content: "Parcial 1";
+                                    }
+                                    #calificaciones td:nth-of-type(3):before {
+                                        content: "Parcial 2";
+                                    }
+                                    #calificaciones td:nth-of-type(4):before {
+                                        content: "Practica final";
+                                    }
+                                    #foro td:nth-of-type(1):before {
+                                        content: "Titulo";
+                                        color: black;
+                                    }
+                                    #foro td:nth-of-type(2):before {
+                                        content: "Mensajes enviados";
+                                        color: black;
+                                    }
+                                    #foro td:nth-of-type(3):before {
+                                        content: "Ultimo mensaje";
+                                        color: black;
+                                    }
+                                    /*mobile*/
+                                    @media only screen and (max-width: 600px) {
+                                        nav {
+                                            display: flex;
+                                            justify-content: center;
+                                            flex-wrap: wrap;
+                                        }
+                                        .navContenedor {
+                                            padding-right: 0%;
+                                        }
+                                        .contenedor {
+                                            grid-template-columns: 1fr;
+                                            grid-template-rows: auto auto auto 70px 0px;
+                                            grid-template-areas: "left-column" "main-block" "right-column" "footer" "none"
+                                        }
+                                        #main-block {
+                                            margin-top: 10px;
+                                            color: white;
+                                            background-color: black;
+                                            padding: 30px 20px 0 20px;
+                                        }
+                                        #left-column {
+                                            margin-top: 20px;
+                                        }
+                                        #right-column {
+                                            margin-top: 10px;
+                                        }
+                                        #auxiliar {
+                                            grid-area: none;
+                                            visibility: hidden;
+                                        }
+                                        h2 {
+                                            color: black;
+                                            border-style: solid;
+                                            border-width: 0 0 2px 0;
+                                            padding-bottom: 5px;
+                                        }
+                                        ul {
+                                            list-style-type: none;
+                                            text-align: left;
+                                            margin-left: 30px;
+                                            margin-top: 20px;
+                                        }
+                                        li {
+                                            padding: 25px
+                                        }
+                                        .introTema {
+                                            display: block;
+                                        }
+                                        .imagenTema {
+                                            display: block;
+                                            max-width: 90%;
+                                            width: 45%;
+                                            height: auto;
+                                            margin-left: auto;
+                                            margin-right: auto;
+                                        }
+                                        h1 {
+                                            text-align: center;
+                                        }
+                                    }
