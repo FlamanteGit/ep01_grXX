@@ -8,7 +8,7 @@
     <title>Interfaces de usuario</title>
     <link rel="stylesheet" href="../ej-style/myStyles.css">
     <link rel="shortcut icon" href="../ej-images/icon.png" />
-
+    <script src="../ej-js/main.js"></script>
 </head>
 
 <body>
@@ -16,10 +16,10 @@
         <nav>
             <a href="ej.html"><img src="../ej-images/otro.png" alt="UserInterfacesIcon" class="navegation logo"></a>
             <div class="navContenedor">
-                <a href="ej.html" class="navegation">Inicio</a>
-                <a href="asignatura.html" class="navegation">Asignatura</a>
-                <a href="faq.html" class="navegation">FAQ</a>
-                <a href="contacto.html" class="navegation">Contacto</a>
+                <a onclick="showElement('main-block');" class="navegation">Inicio</a>
+                <a onclick="showElement('asignatura');" class="navegation">Asignatura</a>
+                <a onclick="showElement('faq');" class="navegation">FAQ</a>
+                <a onclick="showElement('contacto');" class="navegation">Contacto</a>
             </div>
         </nav>
     </header>
@@ -30,9 +30,9 @@
             <section id="curso">
                 <h2>CURSO</h2>
                 <ul>
-                    <li><a href="calificaciones.html">Calificaciones</a></li>
-                    <li><a href="estudiantes.html">Estudiantes</a></li>
-                    <li><a href="foro.html">Foro</a></li>
+                    <li><a onclick="showElement('calificaciones');">Calificaciones</a></li>
+                    <li><a onclick="showElement('estudiantes');">Estudiantes</a></li>
+                    <li><a onclick="showElement('foro');">Foro</a></li>
                 </ul>
             </section>
         </div>
@@ -102,7 +102,293 @@
                         <iframe src="https://www.youtube.com/embed/ivyIqmczxHU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <p>Video que nos explica como combinar HTML5, CSS3 Y JavaScript con el objetivo de conseguir una pagina web completa</p>
                     </div>
+                </div>
+            </main>
+        </div>
 
+        <!--asignatura-->
+        <div id="asignatura" style="display: none;">
+            <main class="main-content">
+                <h1>ASIGNATURA</h1>
+                <br>
+                <h3>Introduccion</h3>
+                <p>La interfaz de usuario es el medio con que el usuario puede comunicarse con una máquina, equipo, computadora o dispositivo, y comprende todos los puntos de contacto entre el usuario y el equipo. Normalmente suelen ser fáciles de entender
+                    y fáciles de accionar, aunque en el ámbito de la informática es preferible referirse a que suelen ser "usables", "amigables e intuitivos" porque es complejo y subjetivo decir "fácil".</p>
+                <br>
+                <h3>Definicion</h3>
+                <p>La interfaz de usuario es el espacio donde se producen las interacciones entre seres humanos y máquinas. El objetivo de esta interacción es permitir el funcionamiento y control más efectivo de la máquina desde la interacción con el humano.
+                    Las interfaces básicas de usuario son aquellas que incluyen elementos como menús, ventanas, contenido gráfico, cursor, los beeps y algunos otros sonidos que la computadora hace, y en general, todos aquellos canales por los cuales se
+                    permite la comunicación entre el ser humano y la computadora. El objetivo del diseño de una interfaz es producir una interfaz que sea fácil de usar (explicarse por sí misma), eficiente y agradable para que al operar la máquina dé el
+                    resultado deseado.</p>
+                <h3>Funciones principales</h3>
+                <p>Las funciones principales son las siguientes:</p>
+                <p>Puesta en marcha y apagado. Control de las funciones manipulables del equipo. Manipulación de archivos y directorios. Herramientas de desarrollo de aplicaciones. Comunicación con otros sistemas. Información de estado. Configuración de
+                    la propia interfaz y entorno. Intercambio de datos entre aplicaciones. Sistema de ayuda interactivo.</p>
+            </main>
+        </div>
+
+        <!--calificaciones-->
+        <div id="calificaciones" style="display: none;">
+            <main class="main-content">
+                <h1>CALIFICACIONES</h1>
+                <div id="calificaciones">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>NIA</th>
+                                <th>Parcial 1</th>
+                                <th>Parcial 2</th>
+                                <th>Practica final</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>100405861</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>100405862</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>100405863</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>100405864</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>100405865</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>100405866</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>100405867</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>100405868</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>100405869</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>100405870</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                </div>
+            </main>
+        </div>
+
+        <!--contacto-->
+        <div id="contacto" style="display: none;">
+            <main class="main-content">
+                <div class="contact">
+                    <h3>ANA TAJADURA JIMENEZ</h3>
+                    Correo: atajadur@inf.uc3m.es
+                    <br>Despacho: 2.2.C02
+                </div>
+                <div class="contact">
+                    <h3>JAVIER SANZ RODRIGUEZ</h3>
+                    Correo: jsrodrig@inf.uc3m.es
+                    <br>Despacho: 2.2.C03
+                </div>
+                <div class="contact">
+                    <h3>TERESA ONORATI</h3>
+                    Correo: tonorati@inf.uc3m.es
+                    <br>Despacho: 2.2.C03
+                </div>
+            </main>
+        </div>
+
+
+        <!--estudiantes-->
+        <div id="estudiantes" style="display: none;">
+            <main class="main-content">
+                <h1>LISTADO DE ESTUDIANTES</h1>
+                <div id="estudiantes">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Foto</th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Correo</th>
+                                <th>Mensaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><img src="../ej-images/alumno6.jpg" alt="alumno1"></th>
+                                <th>Raul</th>
+                                <th>Gimenez de Dios</th>
+                                <th>100405861@alumnos.uc3m.es</th>
+                                <th><i class="far fa-comment"></i></th>
+                            </tr>
+                            <tr>
+                                <th><img src="../ej-images/alumno2.jpg" alt="alumno1"></th>
+                                <th>Rodrigo</th>
+                                <th>Fernandez Liñan</th>
+                                <th>100405862@alumnos.uc3m.es</th>
+                                <th><i class="far fa-comment"></i></th>
+                            </tr>
+                            <tr>
+                                <th><img src="../ej-images/alumno3.jpg" alt="alumno1"></th>
+                                <th>Diego</th>
+                                <th>Fernandez Plaza</th>
+                                <th>100405863@alumnos.uc3m.es</th>
+                                <th><i class="far fa-comment"></i></th>
+                            </tr>
+                            <tr>
+                                <th><img src="../ej-images/alumno4.jpg" alt="alumno1"></th>
+                                <th>Daniel</th>
+                                <th>Garcia Barroso</th>
+                                <th>100405864@alumnos.uc3m.es</th>
+                                <th><i class="far fa-comment"></i></th>
+                            </tr>
+                            <tr>
+                                <th><img src="../ej-images/alumno5.jpg" alt="alumno1"></th>
+                                <th>Jose</th>
+                                <th> Gallego Casilda</th>
+                                <th>100405865@alumnos.uc3m.es</th>
+                                <th><i class="far fa-comment"></i></th>
+                            </tr>
+                            <tr>
+                                <th><img src="../ej-images/alumno1.jpg" alt="alumno1"></th>
+                                <th>Mohamed</th>
+                                <th>El Aakil</th>
+                                <th>100405866@alumnos.uc3m.es</th>
+                                <th><i class="far fa-comment"></i></th>
+                            </tr>
+                            <tr>
+                                <th><img src="../ej-images/alumno7.jpg" alt="alumno1"></th>
+                                <th>Adrian</th>
+                                <th>Giron Jimenez</th>
+                                <th>100405867@alumnos.uc3m.es</th>
+                                <th><i class="far fa-comment"></i></th>
+                            </tr>
+                            <tr>
+                                <th><img src="../ej-images/alumno8.jpg" alt="alumno1"></th>
+                                <th>Mario</th>
+                                <th>Dominguez Garcia</th>
+                                <th>100405868@alumnos.uc3m.es</th>
+                                <th><i class="far fa-comment"></i></th>
+                            </tr>
+                            <tr>
+                                <th><img src="../ej-images/alumno9.jpg" alt="alumno1"></th>
+                                <th>Miguel</th>
+                                <th>Garcia Trigueros</th>
+                                <th>100405869@alumnos.uc3m.es</th>
+                                <th><i class="far fa-comment"></i></th>
+                            </tr>
+                            <tr>
+                                <th><img src="../ej-images/alumno10.jpg" alt="alumno1"></th>
+                                <th>Amalia</th>
+                                <th>Cid Blasco</th>
+                                <th>100405870@alumnos.uc3m.es</th>
+                                <th><i class="far fa-comment"></i></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+
+        <!--faq-->
+        <div id="faq" style="display: none;">
+            <main class="main-content">
+                <h1>PREGUNTAS FRECUENTES</h1>
+                <br>
+                <h3>¿Hay nota mínima en los parciales y en el trabajo?</h3>
+                <p>No, no existe una nota mínima, siempre que la media sea mayor o igual a 5 se aprobará la asignatura.</p>
+                <h3>¿Qué temas entran en el primer parcial?</h3>
+                <p>Los temas 1, 2, 3 y 4, además de preguntas relacionadas con la practica 1.</p>
+                <h3>¿Qué temas entran en el segundo parcial?</h3>
+                <p>Los temas 5, 6, 7 y 8, además de preguntas relacionadas con la practica 2.</p>
+                <h3>¿Qué peso tiene cada parcial en la nota final?¿Y la práctica?</h3>
+                <p>Cada parcial tiene un peso del 10% (1 pto) sobre la practica final</p>
+                <h3>¿Cual es la maxima nota que se puede obtener sin seguir la evaluacion continua?</h3>
+                <p>La maxima nota que se puede obtener es un 6 en el caso de que solo se realizase el examen final dado que este tiene un peso del 60% si el alumno no sigue la EC</p>
+                <h3>¿Cual es la bibliografia recomendada?</h3>
+                <p>The Design of Everyday Things (Libro de Donald Norman)</p>
+            </main>
+        </div>
+
+        <!--foro-->
+        <div id="foro" style="display: none;">
+            <main class="main-content">
+                <div id="foro">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Nº de mensajes enviados</th>
+                                <th>Último mensaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Avisos</td>
+                                <td>6</td>
+                                <td>05/10/2020 19:02</td>
+                            </tr>
+                            <tr>
+                                <td>Guía de buenas prácticas del estudiante</td>
+                                <td>1</td>
+                                <td>04/09/2020 10:02</td>
+                            </tr>
+                            <tr>
+                                <td>No consigo centrar los elementos horizontalmente dentro de un div</td>
+                                <td>3</td>
+                                <td>05/10/2020 15:22</td>
+                            </tr>
+                            <tr>
+                                <td>¿Cuales son las diferencias entre usar grid y usar flex?</td>
+                                <td>5</td>
+                                <td>27/09/2020 11:45</td>
+                            </tr>
+                            <tr>
+                                <td>No logro hacer que el header este fijo</td>
+                                <td>4</td>
+                                <td>01/10/2020 22:15</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </main>
         </div>
