@@ -21,6 +21,10 @@ a {
     font-weight: bolder;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 .contenedor a:hover {
     color: orange;
     background-color: black;
@@ -97,7 +101,7 @@ header {
     grid-area: left-column;
 }
 
-#main-block {
+#main-block, #asignatura, #calificaciones, #contacto, #estudiantes, #faq, #foro {
     color: white;
     background-color: black;
     padding: 20px 20px 0 20px;
@@ -244,7 +248,6 @@ th {
 .contact {
     margin: 20px;
 }
-
 
 /*tablet*/
 
@@ -426,3 +429,4 @@ th {
             text-align: center;
         }
     }
+}
