@@ -45,7 +45,7 @@ nav {
     padding: 10px;
 }
 
-header {
+#main-header {
     background-color: black;
     position: fixed;
     left: 0;

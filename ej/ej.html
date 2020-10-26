@@ -2,21 +2,22 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interfaces de usuario</title>
-    <link rel="stylesheet" href="../ej-style/myStyles.css">
+    <link rel="stylesheet" href="../ej-style/myStyles.css" />
+    <link rel="stylesheet" href="../ej-style/simple-calendar.css" />
     <link rel="shortcut icon" href="../ej-images/icon.png" />
     <script src="../ej-js/jquery-3.5.1.min.js"></script>
     <script src="../ej-js/main.js"></script>
-    <script src="../ej-js/clndr.js"></script>
+    <script src="../ej-js/jquery.simple-calendar.min.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="main-header">
         <nav>
-            <a href="ej.html"><img src="../ej-images/otro.png" alt="UserInterfacesIcon" class="navegation logo"></a>
+            <a href="ej.html"><img src="../ej-images/otro.png" alt="UserInterfacesIcon" class="navegation logo" /></a>
             <div class="navContenedor">
                 <a onclick="showElement('main-block');" class="navegation">Inicio</a>
                 <a onclick="showElement('asignatura');" class="navegation">Asignatura</a>
@@ -26,13 +27,14 @@
         </nav>
     </header>
     <div class="contenedor">
-
         <!--barra izquierda-->
         <div id="left-column">
             <section id="curso">
                 <h2>CURSO</h2>
                 <ul>
-                    <li><a onclick="showElement('calificaciones');">Calificaciones</a></li>
+                    <li>
+                        <a onclick="showElement('calificaciones');">Calificaciones</a>
+                    </li>
                     <li><a onclick="showElement('estudiantes');">Estudiantes</a></li>
                     <li><a onclick="showElement('foro');">Foro</a></li>
                 </ul>
@@ -42,15 +44,17 @@
         <!--zona principal-->
         <div id="main-block">
             <main class="main-content">
-
-                <h1>TEMA 1 - INTRODUCCION </h1>
+                <h1>TEMA 1 - INTRODUCCION</h1>
 
                 <div class="introTema">
-                    <img class="imagenTema" src="../ej-images/UI.jpg" alt="Tema1-Imagen">
-                    <p>La interacción persona-computadora o persona-ordenador (IPO) se podría definir formalmente como:
-                        «La disciplina dedicada a diseñar, evaluar e implementar sistemas informáticos interactivos para
-                        el uso humano, y a estudiar los fenómenos
-                        relacionados más significativos»​</p>
+                    <img class="imagenTema" src="../ej-images/UI.jpg" alt="Tema1-Imagen" />
+                    <p>
+                        La interacción persona-computadora o persona-ordenador (IPO) se
+                        podría definir formalmente como: «La disciplina dedicada a
+                        diseñar, evaluar e implementar sistemas informáticos interactivos
+                        para el uso humano, y a estudiar los fenómenos relacionados más
+                        significativos»​
+                    </p>
                 </div>
 
                 <div class="videos">
@@ -58,32 +62,42 @@
                         <iframe src="https://www.youtube.com/embed/o1aVlrGy7ws"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <p>Video introductorio que trata de definir el concepto de Interfaz de Usuario sirviendo de base
-                            para el comienzo de la asignatura</p>
+                        <p>
+                            Video introductorio que trata de definir el concepto de Interfaz
+                            de Usuario sirviendo de base para el comienzo de la asignatura
+                        </p>
                     </div>
                     <div class="vregion">
                         <iframe src="https://www.youtube.com/embed/bptPpkmprNw"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <p>Esta apasionante charla de Daniel Grande nos fuerza a replantearnos nuestra relación con
-                            nuestros dispositivos y la tecnología más allá de la interfaz de usuario.</p>
+                        <p>
+                            Esta apasionante charla de Daniel Grande nos fuerza a
+                            replantearnos nuestra relación con nuestros dispositivos y la
+                            tecnología más allá de la interfaz de usuario.
+                        </p>
                     </div>
                     <div class="vregion">
                         <iframe src="https://www.youtube.com/embed/qCyrRLlBNSg"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <p>Video introductorio a la experiencia de usuario, concepto altamente ligado con las interfaces
-                            de usuario e imprescindible de tener en cuenta</p>
+                        <p>
+                            Video introductorio a la experiencia de usuario, concepto
+                            altamente ligado con las interfaces de usuario e imprescindible
+                            de tener en cuenta
+                        </p>
                     </div>
-
                 </div>
                 <h1>TEMA 2 - HTML5 & CSS3</h1>
                 <div class="introTema">
-                    <img class="imagenTema" src="../ej-images/HTML5.png" alt="Tema2-Imagen">
-                    <p>HTML, siglas en inglés de HyperText Markup Language (‘lenguaje de marcas de hipertexto’), hace
-                        referencia al lenguaje de marcado para la elaboración de páginas web. CSS son las siglas de
-                        “Cascading Style Sheets” (hojas de estilo en
-                        cascada). CSS es un lenguaje para la composición y estructuración de páginas web (HTML o XML).
+                    <img class="imagenTema" src="../ej-images/HTML5.png" alt="Tema2-Imagen" />
+                    <p>
+                        HTML, siglas en inglés de HyperText Markup Language (‘lenguaje de
+                        marcas de hipertexto’), hace referencia al lenguaje de marcado
+                        para la elaboración de páginas web. CSS son las siglas de
+                        “Cascading Style Sheets” (hojas de estilo en cascada). CSS es un
+                        lenguaje para la composición y estructuración de páginas web (HTML
+                        o XML).
                     </p>
                 </div>
                 <div class="videos">
@@ -91,93 +105,123 @@
                         <iframe src="https://www.youtube.com/embed/WSFT4OQF_mA"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <p>Video introductorio a HTML5 que trata de darnos una vision inicial acerca de este lenguaje
-                            definiendo sus funcionalidades y usos habituales</p>
+                        <p>
+                            Video introductorio a HTML5 que trata de darnos una vision
+                            inicial acerca de este lenguaje definiendo sus funcionalidades y
+                            usos habituales
+                        </p>
                     </div>
                     <div class="vregion">
                         <iframe src="https://www.youtube.com/embed/mOQWl150sPM"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <p>Video introductorio a CSS3 que trata de darnos una vision inicial acerca de este lenguaje
-                            definiendo sus funcionalidades y usos habituales</p>
+                        <p>
+                            Video introductorio a CSS3 que trata de darnos una vision
+                            inicial acerca de este lenguaje definiendo sus funcionalidades y
+                            usos habituales
+                        </p>
                     </div>
                     <div class="vregion">
                         <iframe src="https://www.youtube.com/embed/QC9_8nRNNHA"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <p>Video inicial del curso gratuito de HTML5 de pildorasinformaticas, un prestigioso youtuber
-                            por sus tutoriales sobre programacion e informatica</p>
+                        <p>
+                            Video inicial del curso gratuito de HTML5 de
+                            pildorasinformaticas, un prestigioso youtuber por sus tutoriales
+                            sobre programacion e informatica
+                        </p>
                     </div>
                 </div>
                 <h1>TEMA 3 - JAVASCRIPT</h1>
                 <div class="introTema">
-                    <img class="imagenTema" src="../ej-images/javascript.png" alt="Tema3-Imagen">
-                    <p>JavaScript es un lenguaje de programación que se utiliza principalmente para crear páginas web
-                        dinámicas. Una página web dinámica es aquella que incorpora efectos como texto que aparece y
-                        desaparece, animaciones, acciones que se activan
-                        al pulsar botones y ventanas con mensajes de aviso al usuario.</p>
+                    <img class="imagenTema" src="../ej-images/javascript.png" alt="Tema3-Imagen" />
+                    <p>
+                        JavaScript es un lenguaje de programación que se utiliza
+                        principalmente para crear páginas web dinámicas. Una página web
+                        dinámica es aquella que incorpora efectos como texto que aparece y
+                        desaparece, animaciones, acciones que se activan al pulsar botones
+                        y ventanas con mensajes de aviso al usuario.
+                    </p>
                 </div>
                 <div class="videos">
                     <div class="vregion">
                         <iframe src="https://www.youtube.com/embed/riZbwRFMFuw"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <p>Video introductorio a JavaScript que trata de darnos una vision inicial acerca de este
-                            lenguaje definiendo sus funcionalidades y usos habituales</p>
+                        <p>
+                            Video introductorio a JavaScript que trata de darnos una vision
+                            inicial acerca de este lenguaje definiendo sus funcionalidades y
+                            usos habituales
+                        </p>
                     </div>
                     <div class="vregion">
                         <iframe src="https://www.youtube.com/embed/Q9fwkpxr3Dw"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <p>Video que trata de enseñarnos de manera resumida y rapida los conceptos mas importantes
-                            acerca de JavaScript</p>
+                        <p>
+                            Video que trata de enseñarnos de manera resumida y rapida los
+                            conceptos mas importantes acerca de JavaScript
+                        </p>
                     </div>
                     <div class="vregion">
                         <iframe src="https://www.youtube.com/embed/ivyIqmczxHU"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                        <p>Video que nos explica como combinar HTML5, CSS3 Y JavaScript con el objetivo de conseguir una
-                            pagina web completa</p>
+                        <p>
+                            Video que nos explica como combinar HTML5, CSS3 Y JavaScript con
+                            el objetivo de conseguir una pagina web completa
+                        </p>
                     </div>
                 </div>
             </main>
         </div>
 
         <!--asignatura-->
-        <div id="asignatura" style="display: none;">
+        <div id="asignatura" style="display: none">
             <main class="main-content">
                 <h1>ASIGNATURA</h1>
-                <br>
+                <br />
                 <h3>Introduccion</h3>
-                <p>La interfaz de usuario es el medio con que el usuario puede comunicarse con una máquina, equipo,
-                    computadora o dispositivo, y comprende todos los puntos de contacto entre el usuario y el equipo.
-                    Normalmente suelen ser fáciles de entender
-                    y fáciles de accionar, aunque en el ámbito de la informática es preferible referirse a que suelen
-                    ser "usables", "amigables e intuitivos" porque es complejo y subjetivo decir "fácil".</p>
-                <br>
+                <p>
+                    La interfaz de usuario es el medio con que el usuario puede
+                    comunicarse con una máquina, equipo, computadora o dispositivo, y
+                    comprende todos los puntos de contacto entre el usuario y el equipo.
+                    Normalmente suelen ser fáciles de entender y fáciles de accionar,
+                    aunque en el ámbito de la informática es preferible referirse a que
+                    suelen ser "usables", "amigables e intuitivos" porque es complejo y
+                    subjetivo decir "fácil".
+                </p>
+                <br />
                 <h3>Definicion</h3>
-                <p>La interfaz de usuario es el espacio donde se producen las interacciones entre seres humanos y
-                    máquinas. El objetivo de esta interacción es permitir el funcionamiento y control más efectivo de la
-                    máquina desde la interacción con el humano.
-                    Las interfaces básicas de usuario son aquellas que incluyen elementos como menús, ventanas,
-                    contenido gráfico, cursor, los beeps y algunos otros sonidos que la computadora hace, y en general,
-                    todos aquellos canales por los cuales se
-                    permite la comunicación entre el ser humano y la computadora. El objetivo del diseño de una interfaz
-                    es producir una interfaz que sea fácil de usar (explicarse por sí misma), eficiente y agradable para
-                    que al operar la máquina dé el
-                    resultado deseado.</p>
+                <p>
+                    La interfaz de usuario es el espacio donde se producen las
+                    interacciones entre seres humanos y máquinas. El objetivo de esta
+                    interacción es permitir el funcionamiento y control más efectivo de
+                    la máquina desde la interacción con el humano. Las interfaces
+                    básicas de usuario son aquellas que incluyen elementos como menús,
+                    ventanas, contenido gráfico, cursor, los beeps y algunos otros
+                    sonidos que la computadora hace, y en general, todos aquellos
+                    canales por los cuales se permite la comunicación entre el ser
+                    humano y la computadora. El objetivo del diseño de una interfaz es
+                    producir una interfaz que sea fácil de usar (explicarse por sí
+                    misma), eficiente y agradable para que al operar la máquina dé el
+                    resultado deseado.
+                </p>
                 <h3>Funciones principales</h3>
                 <p>Las funciones principales son las siguientes:</p>
-                <p>Puesta en marcha y apagado. Control de las funciones manipulables del equipo. Manipulación de
-                    archivos y directorios. Herramientas de desarrollo de aplicaciones. Comunicación con otros sistemas.
-                    Información de estado. Configuración de
-                    la propia interfaz y entorno. Intercambio de datos entre aplicaciones. Sistema de ayuda interactivo.
+                <p>
+                    Puesta en marcha y apagado. Control de las funciones manipulables
+                    del equipo. Manipulación de archivos y directorios. Herramientas de
+                    desarrollo de aplicaciones. Comunicación con otros sistemas.
+                    Información de estado. Configuración de la propia interfaz y
+                    entorno. Intercambio de datos entre aplicaciones. Sistema de ayuda
+                    interactivo.
                 </p>
             </main>
         </div>
 
         <!--calificaciones-->
-        <div id="calificaciones" style="display: none;">
+        <div id="calificaciones" style="display: none">
             <main class="main-content">
                 <h1>CALIFICACIONES</h1>
                 <div id="calificaciones">
@@ -253,41 +297,39 @@
                             </tr>
                         </tbody>
                     </table>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                 </div>
             </main>
         </div>
 
         <!--contacto-->
-        <div id="contacto" style="display: none;">
+        <div id="contacto" style="display: none">
             <main class="main-content">
                 <div class="contact">
                     <h3>ANA TAJADURA JIMENEZ</h3>
                     Correo: atajadur@inf.uc3m.es
-                    <br>Despacho: 2.2.C02
+                    <br />Despacho: 2.2.C02
                 </div>
                 <div class="contact">
                     <h3>JAVIER SANZ RODRIGUEZ</h3>
                     Correo: jsrodrig@inf.uc3m.es
-                    <br>Despacho: 2.2.C03
+                    <br />Despacho: 2.2.C03
                 </div>
                 <div class="contact">
                     <h3>TERESA ONORATI</h3>
                     Correo: tonorati@inf.uc3m.es
-                    <br>Despacho: 2.2.C03
+                    <br />Despacho: 2.2.C03
                 </div>
             </main>
         </div>
 
-
         <!--estudiantes-->
-        <div id="estudiantes" style="display: none;">
+        <div id="estudiantes" style="display: none">
             <main class="main-content">
                 <h1>LISTADO DE ESTUDIANTES</h1>
                 <div id="estudiantes">
@@ -303,70 +345,70 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th><img src="../ej-images/alumno6.jpg" alt="alumno1"></th>
+                                <th><img src="../ej-images/alumno6.jpg" alt="alumno1" /></th>
                                 <th>Raul</th>
                                 <th>Gimenez de Dios</th>
                                 <th>100405861@alumnos.uc3m.es</th>
                                 <th><i class="far fa-comment"></i></th>
                             </tr>
                             <tr>
-                                <th><img src="../ej-images/alumno2.jpg" alt="alumno1"></th>
+                                <th><img src="../ej-images/alumno2.jpg" alt="alumno1" /></th>
                                 <th>Rodrigo</th>
                                 <th>Fernandez Liñan</th>
                                 <th>100405862@alumnos.uc3m.es</th>
                                 <th><i class="far fa-comment"></i></th>
                             </tr>
                             <tr>
-                                <th><img src="../ej-images/alumno3.jpg" alt="alumno1"></th>
+                                <th><img src="../ej-images/alumno3.jpg" alt="alumno1" /></th>
                                 <th>Diego</th>
                                 <th>Fernandez Plaza</th>
                                 <th>100405863@alumnos.uc3m.es</th>
                                 <th><i class="far fa-comment"></i></th>
                             </tr>
                             <tr>
-                                <th><img src="../ej-images/alumno4.jpg" alt="alumno1"></th>
+                                <th><img src="../ej-images/alumno4.jpg" alt="alumno1" /></th>
                                 <th>Daniel</th>
                                 <th>Garcia Barroso</th>
                                 <th>100405864@alumnos.uc3m.es</th>
                                 <th><i class="far fa-comment"></i></th>
                             </tr>
                             <tr>
-                                <th><img src="../ej-images/alumno5.jpg" alt="alumno1"></th>
+                                <th><img src="../ej-images/alumno5.jpg" alt="alumno1" /></th>
                                 <th>Jose</th>
-                                <th> Gallego Casilda</th>
+                                <th>Gallego Casilda</th>
                                 <th>100405865@alumnos.uc3m.es</th>
                                 <th><i class="far fa-comment"></i></th>
                             </tr>
                             <tr>
-                                <th><img src="../ej-images/alumno1.jpg" alt="alumno1"></th>
+                                <th><img src="../ej-images/alumno1.jpg" alt="alumno1" /></th>
                                 <th>Mohamed</th>
                                 <th>El Aakil</th>
                                 <th>100405866@alumnos.uc3m.es</th>
                                 <th><i class="far fa-comment"></i></th>
                             </tr>
                             <tr>
-                                <th><img src="../ej-images/alumno7.jpg" alt="alumno1"></th>
+                                <th><img src="../ej-images/alumno7.jpg" alt="alumno1" /></th>
                                 <th>Adrian</th>
                                 <th>Giron Jimenez</th>
                                 <th>100405867@alumnos.uc3m.es</th>
                                 <th><i class="far fa-comment"></i></th>
                             </tr>
                             <tr>
-                                <th><img src="../ej-images/alumno8.jpg" alt="alumno1"></th>
+                                <th><img src="../ej-images/alumno8.jpg" alt="alumno1" /></th>
                                 <th>Mario</th>
                                 <th>Dominguez Garcia</th>
                                 <th>100405868@alumnos.uc3m.es</th>
                                 <th><i class="far fa-comment"></i></th>
                             </tr>
                             <tr>
-                                <th><img src="../ej-images/alumno9.jpg" alt="alumno1"></th>
+                                <th><img src="../ej-images/alumno9.jpg" alt="alumno1" /></th>
                                 <th>Miguel</th>
                                 <th>Garcia Trigueros</th>
                                 <th>100405869@alumnos.uc3m.es</th>
                                 <th><i class="far fa-comment"></i></th>
                             </tr>
                             <tr>
-                                <th><img src="../ej-images/alumno10.jpg" alt="alumno1"></th>
+                                <th><img src="../ej-images/alumno10.jpg" alt="alumno1" /></th>
                                 <th>Amalia</th>
                                 <th>Cid Blasco</th>
                                 <th>100405870@alumnos.uc3m.es</th>
@@ -379,29 +421,45 @@
         </div>
 
         <!--faq-->
-        <div id="faq" style="display: none;">
+        <div id="faq" style="display: none">
             <main class="main-content">
                 <h1>PREGUNTAS FRECUENTES</h1>
-                <br>
+                <br />
                 <h3>¿Hay nota mínima en los parciales y en el trabajo?</h3>
-                <p>No, no existe una nota mínima, siempre que la media sea mayor o igual a 5 se aprobará la asignatura.
+                <p>
+                    No, no existe una nota mínima, siempre que la media sea mayor o
+                    igual a 5 se aprobará la asignatura.
                 </p>
                 <h3>¿Qué temas entran en el primer parcial?</h3>
-                <p>Los temas 1, 2, 3 y 4, además de preguntas relacionadas con la practica 1.</p>
+                <p>
+                    Los temas 1, 2, 3 y 4, además de preguntas relacionadas con la
+                    practica 1.
+                </p>
                 <h3>¿Qué temas entran en el segundo parcial?</h3>
-                <p>Los temas 5, 6, 7 y 8, además de preguntas relacionadas con la practica 2.</p>
+                <p>
+                    Los temas 5, 6, 7 y 8, además de preguntas relacionadas con la
+                    practica 2.
+                </p>
                 <h3>¿Qué peso tiene cada parcial en la nota final?¿Y la práctica?</h3>
-                <p>Cada parcial tiene un peso del 10% (1 pto) sobre la practica final</p>
-                <h3>¿Cual es la maxima nota que se puede obtener sin seguir la evaluacion continua?</h3>
-                <p>La maxima nota que se puede obtener es un 6 en el caso de que solo se realizase el examen final dado
-                    que este tiene un peso del 60% si el alumno no sigue la EC</p>
+                <p>
+                    Cada parcial tiene un peso del 10% (1 pto) sobre la practica final
+                </p>
+                <h3>
+                    ¿Cual es la maxima nota que se puede obtener sin seguir la
+                    evaluacion continua?
+                </h3>
+                <p>
+                    La maxima nota que se puede obtener es un 6 en el caso de que solo
+                    se realizase el examen final dado que este tiene un peso del 60% si
+                    el alumno no sigue la EC
+                </p>
                 <h3>¿Cual es la bibliografia recomendada?</h3>
                 <p>The Design of Everyday Things (Libro de Donald Norman)</p>
             </main>
         </div>
 
         <!--foro-->
-        <div id="foro" style="display: none;">
+        <div id="foro" style="display: none">
             <main class="main-content">
                 <div id="foro">
                     <table>
@@ -424,12 +482,17 @@
                                 <td>04/09/2020 10:02</td>
                             </tr>
                             <tr>
-                                <td>No consigo centrar los elementos horizontalmente dentro de un div</td>
+                                <td>
+                                    No consigo centrar los elementos horizontalmente dentro de
+                                    un div
+                                </td>
                                 <td>3</td>
                                 <td>05/10/2020 15:22</td>
                             </tr>
                             <tr>
-                                <td>¿Cuales son las diferencias entre usar grid y usar flex?</td>
+                                <td>
+                                    ¿Cuales son las diferencias entre usar grid y usar flex?
+                                </td>
                                 <td>5</td>
                                 <td>27/09/2020 11:45</td>
                             </tr>
@@ -448,29 +511,25 @@
         <div id="right-column">
             <section id="noticias">
                 <h2>NOTICIAS</h2>
+                <div id="container"></div>
                 <div id="content-news">
-                    <h4>Calificaciones 1er parcial publicadas</h4> <br>
-                    <h4>Nueva entrada en el foro</h4> <br>
-                    <h4>Fecha entrega practica 1 actualizada</h4> <br>
+                    <h4>Calificaciones 1er parcial publicadas</h4>
+                    <br />
+                    <h4>Nueva entrada en el foro</h4>
+                    <br />
+                    <h4>Fecha entrega practica 1 actualizada</h4>
+                    <br />
                     <p>nueva fecha: 14/11/2020</p>
                 </div>
             </section>
         </div>
 
-        <div id="auxiliar">
-
-        </div>
+        <div id="auxiliar"></div>
 
         <div id="footer">
-            <footer>
-                © 2020 UC3M. Departamento de interfaces de Usuario.
-            </footer>
+            <footer>© 2020 UC3M. Departamento de interfaces de Usuario.</footer>
         </div>
-
     </div>
-
-
-
 </body>
 
 </html>
