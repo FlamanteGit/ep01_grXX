@@ -26,7 +26,7 @@ body {
 .frame {
     height: 575px;
     width: 430px;
-    background: linear-gradient( rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95)), url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
+    background: linear-gradient( black, rgb(56, 56, 56)), url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
@@ -74,7 +74,7 @@ li {
     padding-bottom: 10px;
     color: #ffffff;
     text-decoration: none;
-    border-bottom: solid 2px #1059FF;
+    border-bottom: solid 2px orange;
     transition: all .25s ease;
     cursor: pointer;
 }
@@ -91,7 +91,7 @@ li {
     cursor: pointer;
     color: #ffffff;
     text-decoration: none;
-    border-bottom: solid 2px #1059FF;
+    border-bottom: solid 2px orange;
     padding-bottom: 10px;
 }
 
@@ -273,7 +273,7 @@ textarea:focus {
 /* on checked */
 
 [type="checkbox"]:checked+label:before {
-    background: #0F4FE6;
+    background: orange;
 }
 
 [type="checkbox"]:checked+label:after {
@@ -324,7 +324,7 @@ textarea:focus {
     border: none;
     border-radius: 20px;
     margin-top: 23px;
-    background-color: #1059FF;
+    background-color: orange;
 }
 
 .btn-signin {
@@ -350,7 +350,7 @@ textarea:focus {
     border: none;
     border-radius: 20px;
     margin-top: 23px;
-    background-color: rgba(16, 89, 255, 1);
+    background-color: orange;
     left: 0px;
     top: 0px;
     transition: all .5s ease, top .5s ease .5s, height .5s ease .5s, background-color .5s ease .75s;
@@ -369,7 +369,7 @@ textarea:focus {
 a.btn-signup:hover,
 a.btn-signin:hover {
     cursor: pointer;
-    background-color: #0F4FE6;
+    background-color: rgb(255, 195, 85);
     transition: background-color .5s;
 }
 
