@@ -38,7 +38,7 @@ body {
 }
 
 .frame-long {
-    height: 615px;
+    height: 1100px;
 }
 
 .frame-short {
@@ -302,7 +302,7 @@ textarea:focus {
 }
 
 [type="checkbox"]:checked+label .ui:after {
-    content: "yes";
+    content: "si";
     color: #ffffff;
 }
 
