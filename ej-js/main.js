@@ -19,13 +19,21 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.display = "block";
 }
 
+$('select[name ="rol"]').change(function () {
+    var rol = $(this).val();
+    if (rol == 'estudiante') {
+        document.getElementById("student-form").style.display = "block";
+    } else {
+        document.getElementById("student-form").style.display = "none";
+    }
+})
 
 //JS CALENDAR CODE
-$(function() {
+$(function () {
     $(".calendar").simpleCalendar({
         // displays events
         displayEvent: true,
@@ -57,20 +65,20 @@ $(function() {
         days: ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'],
         displayYear: true,
         fixedStartDay: true,
-        onInit: function(calendar) {},
-        onMonthChange: function(month, year) {},
-        onDateSelect: function(date, events) {}
+        onInit: function (calendar) { },
+        onMonthChange: function (month, year) { },
+        onDateSelect: function (date, events) { }
     });
 });
 
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
@@ -112,13 +120,8 @@ function checkCookie() {
     }
 }
 
-
-
-
-
-
-$(function() {
-    $(".btn").click(function() {
+$(function () {
+    $(".btn").click(function () {
         $(".form-signin").toggleClass("form-signin-left");
         $(".form-signup").toggleClass("form-signup-left");
         $(".frame").toggleClass("frame-long");
@@ -129,23 +132,3 @@ $(function() {
     });
 });
 
-$(function() {
-    $(".btn-signup").click(function() {
-        $(".nav").toggleClass("nav-up");
-        $(".form-signup-left").toggleClass("form-signup-down");
-        $(".success").toggleClass("success-left");
-        $(".frame").toggleClass("frame-short");
-    });
-});
-
-$(function() {
-    $(".btn-signin").click(function() {
-        $(".btn-animate").toggleClass("btn-animate-grow");
-        $(".welcome").toggleClass("welcome-left");
-        $(".cover-photo").toggleClass("cover-photo-down");
-        $(".frame").toggleClass("frame-short");
-        $(".profile-photo").toggleClass("profile-photo-down");
-        $(".btn-goback").toggleClass("btn-goback-up");
-        $(".forgot").toggleClass("forgot-fade");
-    });
-});
