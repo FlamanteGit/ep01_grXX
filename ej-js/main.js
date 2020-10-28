@@ -108,15 +108,12 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie() {
-    var user = getCookie("username"); //devuelve el valor del nombre de usuario
+function checkCookie(cemail) {
+    var user = getCookie(cemail); //devuelve el valor del nombre de usuario
     if (user != "") { //si no es vacio
-        alert("Welcome again " + user); //bienvenido de nuevo
+        return true;
     } else { //en otro caso
-        user = prompt("Please enter your name:", ""); //porfavor introduzca su nombre
-        if (user != "" && user != null) { //si es valido el nuevo nombre
-            setCookie("username", user, 30); //creamos la cookie :D
-        }
+        return false;
     }
 }
 
@@ -124,8 +121,11 @@ function checkCookie() {
 $(function() {
     $(".btn-signin").click(function() {
         var cmail = document.getElementsByClassName("form-styling")[0].value;
-        var c = getCookie(cmail);
-
+        if(!checkCookie(cmail)){
+            alert("No hay ninguna cuenta asociada a este email.");
+            return;
+        }
+        
         document.getElementsByClassName("container")[0].style.display = "none";
         document.getElementById("main-header").style.display = "block";
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
@@ -147,10 +147,16 @@ $(function() {
         var clanguage = document.getElementsByClassName("form-styling")[11].value;
         var cuniversity = document.getElementsByClassName("form-styling")[12].value;
 
-        var cvalue = cuser + "*" + cnia + "*" + cpsw + "*" + cname + "*" + cmail + "*" + cdate + "*" + cdni + "*" + crol + "*" + cdegree + "*" + clanguage + "*" + cuniversity;
-        //alert(cvalue);
+        if(checkCookie(cmail)) {
+            alert("Ya hay un correo asociado a esta cuenta.");
+            return;
+        }
 
+        var cvalue = cuser + "*" + cnia + "*" + cpsw + "*" + cname + "*" + cmail + "*" + cdate + "*" + cdni + "*" + crol + "*" + cdegree + "*" + clanguage + "*" + cuniversity;
         setCookie(cmail, cvalue, 30);
+        
+        alert(checkCookie(cmail));
+
         alert(document.cookie);
 
         // document.getElementsByClassName("container")[0].style.display = "none";
@@ -158,7 +164,6 @@ $(function() {
         // document.getElementsByClassName("contenedor")[0].style.display = "grid";
     });
 });
-
 
 $(function() {
     $(".btn").click(function() {
