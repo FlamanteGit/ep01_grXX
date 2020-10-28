@@ -120,11 +120,12 @@ function checkCookie() {
     }
 }
 
+
 $(function() {
-    $(".form-signin").submit(function() {
-        //var cmail = document.getElementsByClassName("form-signin")[1];
-        // var cpsw = document.getElementsByClassName(".form-signin")[0];
-        alert("hola " + cmail);
+    $(".btn-signin").click(function() {
+        var cmail = document.getElementsByClassName("form-styling")[0].value;
+        var cpsw = document.getElementsByClassName("form-styling")[1].value;
+        alert("hola " + cmail + cpsw);
         //var c = getCookie(cmail, cpsw);
     });
 });
