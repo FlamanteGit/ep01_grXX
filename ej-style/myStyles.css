@@ -490,7 +490,6 @@ body {
 a {
     text-decoration: none;
     color: black;
-    padding: 15px;
     font-weight: bolder;
 }
 
@@ -518,14 +517,37 @@ nav {
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     padding: 10px;
-    justify-items: stretch;
     align-items: center;
 }
 
 #profile-img {
-    width: 50%;
-    height: auto;
-    margin: auto 25%;
+    width: 100%;
+    grid-area: profile-img;
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+#user {
+    grid-area: user;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+#logout {
+    grid-area: logout;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+}
+
+#user-header {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "user profile-img" "logout profile-img";
+    justify-content: center;  
+    column-gap: 10px;
 }
 
 #main-header {
