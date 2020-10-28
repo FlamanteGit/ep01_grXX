@@ -120,13 +120,42 @@ function checkCookie() {
     }
 }
 
-
+// INICIAR SESION
 $(function() {
     $(".btn-signin").click(function() {
         var cmail = document.getElementsByClassName("form-styling")[0].value;
-        var cpsw = document.getElementsByClassName("form-styling")[1].value;
-        alert("hola " + cmail + cpsw);
-        //var c = getCookie(cmail, cpsw);
+        var c = getCookie(cmail);
+
+        document.getElementsByClassName("container")[0].style.display = "none";
+        document.getElementById("main-header").style.display = "block";
+        document.getElementsByClassName("contenedor")[0].style.display = "grid";
+    });
+});
+
+// REGISTRARSE
+$(function() {
+    $(".btn-signup").click(function() {
+        var cuser = document.getElementsByClassName("form-styling")[2].value;
+        var cnia = document.getElementsByClassName("form-styling")[3].value;
+        var cpsw = document.getElementsByClassName("form-styling")[4].value;
+        var cname = document.getElementsByClassName("form-styling")[5].value;
+        var cmail = document.getElementsByClassName("form-styling")[6].value;
+        var cdate = document.getElementsByClassName("form-styling")[7].value;
+        var cdni = document.getElementsByClassName("form-styling")[8].value;
+        var crol = document.getElementsByClassName("form-styling")[9].value;
+        var cdegree = document.getElementsByClassName("form-styling")[10].value;
+        var clanguage = document.getElementsByClassName("form-styling")[11].value;
+        var cuniversity = document.getElementsByClassName("form-styling")[12].value;
+
+        var cvalue = cuser + "*" + cnia + "*" + cpsw + "*" + cname + "*" + cmail + "*" + cdate + "*" + cdni + "*" + crol + "*" + cdegree + "*" + clanguage + "*" + cuniversity;
+        //alert(cvalue);
+
+        setCookie(cmail, cvalue, 30);
+        alert(document.cookie);
+
+        // document.getElementsByClassName("container")[0].style.display = "none";
+        // document.getElementById("main-header").style.display = "block";
+        // document.getElementsByClassName("contenedor")[0].style.display = "grid";
     });
 });
 
