@@ -21,6 +21,15 @@ body * {
     width: 100%;
     padding-top: 60px;
     padding-bottom: 100px;
+    background-image: url("../ej-images/wallpaper2.jpg");
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px);*/
+    /*Full height*/
+    height: 100%;
+    /*Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .frame {
@@ -321,57 +330,58 @@ textarea:focus {
     padding-top: 8px;
     width: 100%;
     height: 35px;
-      border: none;
-      border-radius: 20px;
+    border: none;
+    border-radius: 20px;
     margin-top: 23px;
     background-color: orange;
-  }
-  
-  .btn-signin {
+}
+
+.btn-signin {
     float: left;
     padding-top: 8px;
     width: 100%;
     height: 35px;
-      border: none;
-      border-radius: 20px;
+    border: none;
+    border-radius: 20px;
     margin-top: -8px;
     color: white;
-  }
-  
-  .btn-animate {
+}
+
+.btn-animate {
     float: left;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 13px;
     text-align: center;
-    color: rgba(255,255,255, 1);
+    color: rgba(255, 255, 255, 1);
     padding-top: 8px;
     width: 100%;
     height: 35px;
-      border: none;
-      border-radius: 20px;
+    border: none;
+    border-radius: 20px;
     margin-top: 23px;
     background-color: orange;
     left: 0px;
     top: 0px;
-    transition: all .5s ease, top .5s ease .5s, height .5s ease .5s, background-color .5s ease .75s; 
-  }
-  
-  .btn-animate-grow {
+    transition: all .5s ease, top .5s ease .5s, height .5s ease .5s, background-color .5s ease .75s;
+}
+
+.btn-animate-grow {
     width: 130%;
     height: 625px;
     position: relative;
     left: -55px;
     top: -420px;
-    color: rgba(255,255,255,0);
-    background-color: rgba(255,255,255,1);
-  }
-  
-  a.btn-signup:hover, a.btn-signin:hover {
-      cursor: pointer; 
-      background-color: rgb(255, 190, 70);
-      transition: background-color .5s; 
-  }
+    color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+a.btn-signup:hover,
+a.btn-signin:hover {
+    cursor: pointer;
+    background-color: rgb(255, 190, 70);
+    transition: background-color .5s;
+}
 
 .forgot {
     height: 100px;
@@ -423,9 +433,9 @@ textarea:focus {
     text-transform: uppercase;
     font-size: 13px;
     text-align: center;
-    color: #1059FF;
+    color: orange;
     margin-top: -8px;
-    border: solid 1px #1059FF;
+    border: solid 1px orange;
     opacity: 0;
     transition: top 1.5s ease 0.35s, opacity .75s ease .5s;
 }
@@ -437,7 +447,7 @@ textarea:focus {
 
 a.btn-goback:hover {
     cursor: pointer;
-    background-color: #0F4FE6;
+    background-color: orange;
     transition: all .5s;
     color: #ffffff;
 }
@@ -465,7 +475,7 @@ a.btn-goback:hover {
 
 .refreshicon:hover {
     cursor: pointer;
-    fill: #1059FF;
+    fill: orange;
     transform: rotate(180deg);
 }
 
@@ -504,8 +514,18 @@ a.navegation:hover {
 }
 
 nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     padding: 10px;
+    justify-items: stretch;
+    align-items: center;
+}
+
+#profile-img {
+    width: 50%;
+    height: auto;
+    margin: auto 25%;
 }
 
 #main-header {
