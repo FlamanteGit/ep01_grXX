@@ -19,11 +19,11 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function () {
+btn.onclick = function() {
     modal.style.display = "block";
 }
 
-$('select[name ="rol"]').change(function () {
+$('select[name ="rol"]').change(function() {
     var rol = $(this).val();
     if (rol == 'estudiante') {
         document.getElementById("student-form").style.display = "block";
@@ -33,7 +33,7 @@ $('select[name ="rol"]').change(function () {
 })
 
 //JS CALENDAR CODE
-$(function () {
+$(function() {
     $(".calendar").simpleCalendar({
         // displays events
         displayEvent: true,
@@ -65,20 +65,20 @@ $(function () {
         days: ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'],
         displayYear: true,
         fixedStartDay: true,
-        onInit: function (calendar) { },
-        onMonthChange: function (month, year) { },
-        onDateSelect: function (date, events) { }
+        onInit: function(calendar) {},
+        onMonthChange: function(month, year) {},
+        onDateSelect: function(date, events) {}
     });
 });
 
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+span.onclick = function() {
     modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
@@ -109,19 +109,29 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-    var user = getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 30);
+    var user = getCookie("username"); //devuelve el valor del nombre de usuario
+    if (user != "") { //si no es vacio
+        alert("Welcome again " + user); //bienvenido de nuevo
+    } else { //en otro caso
+        user = prompt("Please enter your name:", ""); //porfavor introduzca su nombre
+        if (user != "" && user != null) { //si es valido el nuevo nombre
+            setCookie("username", user, 30); //creamos la cookie :D
         }
     }
 }
 
-$(function () {
-    $(".btn").click(function () {
+$(function() {
+    $(".form-signin").submit(function() {
+        //var cmail = document.getElementsByClassName("form-signin")[1];
+        // var cpsw = document.getElementsByClassName(".form-signin")[0];
+        alert("hola " + cmail);
+        //var c = getCookie(cmail, cpsw);
+    });
+});
+
+
+$(function() {
+    $(".btn").click(function() {
         $(".form-signin").toggleClass("form-signin-left");
         $(".form-signup").toggleClass("form-signup-left");
         $(".frame").toggleClass("frame-long");
@@ -131,4 +141,3 @@ $(function () {
         $(this).removeClass("idle").addClass("active");
     });
 });
-
