@@ -121,14 +121,24 @@ function checkCookie(cemail) {
 $(function() {
     $(".btn-signin").click(function() {
         var cmail = document.getElementsByClassName("form-styling")[0].value;
-        if(!checkCookie(cmail)){
+        if (!checkCookie(cmail)) {
             alert("No hay ninguna cuenta asociada a este email.");
             return;
         }
-        
+
+        document.getElementsByClassName("form-signin")[0].reset();
+
         document.getElementsByClassName("container")[0].style.display = "none";
         document.getElementById("main-header").style.display = "block";
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
+    });
+});
+
+$(function() {
+    $("#logout").click(function() {
+        document.getElementsByClassName("container")[0].style.display = "block";
+        document.getElementById("main-header").style.display = "none";
+        document.getElementsByClassName("contenedor")[0].style.display = "none";
     });
 });
 
@@ -147,17 +157,19 @@ $(function() {
         var clanguage = document.getElementsByClassName("form-styling")[11].value;
         var cuniversity = document.getElementsByClassName("form-styling")[12].value;
 
-        if(checkCookie(cmail)) {
+        if (checkCookie(cmail)) {
             alert("Ya hay un correo asociado a esta cuenta.");
             return;
         }
 
+        document.getElementsByClassName("form-signup")[0].reset();
+
         var cvalue = cuser + "*" + cnia + "*" + cpsw + "*" + cname + "*" + cmail + "*" + cdate + "*" + cdni + "*" + crol + "*" + cdegree + "*" + clanguage + "*" + cuniversity;
         setCookie(cmail, cvalue, 30);
-        
-        alert(checkCookie(cmail));
 
-        alert(document.cookie);
+        //alert(checkCookie(cmail));
+
+        //alert(document.cookie);
 
         // document.getElementsByClassName("container")[0].style.display = "none";
         // document.getElementById("main-header").style.display = "block";
