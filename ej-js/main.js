@@ -126,7 +126,13 @@ $(function() {
             return;
         }
 
+
+        var user = getCookieUser(cmail);
+        document.getElementById("user").textContent = "Bienvenido, " + user;
+
         document.getElementsByClassName("form-signin")[0].reset();
+
+
 
         document.getElementsByClassName("container")[0].style.display = "none";
         document.getElementById("main-header").style.display = "block";
@@ -164,12 +170,13 @@ $(function() {
 
         document.getElementsByClassName("form-signup")[0].reset();
 
+
         var cvalue = cuser + "*" + cnia + "*" + cpsw + "*" + cname + "*" + cmail + "*" + cdate + "*" + cdni + "*" + crol + "*" + cdegree + "*" + clanguage + "*" + cuniversity;
         setCookie(cmail, cvalue, 30);
 
-        //alert(checkCookie(cmail));
+        intercambiarPaneles();
 
-        //alert(document.cookie);
+        alert("Has sido registrado correctamente. Simplemente inicia sesión para poder utilizar tu cuenta");
 
         // document.getElementsByClassName("container")[0].style.display = "none";
         // document.getElementById("main-header").style.display = "block";
@@ -177,14 +184,22 @@ $(function() {
     });
 });
 
+function getCookieUser(cmail) {
+    var c = getCookie(cmail);
+    var ca = c.split('*');
+    return ca[0];
+}
+
+function intercambiarPaneles() {
+    $(".form-signin").toggleClass("form-signin-left");
+    $(".form-signup").toggleClass("form-signup-left");
+    $(".frame").toggleClass("frame-long");
+    $(".signup-inactive").toggleClass("signup-active");
+    $(".signin-active").toggleClass("signin-inactive");
+    $(".forgot").toggleClass("forgot-left");
+    $(this).removeClass("idle").addClass("active");
+}
+
 $(function() {
-    $(".btn").click(function() {
-        $(".form-signin").toggleClass("form-signin-left");
-        $(".form-signup").toggleClass("form-signup-left");
-        $(".frame").toggleClass("frame-long");
-        $(".signup-inactive").toggleClass("signup-active");
-        $(".signin-active").toggleClass("signin-inactive");
-        $(".forgot").toggleClass("forgot-left");
-        $(this).removeClass("idle").addClass("active");
-    });
+    $(".btn").click(intercambiarPaneles);
 });
