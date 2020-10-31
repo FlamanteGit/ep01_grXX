@@ -1,3 +1,23 @@
+$(document).ready(function() {
+    // document.getElementById("main-block").style.display = "none";
+    // document.getElementById("asignatura").style.display = "none";
+    // document.getElementById("calificaciones").style.display = "none";
+    // document.getElementById("contacto").style.display = "none";
+    // document.getElementById("estudiantes").style.display = "none";
+    // document.getElementById("faq").style.display = "none";
+    // document.getElementById("foro").style.display = "none";
+    // document.getElementById("main-header").style.display = "none";
+    var login = getCookie("login");
+    alert(login);
+    if (!login || login == "") {
+        document.getElementsByClassName("container")[0].style.display = "block";
+    } else {
+        document.getElementById("main-header").style.display = "block";
+        document.getElementsByClassName("contenedor")[0].style.display = "grid";
+
+    }
+});
+
 function showElement(id) {
     document.getElementById("main-block").style.display = "none";
     document.getElementById("asignatura").style.display = "none";
@@ -133,7 +153,7 @@ $(function() {
         document.getElementsByClassName("form-signin")[0].reset();
 
 
-
+        setCookie("login", true, 30);
         document.getElementsByClassName("container")[0].style.display = "none";
         document.getElementById("main-header").style.display = "block";
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
@@ -162,6 +182,44 @@ $(function() {
         var cdegree = document.getElementsByClassName("form-styling")[10].value;
         var clanguage = document.getElementsByClassName("form-styling")[11].value;
         var cuniversity = document.getElementsByClassName("form-styling")[12].value;
+
+        if (cuser == "" || cnia == "" || cpsw == "" || cname == "" || cmail == "" || cdate == "" || cdni == "" || crol == "" || clanguage == "") {
+            alert("FALTAN CAMPOS POR RELLENAR");
+            return;
+        }
+
+        if (crol == " -- Selecciona un rol -- ") {
+            alert("SELECCIONA UN ROL");
+            return;
+        }
+
+        if (clanguage == " -- Selecciona un idioma -- ") {
+            alert("SELECCIONA UN IDIOMA");
+            return;
+        }
+
+        if (crol == "estudiante" && cdegree == " -- Selecciona un grado -- ") {
+            alert("SELECCIONA UN GRADO");
+            return;
+        }
+
+        var pattern = /^100+[0-9]{6}$/;
+        if (!pattern.test(cnia)) {
+            alert("EL NIA NO SIGUE EL PATRON 100XXXXXX");
+            return;
+        }
+
+        pattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/
+        if (!pattern.test(cmail)) {
+            alert("COMPRUEBA QUE EL EMAIL QUE HAS INTRODUCIDO EXISTE");
+            return;
+        }
+
+        pattern = /^(((0[1-9]|[12][0-9]|3[01])[- /.](0[13578]|1[02])|(0[1-9]|[12][0-9]|30)[- /.](0[469]|11)|(0[1-9]|1\d|2[0-8])[- /.]02)[- /.]\d{4}|29[- /.]02[- /.](\d{2}(0[48]|[2468][048]|[13579][26])|([02468][048]|[1359][26])00))$/
+        if (!pattern.test(cdate)) {
+            alert("INTRODUCE UNA FECHA CON EL FORMATO dd/mm/aaaa");
+            return;
+        }
 
         if (checkCookie(cmail)) {
             alert("Ya hay un correo asociado a esta cuenta.");
