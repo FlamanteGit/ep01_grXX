@@ -14,6 +14,7 @@ $(document).ready(function() {
         document.getElementById("main-header").style.display = "block";
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
         document.getElementById("main-block").style.display = "block";
+        document.getElementById("user").textContent = "Bienvenido, " + getUsernameLogedUser();
     }
 });
 
@@ -96,13 +97,6 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
 //JS COOKIES CODE 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
@@ -145,14 +139,13 @@ $(function() {
             return;
         }
 
+        document.getElementById("user").textContent = "Bienvenido, " + getUsernameLogedUser();
 
-        var user = getCookieUser(cmail);
-        document.getElementById("user").textContent = "Bienvenido, " + user;
+        setCookie("login", true, 30);
+        setCookie("logedUser", getCookie(cmail), 30);
 
         document.getElementsByClassName("form-signin")[0].reset();
 
-
-        setCookie("login", true, 30);
         document.getElementsByClassName("container")[0].style.display = "none";
         document.getElementById("main-header").style.display = "block";
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
@@ -161,10 +154,12 @@ $(function() {
 });
 
 $(function() {
-    $("#logout").click(function() {
+    $("#logout2").click(function() {
+
         document.getElementsByClassName("container")[0].style.display = "block";
         document.getElementById("main-header").style.display = "none";
         document.getElementsByClassName("contenedor")[0].style.display = "none";
+        modal2.style.display = "none";
     });
 });
 
@@ -242,11 +237,66 @@ $(function() {
     });
 });
 
-function getCookieUser(cmail) {
-    var c = getCookie(cmail);
+function getUsernameLogedUser() {
+    var c = getCookie("logedUser");
     var ca = c.split('*');
     return ca[0];
 }
+
+function getNIALogedUser() {
+    var c = getCookie("logedUser");
+    var ca = c.split('*');
+    return ca[1];
+}
+
+function getPasswordLogedUser() {
+    var c = getCookie("logedUser");
+    var ca = c.split('*');
+    return ca[2];
+}
+
+function getNameLogedUser() {
+    var c = getCookie("logedUser");
+    var ca = c.split('*');
+    return ca[3];
+}
+
+function getEmailLogedUser() {
+    var c = getCookie("logedUser");
+    var ca = c.split('*');
+    return ca[4];
+}
+
+function getDateLogedUser() {
+    var c = getCookie("logedUser");
+    var ca = c.split('*');
+    return ca[5];
+}
+
+function getDNILogedUser() {
+    var c = getCookie("logedUser");
+    var ca = c.split('*');
+    return ca[6];
+}
+
+function getRolLogedUser() {
+    var c = getCookie("logedUser");
+    var ca = c.split('*');
+    return ca[7];
+}
+
+function getDegreeLogedUser() {
+    var c = getCookie("logedUser");
+    var ca = c.split('*');
+    return ca[8];
+}
+
+function getLanguageLogedUser() {
+    var c = getCookie("logedUser");
+    var ca = c.split('*');
+    return ca[9];
+}
+
 
 function intercambiarPaneles() {
     $(".form-signin").toggleClass("form-signin-left");
@@ -261,3 +311,52 @@ function intercambiarPaneles() {
 $(function() {
     $(".btn").click(intercambiarPaneles);
 });
+
+
+// When the user clicks on the button, open the modal
+document.getElementById("logout").onclick = function() {
+    document.getElementById("confirm-logout").style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+document.getElementsByClassName("close2")[0].onclick = function() {
+    document.getElementById("confirm-logout").style.display = "none";
+}
+
+// MODAL MENSAJE
+// When the user clicks on the button, open the modal
+document.getElementsByClassName("far fa-comment")[0].onclick = function() {
+    document.getElementById("send-message").style.display = "block";
+}
+document.getElementsByClassName("far fa-comment")[1].onclick = function() {
+    document.getElementById("send-message").style.display = "block";
+}
+document.getElementsByClassName("far fa-comment")[2].onclick = function() {
+    document.getElementById("send-message").style.display = "block";
+}
+document.getElementsByClassName("far fa-comment")[3].onclick = function() {
+    document.getElementById("send-message").style.display = "block";
+}
+document.getElementsByClassName("far fa-comment")[4].onclick = function() {
+    document.getElementById("send-message").style.display = "block";
+}
+document.getElementsByClassName("far fa-comment")[5].onclick = function() {
+    document.getElementById("send-message").style.display = "block";
+}
+document.getElementsByClassName("far fa-comment")[6].onclick = function() {
+    document.getElementById("send-message").style.display = "block";
+}
+document.getElementsByClassName("far fa-comment")[7].onclick = function() {
+    document.getElementById("send-message").style.display = "block";
+}
+document.getElementsByClassName("far fa-comment")[8].onclick = function() {
+    document.getElementById("send-message").style.display = "block";
+}
+document.getElementsByClassName("far fa-comment")[9].onclick = function() {
+    document.getElementById("send-message").style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+document.getElementsByClassName("close3")[0].onclick = function() {
+    document.getElementById("send-message").style.display = "none";
+}

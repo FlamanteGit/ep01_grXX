@@ -812,14 +812,37 @@ table {
     /* 15% from the top and centered */
     padding: 10px;
     width: 80%;
-    border-radius: 3%;
     /* Could be more or less, depending on screen size */
+}
+
+#send-message {
+    padding: 10px;
+}
+
+#send-message-button {
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: black;
+    color: orange;
+    text-align: center;
+}
+
+#logout2 {
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: black;
+    color: orange;
+    text-align: center;
 }
 
 
 /* The Close Button */
 
-.close {
+.close,
+.close2,
+.close3 {
     margin-top: 0;
     margin-left: 10px;
     color: white;
