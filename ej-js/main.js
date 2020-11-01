@@ -8,13 +8,12 @@ $(document).ready(function() {
     // document.getElementById("foro").style.display = "none";
     // document.getElementById("main-header").style.display = "none";
     var login = getCookie("login");
-    alert(login);
     if (!login || login == "") {
         document.getElementsByClassName("container")[0].style.display = "block";
     } else {
         document.getElementById("main-header").style.display = "block";
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
-
+        document.getElementById("main-block").style.display = "block";
     }
 });
 
@@ -157,6 +156,7 @@ $(function() {
         document.getElementsByClassName("container")[0].style.display = "none";
         document.getElementById("main-header").style.display = "block";
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
+        document.getElementById("main-block").style.display = "block";
     });
 });
 
