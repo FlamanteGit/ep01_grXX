@@ -78,8 +78,6 @@
                     <input class="form-styling" type="text" name="username" placeholder="" />
                     <label for="password">Contraseña</label>
                     <input class="form-styling" type="password" name="password" placeholder="" />
-                    <input type="checkbox" id="checkbox" />
-                    <label for="checkbox"><span class="ui"></span>Permanecer conectado</label>
                     <div class="btn-animate">
                         <a class="btn-signin">Iniciar sesión</a>
                     </div>
@@ -127,9 +125,7 @@
                     </select>
                     <label for="university">Universidad</label>
                     <input class="form-styling" type="text" name="university" readonly disabled value="Universidad Carlos III Madrid" placeholder="" />
-                    <div class="checkbox">
-                        <label><input type="checkbox" value="">He leído y acepto las Condiciones de uso</label>
-                    </div>
+                    <label><input type="checkbox" value="" id="iveread">  He leído y acepto las Condiciones de uso</label>
                     <a class="btn-signup">Registrarse</a>
                 </form>
             </div>
@@ -158,8 +154,9 @@
             <section id="curso">
                 <h2>CURSO</h2>
                 <ul>
-                    <li><a onclick="showElement('calificaciones');">Calificaciones</a></li>
-                    <li><a onclick="showElement('estudiantes');">Estudiantes</a></li>
+                    <li id="mis-asignaturas-link"><a onclick="showElement('mis-asignaturas');">Mis asignaturas</a></li>
+                    <li id="calificaciones-link"><a onclick="showElement('calificaciones');">Calificaciones</a></li>
+                    <li id="estudiantes-link"><a onclick="showElement('estudiantes');">Estudiantes</a></li>
                     <li><a onclick="showElement('foro');">Foro</a></li>
                 </ul>
             </section>
@@ -285,7 +282,293 @@
                 </p>
             </main>
         </div>
-
+        <!--mis asignaturas-->
+        <div id="mis-asignaturas">
+            <main class="main-content">
+                <h1>MIS ASIGNATURAS</h1>
+                <h2 class="asignaturas-title">MAGISTRALES</h2>
+                <ul id="magistrales">
+                    <li>
+                        <a onclick="showElement('iu')" class="navegation">80 MAG. Interfaces de Usuario 20/21</a></li>
+                    <li>
+                        <a onclick="showElement('ro')" class="navegation">80 MAG. Redes de Ordenadores 20/21</a></li>
+                    <li>
+                        <a onclick="showElement('ac')" class="navegation">80 MAG. Arquitectura de computadores 20/21</a></li>
+                    <li>
+                        <a onclick="showElement('is')" class="navegation">80 MAG. Ingenieria del SoftWare 20/21</a></li>
+                    <li>
+                        <a onclick="showElement('ho')" class="navegation">80 MAG. Heuristica y Optimizacion 20/21</a></li>
+                </ul>
+                <h2 class="asignaturas-title">GRUPO REDUCIDO</h2>
+                <ul id="reducidas">
+                    <li>
+                        <a onclick="showElement('iu')" class="navegation">81 Interfaces de Usuario 20/21</a></li>
+                    <li>
+                        <a onclick="showElement('ro')" class="navegation">81 Redes de Ordenadores 20/21</a></li>
+                    <li>
+                        <a onclick="showElement('ac')" class="navegation">81 Arquitectura de computadores 20/21</a></li>
+                    <li>
+                        <a onclick="showElement('is')" class="navegation">81 Ingenieria del SoftWare 20/21</a></li>
+                    <li>
+                        <a onclick="showElement('ho')" class="navegation">81 Heuristica y Optimizacion 20/21</a></li>
+                </ul>
+            </main>
+        </div>
+        <div id="iu">
+            <h1>INTERFACES DE USUARIO</h1>
+            <div>
+                <table class="table-page">
+                    <thead>
+                        <tr>
+                            <th>Item de calificacion</th>
+                            <th>Rango</th>
+                            <th>Calificacion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Practica 1</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica 2</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica 3</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica final</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Parcial 1</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Parcial 2</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Examen final</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="ro">
+            <h1>REDES DE ORDENADORES</h1>
+            <div>
+                <table class="table-page">
+                    <thead>
+                        <tr>
+                            <th>Item de calificacion</th>
+                            <th>Rango</th>
+                            <th>Calificacion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Practica 1</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica 2</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica 3</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica final</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Parcial 1</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Parcial 2</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Examen final</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="ac">
+            <h1>ARQUITECTURA DE COMPUTADORES</h1>
+            <div>
+                <table class="table-page">
+                    <thead>
+                        <tr>
+                            <th>Item de calificacion</th>
+                            <th>Rango</th>
+                            <th>Calificacion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Practica 1</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica 2</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica 3</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica final</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Parcial 1</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Parcial 2</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Examen final</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="is">
+            <h1>INGENIERIA DEL SOFTWARE</h1>
+            <div>
+                <table class="table-page">
+                    <thead>
+                        <tr>
+                            <th>Item de calificacion</th>
+                            <th>Rango</th>
+                            <th>Calificacion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Practica 1</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica 2</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica 3</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica final</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Parcial 1</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Parcial 2</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Examen final</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="ho">
+            <h1>HEURISTICA Y OPTIMIZACION</h1>
+            <div>
+                <table class="table-page">
+                    <thead>
+                        <tr>
+                            <th>Item de calificacion</th>
+                            <th>Rango</th>
+                            <th>Calificacion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Practica 1</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica 2</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica 3</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Practica final</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Parcial 1</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Parcial 2</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                        <tr>
+                            <td>Examen final</td>
+                            <td>99.99 - 100</td>
+                            <td>9.9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <!--calificaciones-->
         <div id="calificaciones">
             <main class="main-content">

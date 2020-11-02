@@ -16,6 +16,14 @@ $(document).ready(function() {
         document.getElementById("main-block").style.display = "block";
         document.getElementById("user").textContent = "Bienvenido, " + getUsernameLogedUser();
     }
+
+    var logedRol = getRolLogedUser();
+
+    if (logedRol == "estudiante") {
+        document.getElementById('estudiantes-link').style.display = "none";
+    } else {
+        document.getElementById('mis-asignaturas-link').style.display = "none";
+    }
 });
 
 function showElement(id) {
@@ -26,6 +34,12 @@ function showElement(id) {
     document.getElementById("estudiantes").style.display = "none";
     document.getElementById("faq").style.display = "none";
     document.getElementById("foro").style.display = "none";
+    document.getElementById("mis-asignaturas").style.display = "none";
+    document.getElementById("iu").style.display = "none";
+    document.getElementById("ro").style.display = "none";
+    document.getElementById("ac").style.display = "none";
+    document.getElementById("is").style.display = "none";
+    document.getElementById("ho").style.display = "none";
     document.getElementById(id).style.display = "block";
 }
 
@@ -133,7 +147,7 @@ function checkCookie(cemail) {
 // INICIAR SESION
 $(function() {
     $(".btn-signin").click(function() {
-        var cmail = document.getElementsByClassName("form-styling")[0].value;
+        var cmail = document.getElementsByClassName("form-styling")[2].value;
         if (!checkCookie(cmail)) {
             alert("No hay ninguna cuenta asociada a este email.");
             return;
@@ -159,25 +173,31 @@ $(function() {
         document.getElementsByClassName("container")[0].style.display = "block";
         document.getElementById("main-header").style.display = "none";
         document.getElementsByClassName("contenedor")[0].style.display = "none";
-        modal2.style.display = "none";
+        document.getElementById("confirm-logout").style.display = "none";
     });
 });
 
 // REGISTRARSE
 $(function() {
     $(".btn-signup").click(function() {
-        var cuser = document.getElementsByClassName("form-styling")[2].value;
-        var cnia = document.getElementsByClassName("form-styling")[3].value;
-        var cpsw = document.getElementsByClassName("form-styling")[4].value;
-        var cname = document.getElementsByClassName("form-styling")[5].value;
-        var cmail = document.getElementsByClassName("form-styling")[6].value;
-        var cdate = document.getElementsByClassName("form-styling")[7].value;
-        var cdni = document.getElementsByClassName("form-styling")[8].value;
-        var crol = document.getElementsByClassName("form-styling")[9].value;
-        var cdegree = document.getElementsByClassName("form-styling")[10].value;
-        var clanguage = document.getElementsByClassName("form-styling")[11].value;
-        var cuniversity = document.getElementsByClassName("form-styling")[12].value;
+        var cuser = document.getElementsByClassName("form-styling")[4].value;
+        var cnia = document.getElementsByClassName("form-styling")[5].value;
+        var cpsw = document.getElementsByClassName("form-styling")[6].value;
+        var cname = document.getElementsByClassName("form-styling")[7].value;
+        var cmail = document.getElementsByClassName("form-styling")[8].value;
+        var cdate = document.getElementsByClassName("form-styling")[9].value;
+        var cdni = document.getElementsByClassName("form-styling")[10].value;
+        var crol = document.getElementsByClassName("form-styling")[11].value;
+        var cdegree = document.getElementsByClassName("form-styling")[12].value;
+        var clanguage = document.getElementsByClassName("form-styling")[13].value;
+        var cuniversity = document.getElementsByClassName("form-styling")[14].value;
 
+        var iveread = document.getElementById("iveread").checked;
+
+        if (!iveread) {
+            alert("ACEPTE LOS TERMINOS Y CONDICIONES DE USO");
+            return;
+        }
         if (cuser == "" || cnia == "" || cpsw == "" || cname == "" || cmail == "" || cdate == "" || cdni == "" || crol == "" || clanguage == "") {
             alert("FALTAN CAMPOS POR RELLENAR");
             return;

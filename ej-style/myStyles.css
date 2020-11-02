@@ -234,93 +234,6 @@ textarea:focus {
     transition: background 0.5s ease;
 }
 
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
-    position: absolute;
-    display: none;
-}
-
-[type="checkbox"]:not(:checked)+label,
-[type="checkbox"]:checked+label {
-    position: relative;
-    padding-left: 85px;
-    padding-top: 2px;
-    cursor: pointer;
-    margin-top: 8px;
-}
-
-[type="checkbox"]:not(:checked)+label:before,
-[type="checkbox"]:checked+label:before,
-[type="checkbox"]:not(:checked)+label:after,
-[type="checkbox"]:checked+label:after {
-    content: "";
-    position: absolute;
-}
-
-[type="checkbox"]:not(:checked)+label:before,
-[type="checkbox"]:checked+label:before {
-    width: 65px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    left: 0;
-    top: -3px;
-    transition: all 0.2s ease;
-}
-
-[type="checkbox"]:not(:checked)+label:after,
-[type="checkbox"]:checked+label:after {
-    width: 10px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    top: 7px;
-    left: 10px;
-    transition: all 0.2s ease;
-}
-
-
-/* on checked */
-
-[type="checkbox"]:checked+label:before {
-    background: orange;
-}
-
-[type="checkbox"]:checked+label:after {
-    background: #ffffff;
-    top: 7px;
-    left: 45px;
-}
-
-[type="checkbox"]:checked+label .ui,
-[type="checkbox"]:not(:checked)+label .ui:before,
-[type="checkbox"]:checked+label .ui:after {
-    position: absolute;
-    left: 6px;
-    width: 65px;
-    border-radius: 15px;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 22px;
-    transition: all 0.2s ease;
-}
-
-[type="checkbox"]:not(:checked)+label .ui:before {
-    content: "no";
-    left: 32px;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-[type="checkbox"]:checked+label .ui:after {
-    content: "si";
-    color: #ffffff;
-}
-
-[type="checkbox"]:focus+label:before {
-    box-sizing: border-box;
-    margin-top: -1px;
-}
-
 .btn-signup {
     float: left;
     font-weight: 700;
@@ -628,12 +541,31 @@ nav {
 #contacto,
 #estudiantes,
 #faq,
-#foro {
+#foro,
+#mis-asignaturas,
+#iu,
+#ro,
+#ac,
+#is,
+#ho {
     color: white;
     background-color: black;
     padding: 20px 20px 0 20px;
     grid-area: main-block;
     display: none;
+}
+
+#magistrales,
+#reducidas {
+    margin-left: 0;
+}
+
+.asignaturas-title {
+    color: orange;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    padding-bottom: 5px;
+    padding-top: 15px;
 }
 
 #right-column {
