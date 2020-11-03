@@ -7,6 +7,18 @@ $(document).ready(function() {
     // document.getElementById("faq").style.display = "none";
     // document.getElementById("foro").style.display = "none";
     // document.getElementById("main-header").style.display = "none";
+
+    cargaPagina();
+    var logedRol = getRolLogedUser();
+
+    if (logedRol == "estudiante") {
+        document.getElementById('estudiantes-link').style.display = "none";
+    } else {
+        document.getElementById('mis-asignaturas-link').style.display = "none";
+    }
+});
+
+function cargaPagina() {
     var login = getCookie("login");
     if (login == "false" || login == "") {
         document.getElementsByClassName("container")[0].style.display = "block";
@@ -16,15 +28,7 @@ $(document).ready(function() {
         document.getElementById("main-block").style.display = "block";
         document.getElementById("user").textContent = "Bienvenido, " + getUsernameLogedUser();
     }
-
-    var logedRol = getRolLogedUser();
-
-    if (logedRol == "estudiante") {
-        document.getElementById('estudiantes-link').style.display = "none";
-    } else {
-        document.getElementById('mis-asignaturas-link').style.display = "none";
-    }
-});
+}
 
 function showElement(id) {
     document.getElementById("main-block").style.display = "none";
@@ -159,6 +163,8 @@ $(function() {
         setCookie("logedUser", getCookie(cmail), 30);
 
         document.getElementsByClassName("form-signin")[0].reset();
+
+        cargaPagina();
 
         document.getElementsByClassName("container")[0].style.display = "none";
         document.getElementById("main-header").style.display = "block";
