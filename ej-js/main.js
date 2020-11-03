@@ -8,7 +8,7 @@ $(document).ready(function() {
     // document.getElementById("foro").style.display = "none";
     // document.getElementById("main-header").style.display = "none";
     var login = getCookie("login");
-    if (!login || login == "") {
+    if (login == "false" || login == "") {
         document.getElementsByClassName("container")[0].style.display = "block";
     } else {
         document.getElementById("main-header").style.display = "block";
@@ -170,6 +170,7 @@ $(function() {
 $(function() {
     $("#logout2").click(function() {
 
+        setCookie("login", "false");
         document.getElementsByClassName("container")[0].style.display = "block";
         document.getElementById("main-header").style.display = "none";
         document.getElementsByClassName("contenedor")[0].style.display = "none";
