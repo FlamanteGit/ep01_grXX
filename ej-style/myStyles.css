@@ -12,6 +12,12 @@ body * {
     font-family: "Open Sans", sans-serif;
 }
 
+.button {
+    padding: 10px;
+    background-color: orange;
+    font-weight: bolder;
+}
+
 .container body {
     background: linear-gradient( rgba(246, 247, 249, 0.8), rgba(246, 247, 249, 0.8)), url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/sky-clouds-cloudy-mountain.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -484,6 +490,7 @@ nav {
 }
 
 #main-header {
+    justify-self: stretch;
     display: none;
     background-color: black;
     position: relative;
@@ -945,9 +952,6 @@ table {
         }
         #user {
             display: none;
-        }
-        .navContenedor {
-            padding-right: 0%;
         }
         .contenedor {
             grid-template-columns: 1fr;

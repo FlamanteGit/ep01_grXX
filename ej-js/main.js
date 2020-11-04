@@ -1,3 +1,15 @@
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        document.getElementById("logo").src = "../ej-images/icon.png";
+    } else {
+        document.getElementById("logo").src = "../ej-images/otro.png";
+    }
+}
+
+var x = window.matchMedia("(max-width: 600px)");
+myFunction(x); // Call listener function at run time
+x.addListener(myFunction); // Attach listener function on state changes
+
 $(document).ready(function() {
     // document.getElementById("main-block").style.display = "none";
     // document.getElementById("asignatura").style.display = "none";
@@ -11,12 +23,30 @@ $(document).ready(function() {
     cargaPagina();
     var logedRol = getRolLogedUser();
 
+    selectProfilePhoto();
+
     if (logedRol == "estudiante") {
         document.getElementById('estudiantes-link').style.display = "none";
     } else {
         document.getElementById('mis-asignaturas-link').style.display = "none";
     }
 });
+
+function selectProfilePhoto() {
+    if (getRolLogedUser().toLowerCase() == "estudiante") {
+        document.getElementById("profile-img").src = "../ej-images/perfilEstudiante.png";
+        return;
+    }
+    if (getRolLogedUser().toLowerCase() == "profesor") {
+        document.getElementById("profile-img").src = "../ej-images/perfilProfesor.png";
+        return;
+    }
+    if (getRolLogedUser().toLowerCase() == "admin") {
+        document.getElementById("profile-img").src = "../ej-images/perfilAdmin.png";
+        return;
+    }
+
+}
 
 function cargaPagina() {
     var login = getCookie("login");
@@ -151,7 +181,7 @@ function checkCookie(cemail) {
 // INICIAR SESION
 $(function() {
     $(".btn-signin").click(function() {
-        var cmail = document.getElementsByClassName("form-styling")[2].value;
+        var cmail = document.getElementsByClassName("form-styling")[0].value;
         if (!checkCookie(cmail)) {
             alert("No hay ninguna cuenta asociada a este email.");
             return;
@@ -187,17 +217,17 @@ $(function() {
 // REGISTRARSE
 $(function() {
     $(".btn-signup").click(function() {
-        var cuser = document.getElementsByClassName("form-styling")[4].value;
-        var cnia = document.getElementsByClassName("form-styling")[5].value;
-        var cpsw = document.getElementsByClassName("form-styling")[6].value;
-        var cname = document.getElementsByClassName("form-styling")[7].value;
-        var cmail = document.getElementsByClassName("form-styling")[8].value;
-        var cdate = document.getElementsByClassName("form-styling")[9].value;
-        var cdni = document.getElementsByClassName("form-styling")[10].value;
-        var crol = document.getElementsByClassName("form-styling")[11].value;
-        var cdegree = document.getElementsByClassName("form-styling")[12].value;
-        var clanguage = document.getElementsByClassName("form-styling")[13].value;
-        var cuniversity = document.getElementsByClassName("form-styling")[14].value;
+        var cuser = document.getElementsByClassName("form-styling")[2].value;
+        var cnia = document.getElementsByClassName("form-styling")[3].value;
+        var cpsw = document.getElementsByClassName("form-styling")[4].value;
+        var cname = document.getElementsByClassName("form-styling")[5].value;
+        var cmail = document.getElementsByClassName("form-styling")[6].value;
+        var cdate = document.getElementsByClassName("form-styling")[7].value;
+        var cdni = document.getElementsByClassName("form-styling")[8].value;
+        var crol = document.getElementsByClassName("form-styling")[9].value;
+        var cdegree = document.getElementsByClassName("form-styling")[10].value;
+        var clanguage = document.getElementsByClassName("form-styling")[11].value;
+        var cuniversity = document.getElementsByClassName("form-styling")[12].value;
 
         var iveread = document.getElementById("iveread").checked;
 
@@ -353,37 +383,40 @@ document.getElementsByClassName("close2")[0].onclick = function() {
 // MODAL MENSAJE
 // When the user clicks on the button, open the modal
 document.getElementsByClassName("far fa-comment")[0].onclick = function() {
-    document.getElementById("send-message").style.display = "block";
+    window.location = "mailto:xyz@abc.com";
 }
 document.getElementsByClassName("far fa-comment")[1].onclick = function() {
-    document.getElementById("send-message").style.display = "block";
+    window.location = "mailto:xyz@abc.com";
 }
 document.getElementsByClassName("far fa-comment")[2].onclick = function() {
-    document.getElementById("send-message").style.display = "block";
+    window.location = "mailto:xyz@abc.com";
 }
 document.getElementsByClassName("far fa-comment")[3].onclick = function() {
-    document.getElementById("send-message").style.display = "block";
+    window.location = "mailto:xyz@abc.com";
 }
 document.getElementsByClassName("far fa-comment")[4].onclick = function() {
-    document.getElementById("send-message").style.display = "block";
+    window.location = "mailto:xyz@abc.com";
 }
 document.getElementsByClassName("far fa-comment")[5].onclick = function() {
-    document.getElementById("send-message").style.display = "block";
+    window.location = "mailto:xyz@abc.com";
 }
 document.getElementsByClassName("far fa-comment")[6].onclick = function() {
-    document.getElementById("send-message").style.display = "block";
+    window.location = "mailto:xyz@abc.com";
 }
 document.getElementsByClassName("far fa-comment")[7].onclick = function() {
-    document.getElementById("send-message").style.display = "block";
+    window.location = "mailto:xyz@abc.com";
 }
 document.getElementsByClassName("far fa-comment")[8].onclick = function() {
-    document.getElementById("send-message").style.display = "block";
+    window.location = "mailto:xyz@abc.com";
 }
 document.getElementsByClassName("far fa-comment")[9].onclick = function() {
-    document.getElementById("send-message").style.display = "block";
+    window.location = "mailto:xyz@abc.com";
 }
 
-// When the user clicks on <span> (x), close the modal
-document.getElementsByClassName("close3")[0].onclick = function() {
-    document.getElementById("send-message").style.display = "none";
-}
+
+$("#export-button").click(function() {
+    $("#table-notas").table2excel({
+        name: "notas",
+        filename: "calificaciones.xls"
+    });
+});

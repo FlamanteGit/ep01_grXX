@@ -48,22 +48,6 @@
         </div>
     </div>
 
-    <div id="send-message" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close3">&times;</span>
-            <h2>ENVIAR MENSAJE</h2>
-            <br>
-            <label for="">Asunto</label>
-            <input class="form-styling" type="text">
-            <label for="">Mensaje</label>
-            <input class="form-styling" type="text">
-            <br>
-            <a id="send-message-button">ENVIAR</a>
-        </div>
-
-    </div>
-
     <div class="container">
         <div class="frame">
             <div class="nav">
@@ -574,7 +558,7 @@
             <main class="main-content">
                 <h1>CALIFICACIONES</h1>
                 <div>
-                    <table class="table-page">
+                    <table id="table-notas" class="table-page">
                         <thead>
                             <tr>
                                 <th>NIA</th>
@@ -646,6 +630,9 @@
                             </tr>
                         </tbody>
                     </table>
+                    <br/>
+                    <button id="export-button" class="button">EXPORTAR</button>
+
                     <br />
                     <br />
                     <br />
@@ -887,6 +874,7 @@
     <script src="../ej-js/jquery-3.5.1.min.js"></script>
     <script src="../ej-js/main.js"></script>
     <script src="../ej-js/jquery.simple-calendar.min.js"></script>
+    <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
 
 </body>
 
