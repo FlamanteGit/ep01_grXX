@@ -20,17 +20,28 @@ $(document).ready(function() {
     // document.getElementById("foro").style.display = "none";
     // document.getElementById("main-header").style.display = "none";
 
+    loadAll();
+});
+
+function loadAll() {
     cargaPagina();
-    var logedRol = getRolLogedUser();
 
     selectProfilePhoto();
 
+    specificContent();
+}
+
+
+function specificContent() {
+    var logedRol = getRolLogedUser();
     if (logedRol == "estudiante") {
         document.getElementById('estudiantes-link').style.display = "none";
+        document.getElementById('mis-asignaturas-link').style.display = "block";
     } else {
         document.getElementById('mis-asignaturas-link').style.display = "none";
+        document.getElementById('estudiantes-link').style.display = "block";
     }
-});
+}
 
 function selectProfilePhoto() {
     if (getRolLogedUser().toLowerCase() == "estudiante") {
@@ -194,12 +205,14 @@ $(function() {
 
         document.getElementsByClassName("form-signin")[0].reset();
 
-        cargaPagina();
 
         document.getElementsByClassName("container")[0].style.display = "none";
         document.getElementById("main-header").style.display = "block";
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
         document.getElementById("main-block").style.display = "block";
+
+        loadAll();
+
     });
 });
 
@@ -383,34 +396,34 @@ document.getElementsByClassName("close2")[0].onclick = function() {
 // MODAL MENSAJE
 // When the user clicks on the button, open the modal
 document.getElementsByClassName("far fa-comment")[0].onclick = function() {
-    window.location = "mailto:xyz@abc.com";
+    window.location = "mailto:xyz@loadAll.com";
 }
 document.getElementsByClassName("far fa-comment")[1].onclick = function() {
-    window.location = "mailto:xyz@abc.com";
+    window.location = "mailto:xyz@loadAll.com";
 }
 document.getElementsByClassName("far fa-comment")[2].onclick = function() {
-    window.location = "mailto:xyz@abc.com";
+    window.location = "mailto:xyz@loadAll.com";
 }
 document.getElementsByClassName("far fa-comment")[3].onclick = function() {
-    window.location = "mailto:xyz@abc.com";
+    window.location = "mailto:xyz@loadAll.com";
 }
 document.getElementsByClassName("far fa-comment")[4].onclick = function() {
-    window.location = "mailto:xyz@abc.com";
+    window.location = "mailto:xyz@loadAll.com";
 }
 document.getElementsByClassName("far fa-comment")[5].onclick = function() {
-    window.location = "mailto:xyz@abc.com";
+    window.location = "mailto:xyz@loadAll.com";
 }
 document.getElementsByClassName("far fa-comment")[6].onclick = function() {
-    window.location = "mailto:xyz@abc.com";
+    window.location = "mailto:xyz@loadAll.com";
 }
 document.getElementsByClassName("far fa-comment")[7].onclick = function() {
-    window.location = "mailto:xyz@abc.com";
+    window.location = "mailto:xyz@loadAll.com";
 }
 document.getElementsByClassName("far fa-comment")[8].onclick = function() {
-    window.location = "mailto:xyz@abc.com";
+    window.location = "mailto:xyz@loadAll.com";
 }
 document.getElementsByClassName("far fa-comment")[9].onclick = function() {
-    window.location = "mailto:xyz@abc.com";
+    window.location = "mailto:xyz@loadAll.com";
 }
 
 
