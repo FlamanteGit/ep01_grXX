@@ -554,6 +554,7 @@ nav {
 #main-block,
 #asignatura,
 #calificaciones,
+#calificaciones-alumno,
 #contacto,
 #estudiantes,
 #faq,
@@ -625,8 +626,12 @@ p {
 ul {
     list-style-type: none;
     text-align: left;
-    margin-left: 10%;
     margin-top: 20px;
+    margin-left: 10%;
+}
+
+#ul-calificaciones-alumno {
+    margin-left: 0;
 }
 
 li {

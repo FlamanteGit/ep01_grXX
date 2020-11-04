@@ -136,6 +136,9 @@
                 <ul>
                     <li id="mis-asignaturas-link"><a onclick="showElement('mis-asignaturas');">Mis asignaturas</a></li>
                     <li id="calificaciones-link"><a onclick="showElement('calificaciones');">Calificaciones</a></li>
+                    <li id="calificaciones-alumnos-link">
+                        <a onclick="showElement('calificaciones-alumno');">Calificaciones</a>
+                    </li>
                     <li id="estudiantes-link"><a onclick="showElement('estudiantes');">Estudiantes</a></li>
                     <li><a onclick="showElement('foro');">Foro</a></li>
                 </ul>
@@ -143,7 +146,7 @@
         </div>
 
         <!--zona principal-->
-        <div id="main-block">
+        <div id="main-block" class="contenido">
             <main class="main-content">
                 <h1>TEMA 1 - INTRODUCCION</h1>
 
@@ -238,7 +241,7 @@
 
 
         <!--asignatura-->
-        <div id="asignatura">
+        <div id="asignatura" class="contenido">
             <main class="main-content">
                 <h1>ASIGNATURA</h1>
                 <br />
@@ -263,38 +266,38 @@
             </main>
         </div>
         <!--mis asignaturas-->
-        <div id="mis-asignaturas">
+        <div id="mis-asignaturas" class="contenido">
             <main class="main-content">
                 <h1>MIS ASIGNATURAS</h1>
                 <h2 class="asignaturas-title">MAGISTRALES</h2>
                 <ul id="magistrales">
                     <li>
-                        <a onclick="showElement('iu')" class="navegation">80 MAG. Interfaces de Usuario 20/21</a></li>
+                        <span>80 MAG. Interfaces de Usuario 20/21</span></li>
                     <li>
-                        <a onclick="showElement('ro')" class="navegation">80 MAG. Redes de Ordenadores 20/21</a></li>
+                        <span>80 MAG. Redes de Ordenadores 20/21</span></li>
                     <li>
-                        <a onclick="showElement('ac')" class="navegation">80 MAG. Arquitectura de computadores 20/21</a></li>
+                        <span>80 MAG. Arquitectura de computadores 20/21</span></li>
                     <li>
-                        <a onclick="showElement('is')" class="navegation">80 MAG. Ingenieria del SoftWare 20/21</a></li>
+                        <span>80 MAG. Ingenieria del SoftWare 20/21</span></li>
                     <li>
-                        <a onclick="showElement('ho')" class="navegation">80 MAG. Heuristica y Optimizacion 20/21</a></li>
+                        <span>80 MAG. Heuristica y Optimizacion 20/21</span></li>
                 </ul>
                 <h2 class="asignaturas-title">GRUPO REDUCIDO</h2>
                 <ul id="reducidas">
                     <li>
-                        <a onclick="showElement('iu')" class="navegation">81 Interfaces de Usuario 20/21</a></li>
+                        <span>81 Interfaces de Usuario 20/21</span></li>
                     <li>
-                        <a onclick="showElement('ro')" class="navegation">81 Redes de Ordenadores 20/21</a></li>
+                        <span>81 Redes de Ordenadores 20/21</span></li>
                     <li>
-                        <a onclick="showElement('ac')" class="navegation">81 Arquitectura de computadores 20/21</a></li>
+                        <span>81 Arquitectura de computadores 20/21</span></li>
                     <li>
-                        <a onclick="showElement('is')" class="navegation">81 Ingenieria del SoftWare 20/21</a></li>
+                        <span>81 Ingenieria del SoftWare 20/21</span></li>
                     <li>
-                        <a onclick="showElement('ho')" class="navegation">81 Heuristica y Optimizacion 20/21</a></li>
+                        <span>81 Heuristica y Optimizacion 20/21</span></li>
                 </ul>
             </main>
         </div>
-        <div id="iu">
+        <div id="iu" class="contenido">
             <h1>INTERFACES DE USUARIO</h1>
             <div>
                 <table class="table-page">
@@ -343,9 +346,18 @@
                         </tr>
                     </tbody>
                 </table>
+                <br/>
+                <button class="button">EXPORTAR</button>
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
         </div>
-        <div id="ro">
+        <div id="ro" class="contenido">
             <h1>REDES DE ORDENADORES</h1>
             <div>
                 <table class="table-page">
@@ -394,9 +406,18 @@
                         </tr>
                     </tbody>
                 </table>
+                <br/>
+                <button class="button">EXPORTAR</button>
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
         </div>
-        <div id="ac">
+        <div id="ac" class="contenido">
             <h1>ARQUITECTURA DE COMPUTADORES</h1>
             <div>
                 <table class="table-page">
@@ -445,9 +466,18 @@
                         </tr>
                     </tbody>
                 </table>
+                <br/>
+                <button class="button">EXPORTAR</button>
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
         </div>
-        <div id="is">
+        <div id="is" class="contenido">
             <h1>INGENIERIA DEL SOFTWARE</h1>
             <div>
                 <table class="table-page">
@@ -496,9 +526,19 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <br/>
+                <button class="button">EXPORTAR</button>
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
         </div>
-        <div id="ho">
+        <div id="ho" class="contenido">
             <h1>HEURISTICA Y OPTIMIZACION</h1>
             <div>
                 <table class="table-page">
@@ -547,10 +587,37 @@
                         </tr>
                     </tbody>
                 </table>
+                <br/>
+                <button class="button">EXPORTAR</button>
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
         </div>
-        <!--calificaciones-->
-        <div id="calificaciones">
+        <!--calificaciones vista alumno-->
+        <div id="calificaciones-alumno" class="contenido">
+            <main class="main-content">
+                <h1>CALIFICACIONES</h1>
+                <ul id="ul-calificaciones-alumno">
+                    <li>
+                        <a onclick="showElement('iu')" class="navegation">Interfaces de Usuario</a></li>
+                    <li>
+                        <a onclick="showElement('ro')" class="navegation">Redes de Ordenadores</a></li>
+                    <li>
+                        <a onclick="showElement('ac')" class="navegation">Arquitectura de computadores</a></li>
+                    <li>
+                        <a onclick="showElement('is')" class="navegation">Ingenieria del Software</a></li>
+                    <li>
+                        <a onclick="showElement('ho')" class="navegation">Heuristica y Optimizacion</a></li>
+                </ul>
+            </main>
+        </div>
+        <!--calificaciones vista administrador/profesor-->
+        <div id="calificaciones" class="contenido">
             <main class="main-content">
                 <h1>CALIFICACIONES</h1>
                 <div>
@@ -640,7 +707,7 @@
         </div>
 
         <!--contacto-->
-        <div id="contacto">
+        <div id="contacto" class="contenido">
             <main class="main-content">
                 <div class="contact">
                     <h3>ANA TAJADURA JIMENEZ</h3>
@@ -661,7 +728,7 @@
         </div>
 
         <!--estudiantes-->
-        <div id="estudiantes">
+        <div id="estudiantes" class="contenido">
             <main class="main-content">
                 <h1>LISTADO DE ESTUDIANTES</h1>
                 <div>
@@ -753,7 +820,7 @@
         </div>
 
         <!--faq-->
-        <div id="faq">
+        <div id="faq" class="contenido">
             <main class="main-content">
                 <h1>PREGUNTAS FRECUENTES</h1>
                 <br />
@@ -785,7 +852,7 @@
         </div>
 
         <!--foro-->
-        <div id="foro">
+        <div id="foro" class="contenido">
             <main class="main-content">
                 <h1>FORO</h1>
                 <div>

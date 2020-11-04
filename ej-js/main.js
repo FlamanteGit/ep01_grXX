@@ -37,9 +37,14 @@ function specificContent() {
     if (logedRol == "estudiante") {
         document.getElementById('estudiantes-link').style.display = "none";
         document.getElementById('mis-asignaturas-link').style.display = "block";
+        document.getElementById('calificaciones-link').style.display = "none";
+        document.getElementById('calificaciones-alumnos-link').style.display = "block";
+
     } else {
         document.getElementById('mis-asignaturas-link').style.display = "none";
         document.getElementById('estudiantes-link').style.display = "block";
+        document.getElementById('calificaciones-link').style.display = "block";
+        document.getElementById('calificaciones-alumnos-link').style.display = "none";
     }
 }
 
@@ -75,6 +80,7 @@ function showElement(id) {
     document.getElementById("main-block").style.display = "none";
     document.getElementById("asignatura").style.display = "none";
     document.getElementById("calificaciones").style.display = "none";
+    document.getElementById("calificaciones-alumno").style.display = "none";
     document.getElementById("contacto").style.display = "none";
     document.getElementById("estudiantes").style.display = "none";
     document.getElementById("faq").style.display = "none";
@@ -224,6 +230,9 @@ $(function() {
         document.getElementById("main-header").style.display = "none";
         document.getElementsByClassName("contenedor")[0].style.display = "none";
         document.getElementById("confirm-logout").style.display = "none";
+        for (let index = 0; index < document.getElementsByClassName("contenido").length; index++) {
+            document.getElementsByClassName("contenido")[index].style.display = "none";
+        }
     });
 });
 
