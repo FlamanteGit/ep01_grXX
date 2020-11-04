@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../ej-images/icon.png" />
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/cf69097668.js" crossorigin="anonymous"></script>
 </head>
 
@@ -30,6 +30,7 @@
                 <a onclick="showElement('faq');" class="navegation">FAQ</a>
                 <a onclick="showElement('contacto');" class="navegation">Contacto</a>
             </div>
+
             <div id="user-header">
                 <img id="profile-img" src="../ej-images/user.png" alt="imagen de perfil">
                 <span id="user" style="color: white;">aqui va el usuario</span>
@@ -300,7 +301,7 @@
         <div id="iu" class="contenido">
             <h1>INTERFACES DE USUARIO</h1>
             <div>
-                <table class="table-page">
+                <table class="table-page" id="table-interfaces">
                     <thead>
                         <tr>
                             <th>Item de calificacion</th>
@@ -347,7 +348,7 @@
                     </tbody>
                 </table>
                 <br/>
-                <button class="button">EXPORTAR</button>
+                <button id="interfaces" class="button">EXPORTAR</button>
 
                 <br />
                 <br />
@@ -360,7 +361,7 @@
         <div id="ro" class="contenido">
             <h1>REDES DE ORDENADORES</h1>
             <div>
-                <table class="table-page">
+                <table class="table-page" id="table-redes">
                     <thead>
                         <tr>
                             <th>Item de calificacion</th>
@@ -407,7 +408,7 @@
                     </tbody>
                 </table>
                 <br/>
-                <button class="button">EXPORTAR</button>
+                <button id="redes" class="button">EXPORTAR</button>
 
                 <br />
                 <br />
@@ -420,7 +421,7 @@
         <div id="ac" class="contenido">
             <h1>ARQUITECTURA DE COMPUTADORES</h1>
             <div>
-                <table class="table-page">
+                <table class="table-page" id="table-computadores">
                     <thead>
                         <tr>
                             <th>Item de calificacion</th>
@@ -467,7 +468,7 @@
                     </tbody>
                 </table>
                 <br/>
-                <button class="button">EXPORTAR</button>
+                <button id="computadores" class="button">EXPORTAR</button>
 
                 <br />
                 <br />
@@ -480,7 +481,7 @@
         <div id="is" class="contenido">
             <h1>INGENIERIA DEL SOFTWARE</h1>
             <div>
-                <table class="table-page">
+                <table class="table-page" id="table-software">
                     <thead>
                         <tr>
                             <th>Item de calificacion</th>
@@ -528,7 +529,7 @@
                 </table>
 
                 <br/>
-                <button class="button">EXPORTAR</button>
+                <button id="software" class="button">EXPORTAR</button>
 
                 <br />
                 <br />
@@ -541,7 +542,7 @@
         <div id="ho" class="contenido">
             <h1>HEURISTICA Y OPTIMIZACION</h1>
             <div>
-                <table class="table-page">
+                <table class="table-page" id="table-heuristica">
                     <thead>
                         <tr>
                             <th>Item de calificacion</th>
@@ -588,7 +589,7 @@
                     </tbody>
                 </table>
                 <br/>
-                <button class="button">EXPORTAR</button>
+                <button id="heuristica" class="button">EXPORTAR</button>
 
                 <br />
                 <br />
@@ -694,7 +695,7 @@
                         </tbody>
                     </table>
                     <br/>
-                    <button id="export-button" class="button">EXPORTAR</button>
+                    <button id="notas-global" class="button">EXPORTAR</button>
 
                     <br />
                     <br />

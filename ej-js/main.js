@@ -436,9 +436,48 @@ document.getElementsByClassName("far fa-comment")[9].onclick = function() {
 }
 
 
-$("#export-button").click(function() {
-    $("#table-notas").table2excel({
+$("#notas-global").click(function() {
+    $("table-page").table2excel({
         name: "notas",
         filename: "calificaciones.xls"
     });
+});
+
+$("#interfaces").click(function() {
+    $("#table-interfaces").table2excel({
+        name: "notas",
+        filename: "calificaciones.xls"
+    });
+});
+
+$("#redes").click(function() {
+    $("#table-redes").table2excel({
+        name: "notas",
+        filename: "calificaciones.xls"
+    });
+});
+
+$("#computadores").click(function() {
+    $("#table-computadores").table2excel({
+        name: "notas",
+        filename: "calificaciones.xls"
+    });
+});
+
+$("#software").click(function() {
+    $("#table-software").table2excel({
+        name: "notas",
+        filename: "calificaciones.xls"
+    });
+});
+
+$("#heuristica").click(function() {
+    $("#table-heuristica").table2excel({
+        name: "notas",
+        filename: "calificaciones.xls"
+    });
+});
+
+$("menu").click(function() {
+    document.getElementsByTagName("nav")[0].style.gridTemplateRows = "1fr 1fr";
 });
