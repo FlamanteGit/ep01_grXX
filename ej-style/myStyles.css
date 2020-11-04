@@ -16,6 +16,15 @@ body * {
     padding: 10px;
     background-color: orange;
     font-weight: bolder;
+    border-radius: 3px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(253, 184, 56);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .container body {
@@ -562,6 +571,11 @@ nav {
     display: none;
 }
 
+.numero-msg-enviados {
+    display: block;
+    margin: 10% 25%;
+}
+
 #magistrales,
 #reducidas {
     margin-left: 0;
@@ -613,13 +627,6 @@ ul {
     text-align: left;
     margin-left: 10%;
     margin-top: 20px;
-}
-
-#foro {
-    background-color: orange;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
 }
 
 li {
@@ -697,8 +704,8 @@ table {
 }
 
 .table-page th img {
-    border-radius: 45%;
-    width: 60px;
+    border-radius: 3px;
+    width: 50px;
     height: auto;
 }
 
@@ -765,6 +772,14 @@ table {
     background-color: black;
     color: orange;
     text-align: center;
+}
+
+i.far.fa-comment {
+    margin-left: 27px;
+}
+
+i.far.fa-comment:hover {
+    cursor: pointer;
 }
 
 #logout2 {
@@ -849,7 +864,7 @@ table {
     .vregion iframe {
         padding-left: 13px;
     }
-    table,
+    /*table,
     thead,
     tbody,
     th,
@@ -920,6 +935,9 @@ table {
     #foro td:nth-of-type(3):before {
         content: "Ultimo mensaje";
         color: black;
+    }*/
+    i.far.fa-comment {
+        margin-left: 0;
     }
     /*mobile*/
     @media only screen and (max-width: 600px) {
