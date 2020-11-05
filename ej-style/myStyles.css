@@ -19,6 +19,10 @@ body * {
     border-radius: 3px;
 }
 
+#boton-menu {
+    display: none;
+}
+
 
 /* Add a black background color to the top navigation */
 
@@ -307,6 +311,7 @@ label {
     color: black;
     font-weight: bolder;
     margin-left: 10px;
+    text-align: center;
 }
 
 .profile-entry {
@@ -1020,12 +1025,25 @@ i.far.fa-comment:hover {
     }
     /*mobile*/
     @media only screen and (max-width: 600px) {
+        #boton-menu {
+            grid-area: boton-menu;
+            justify-self: flex-start;
+            align-self: center;
+            color: white;
+            display: block;
+            padding: 20px;
+        }
         nav {
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            grid-template-areas: "logo user-header" "navContenedor navContenedor";
+            grid-template-areas: "boton-menu logo user-header" "navContenedor navContenedor navContenedor";
+        }
+        #logo {
+            display: block;
+            margin: auto;
         }
         #user-header {
+            padding: 15px;
             grid-area: user-header;
             display: grid;
             grid-template-columns: 1fr;
@@ -1053,16 +1071,18 @@ i.far.fa-comment:hover {
         .contenedor {
             grid-template-columns: 1fr;
             grid-template-rows: auto auto auto 70px 0px;
-            grid-template-areas: "left-column" "main-block" "right-column" "footer" "none";
+            grid-template-areas: "left-column" "right-column" "main-block" "footer" "none";
         }
         #main-block {
-            margin-top: 10px;
             color: white;
             background-color: black;
             padding: 30px 20px 0 20px;
         }
+        #left-column {
+            display: none;
+        }
         #right-column {
-            margin-top: 10px;
+            display: none;
         }
         #auxiliar {
             grid-area: none;

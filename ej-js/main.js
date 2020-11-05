@@ -486,3 +486,104 @@ $("#heuristica").click(function() {
 $("menu").click(function() {
     document.getElementsByTagName("nav")[0].style.gridTemplateRows = "1fr 1fr";
 });
+
+$("#forum1").click(function() {
+    var foto;
+
+    if (getRolLogedUser() == "estudiante") {
+        foto = "../ej-images/perfilEstudiante.png";
+    } else if (getRolLogedUser() == "profesor") {
+        foto = "../ej-images/perfilProfesor.png";
+    } else if (getRolLogedUser() == "admin") {
+        foto = "../ej-images/perfilAdmin.png";
+    }
+
+    var texto = document.getElementsByName("Text1")[0].value;
+
+    var bloque = '<div class="chat-entry"><img class="profile-img" src="' + foto + '" alt=""><span class="profile-name">' + getNameLogedUser().toUpperCase() + '</span><p class="profile-entry">' + texto + '</p></div>';
+    $("#mensajes-1").append(bloque);
+    document.getElementsByName("Text1")[0].value = "";
+});
+
+$("#forum2").click(function() {
+    var foto;
+
+    if (getRolLogedUser() == "estudiante") {
+        foto = "../ej-images/perfilEstudiante.png";
+    } else if (getRolLogedUser() == "profesor") {
+        foto = "../ej-images/perfilProfesor.png";
+    } else if (getRolLogedUser() == "admin") {
+        foto = "../ej-images/perfilAdmin.png";
+    }
+
+    var texto = document.getElementsByName("Text2")[0].value;
+
+    var bloque = '<div class="chat-entry"><img class="profile-img" src="' + foto + '" alt=""><span class="profile-name">' + getNameLogedUser().toUpperCase() + '</span><p class="profile-entry">' + texto + '</p></div>';
+    $("#mensajes-2").append(bloque);
+    document.getElementsByName("Text2")[0].value = "";
+
+});
+
+$("#forum3").click(function() {
+    var foto;
+
+    if (getRolLogedUser() == "estudiante") {
+        foto = "../ej-images/perfilEstudiante.png";
+    } else if (getRolLogedUser() == "profesor") {
+        foto = "../ej-images/perfilProfesor.png";
+    } else if (getRolLogedUser() == "admin") {
+        foto = "../ej-images/perfilAdmin.png";
+    }
+
+    var texto = document.getElementsByName("Text3")[0].value;
+
+    var bloque = '<div class="chat-entry"><img class="profile-img" src="' + foto + '" alt=""><span class="profile-name">' + getNameLogedUser().toUpperCase() + '</span><p class="profile-entry">' + texto + '</p></div>';
+    $("#mensajes-3").append(bloque);
+    document.getElementsByName("Text3")[0].value = "";
+});
+
+$("#forum4").click(function() {
+    var foto;
+
+    if (getRolLogedUser() == "estudiante") {
+        foto = "../ej-images/perfilEstudiante.png";
+    } else if (getRolLogedUser() == "profesor") {
+        foto = "../ej-images/perfilProfesor.png";
+    } else if (getRolLogedUser() == "admin") {
+        foto = "../ej-images/perfilAdmin.png";
+    }
+
+    var texto = document.getElementsByName("Text4")[0].value;
+
+    var bloque = '<div class="chat-entry"><img class="profile-img" src="' + foto + '" alt=""><span class="profile-name">' + getNameLogedUser().toUpperCase() + '</span><p class="profile-entry">' + texto + '</p></div>';
+    $("#mensajes-4").append(bloque);
+    document.getElementsByName("Text4")[0].value = "";
+});
+
+$("#forum5").click(function() {
+    var foto;
+
+    if (getRolLogedUser() == "estudiante") {
+        foto = "../ej-images/perfilEstudiante.png";
+    } else if (getRolLogedUser() == "profesor") {
+        foto = "../ej-images/perfilProfesor.png";
+    } else if (getRolLogedUser() == "admin") {
+        foto = "../ej-images/perfilAdmin.png";
+    }
+
+    var texto = document.getElementsByName("Text5")[0].value;
+
+    var bloque = '<div class="chat-entry"><img class="profile-img" src="' + foto + '" alt=""><span class="profile-name">' + getNameLogedUser().toUpperCase() + '</span><p class="profile-entry">' + texto + '</p></div>';
+    $("#mensajes-5").append(bloque);
+    document.getElementsByName("Text5")[0].value = "";
+});
+
+$("#boton-menu").click(function() {
+    if (document.getElementById("left-column").style.display == "none") {
+        document.getElementById("left-column").style.display = "block";
+        document.getElementById("right-column").style.display = "block";
+    } else if (document.getElementById("left-column").style.display != "none") {
+        document.getElementById("left-column").style.display = "none";
+        document.getElementById("right-column").style.display = "none";
+    }
+});
