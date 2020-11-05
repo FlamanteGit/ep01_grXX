@@ -86,9 +86,6 @@ body * {
     padding-bottom: 200px;
     background-image: url("../ej-images/sasha-stories-0IvpEBGw8aw-unsplash.jpg");
     display: none;
-    /* filter: blur(8px);
-    -webkit-filter: blur(8px);*/
-    /*Full height*/
     height: 100%;
     /*Center and scale the image nicely */
     background-position: center;
@@ -626,6 +623,12 @@ nav {
     grid-area: footer;
 }
 
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "web-uc3m politica-priv copyright";
+}
+
 #curso {
     text-align: center;
 }
@@ -641,10 +644,6 @@ nav {
     padding: 20px 20px 0 20px;
     grid-area: main-block;
     display: none;
-}
-
-a.forum-odd-link:hover {
-    color: white;
 }
 
 a.forum-even-link {
@@ -779,6 +778,7 @@ table {
 
 .table-page tr:nth-of-type(odd) {
     background: orange;
+    color: black;
 }
 
 .table-page th {
@@ -948,78 +948,6 @@ i.far.fa-comment:hover {
     .vregion iframe {
         padding-left: 13px;
     }
-    /*table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: block;
-    }
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-    tr {
-        border: 1px solid orange;
-    }
-    td {
-        border: none;
-        border-bottom: 1px solid orange;
-        position: relative;
-        padding-left: 50%;
-    }
-    #foro tr {
-        border-bottom: 2px solid black;
-    }
-    td:before {
-        position: absolute;
-        top: 6px;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-    }
-    #estudiantes td:nth-of-type(1):before {
-        content: "Foto";
-    }
-    #estudiantes td:nth-of-type(2):before {
-        content: "Nombre";
-    }
-    #estudiantes td:nth-of-type(3):before {
-        content: "Apellidos";
-    }
-    #estudiantes td:nth-of-type(4):before {
-        content: "Correo";
-    }
-    #estudiantes td:nth-of-type(5):before {
-        content: "Msg";
-    }
-    #calificaciones td:nth-of-type(1):before {
-        content: "NIA";
-    }
-    #calificaciones td:nth-of-type(2):before {
-        content: "Parcial 1";
-    }
-    #calificaciones td:nth-of-type(3):before {
-        content: "Parcial 2";
-    }
-    #calificaciones td:nth-of-type(4):before {
-        content: "Practica final";
-    }
-    #foro td:nth-of-type(1):before {
-        content: "Titulo";
-        color: black;
-    }
-    #foro td:nth-of-type(2):before {
-        content: "Mensajes enviados";
-        color: black;
-    }
-    #foro td:nth-of-type(3):before {
-        content: "Ultimo mensaje";
-        color: black;
-    }*/
     i.far.fa-comment {
         margin-left: 0;
     }

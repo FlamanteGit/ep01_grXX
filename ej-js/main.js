@@ -11,15 +11,6 @@ myFunction(x); // Call listener function at run time
 x.addListener(myFunction); // Attach listener function on state changes
 
 $(document).ready(function() {
-    // document.getElementById("main-block").style.display = "none";
-    // document.getElementById("asignatura").style.display = "none";
-    // document.getElementById("calificaciones").style.display = "none";
-    // document.getElementById("contacto").style.display = "none";
-    // document.getElementById("estudiantes").style.display = "none";
-    // document.getElementById("faq").style.display = "none";
-    // document.getElementById("foro").style.display = "none";
-    // document.getElementById("main-header").style.display = "none";
-
     loadAll();
 });
 
@@ -31,7 +22,7 @@ function loadAll() {
     specificContent();
 }
 
-
+//funcion encargada de mostrar el contenido que corresponde a cada rol
 function specificContent() {
     var logedRol = getRolLogedUser();
     if (logedRol == "estudiante") {
@@ -47,7 +38,7 @@ function specificContent() {
         document.getElementById('calificaciones-alumnos-link').style.display = "none";
     }
 }
-
+//funcion para seleccionar foto de perfil dependiendo del rol
 function selectProfilePhoto() {
     if (getRolLogedUser().toLowerCase() == "estudiante") {
         document.getElementById("profile-img").src = "../ej-images/perfilEstudiante.png";
@@ -76,6 +67,7 @@ function cargaPagina() {
     }
 }
 
+//funcion para mostrar la pagina que corresponde
 function showElement(id) {
     document.getElementById("main-block").style.display = "none";
     document.getElementById("asignatura").style.display = "none";
@@ -174,7 +166,7 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
+//obtencion de la cookie
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -190,12 +182,12 @@ function getCookie(cname) {
     }
     return "";
 }
-
+//chequeo de la cookie
 function checkCookie(cemail) {
-    var user = getCookie(cemail); //devuelve el valor del nombre de usuario
-    if (user != "") { //si no es vacio
+    var user = getCookie(cemail);
+    if (user != "") {
         return true;
-    } else { //en otro caso
+    } else {
         return false;
     }
 }
@@ -226,7 +218,7 @@ $(function() {
 
     });
 });
-
+//funcion encargada de manejar el cierre de sesion (logout)
 $(function() {
     $("#logout2").click(function() {
 
@@ -315,12 +307,11 @@ $(function() {
 
         alert("Has sido registrado correctamente. Simplemente inicia sesión para poder utilizar tu cuenta");
 
-        // document.getElementsByClassName("container")[0].style.display = "none";
-        // document.getElementById("main-header").style.display = "block";
-        // document.getElementsByClassName("contenedor")[0].style.display = "grid";
+
     });
 });
 
+//a continuacion funciones de obtencion de cookies especificas 
 function getUsernameLogedUser() {
     var c = getCookie("logedUser");
     var ca = c.split('*');
@@ -381,7 +372,7 @@ function getLanguageLogedUser() {
     return ca[9];
 }
 
-
+//funcion encargada de intercambiar los paneles iniciar sesion y registrarse
 function intercambiarPaneles() {
     $(".form-signin").toggleClass("form-signin-left");
     $(".form-signup").toggleClass("form-signup-left");
@@ -440,7 +431,7 @@ document.getElementsByClassName("far fa-comment")[9].onclick = function() {
     window.location = "mailto:xyz@loadAll.com";
 }
 
-
+//a continuacion funciones encargadas de la descarga de calificaciones en excell
 $("#notas-global").click(function() {
     $("table-page").table2excel({
         name: "notas",
@@ -483,10 +474,12 @@ $("#heuristica").click(function() {
     });
 });
 
+//funcion encargada de controlar nav
 $("menu").click(function() {
     document.getElementsByTagName("nav")[0].style.gridTemplateRows = "1fr 1fr";
 });
 
+//a continuacion funciones encargadas del control del foro y el envio de mensajes
 $("#forum1").click(function() {
     var foto;
 
@@ -577,7 +570,7 @@ $("#forum5").click(function() {
     $("#mensajes-5").append(bloque);
     document.getElementsByName("Text5")[0].value = "";
 });
-
+//funcion control del menu
 $("#boton-menu").click(function() {
     if (document.getElementById("left-column").style.display == "none") {
         document.getElementById("left-column").style.display = "block";
