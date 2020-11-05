@@ -283,10 +283,35 @@ label {
     outline: none;
 }
 
+.forum-chat-input {
+    width: 100%;
+    resize: none;
+}
+
+.profile-img {
+    width: 20px;
+    display: inline;
+}
+
+.profile-name {
+    display: inline;
+    color: black;
+    font-weight: bolder;
+}
+
+.profile-entry {
+    display: block;
+    color: black;
+}
+
+.chat-entry {
+    background-color: orange;
+    padding: 10px;
+    margin: 10px;
+}
+
 .form-signin input:focus,
-textarea:focus,
-.form-signup input:focus,
-textarea:focus {
+.form-signup input:focus {
     background: rgba(255, 255, 255, 0.3);
     border: none;
     padding-right: 40px;
