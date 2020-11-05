@@ -283,20 +283,30 @@ label {
     outline: none;
 }
 
+.send-msg-aera {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "forum-chat-input button";
+}
+
 .forum-chat-input {
     width: 100%;
     resize: none;
 }
 
 .profile-img {
-    width: 20px;
+    width: 25px;
     display: inline;
+    margin-left: 10px;
+    padding-top: 10px;
+    border-radius: 3px;
 }
 
 .profile-name {
     display: inline;
     color: black;
     font-weight: bolder;
+    margin-left: 10px;
 }
 
 .profile-entry {
