@@ -595,25 +595,20 @@ nav {
     grid-area: left-column;
 }
 
-#main-block,
-#asignatura,
-#calificaciones,
-#calificaciones-alumno,
-#contacto,
-#estudiantes,
-#faq,
-#foro,
-#mis-asignaturas,
-#iu,
-#ro,
-#ac,
-#is,
-#ho {
+.contenido {
     color: white;
     background-color: black;
     padding: 20px 20px 0 20px;
     grid-area: main-block;
     display: none;
+}
+
+a.forum-odd-link:hover {
+    color: white;
+}
+
+a.forum-even-link {
+    color: white;
 }
 
 .numero-msg-enviados {

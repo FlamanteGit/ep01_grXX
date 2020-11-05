@@ -91,6 +91,11 @@ function showElement(id) {
     document.getElementById("ac").style.display = "none";
     document.getElementById("is").style.display = "none";
     document.getElementById("ho").style.display = "none";
+    document.getElementById("tema1-foro").style.display = "none";
+    document.getElementById("tema2-foro").style.display = "none";
+    document.getElementById("tema3-foro").style.display = "none";
+    document.getElementById("tema4-foro").style.display = "none";
+    document.getElementById("tema5-foro").style.display = "none";
     document.getElementById(id).style.display = "block";
 }
 
