@@ -1,6 +1,6 @@
 function myFunction(x) {
     if (x.matches) { // If media query matches
-        document.getElementById("logo").src = "../ej-images/icon.png";
+        document.getElementById("logo").src = "../ej-images/mini_Logo_UC3M.svg.png";
     } else {
         document.getElementById("logo").src = "../ej-images/uc3m.png";
     }
@@ -89,6 +89,7 @@ function showElement(id) {
     document.getElementById("tema3-foro").style.display = "none";
     document.getElementById("tema4-foro").style.display = "none";
     document.getElementById("tema5-foro").style.display = "none";
+    document.getElementById("interfacesTopic").style.display = "none";
     document.getElementById(id).style.display = "block";
 }
 
