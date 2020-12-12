@@ -6,6 +6,13 @@
     margin: 0;
 }
 
+#buscador {
+    padding-left: 10px;
+    height: 35px;
+    background-color: white;
+    border-radius: 20px;
+}
+
 html,
 body * {
     box-sizing: border-box;
@@ -590,7 +597,7 @@ nav {
 #main-header {
     justify-self: stretch;
     display: none;
-    background-color: black;
+    background-color: #000E78;
     position: relative;
     left: 0;
     top: 0;

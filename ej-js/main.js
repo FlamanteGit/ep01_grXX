@@ -2,7 +2,7 @@ function myFunction(x) {
     if (x.matches) { // If media query matches
         document.getElementById("logo").src = "../ej-images/icon.png";
     } else {
-        document.getElementById("logo").src = "../ej-images/otro.png";
+        document.getElementById("logo").src = "../ej-images/uc3m.png";
     }
 }
 
