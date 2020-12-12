@@ -19,7 +19,7 @@ function loadAll() {
 
     selectProfilePhoto();
 
-    specificContent();
+    //specificContent();
 }
 
 //funcion encargada de mostrar el contenido que corresponde a cada rol
@@ -63,7 +63,8 @@ function cargaPagina() {
         document.getElementById("main-header").style.display = "block";
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
         document.getElementById("main-block").style.display = "block";
-        document.getElementById("user").textContent = "Bienvenido, " + getUsernameLogedUser();
+        document.getElementById("user").textContent = getUsernameLogedUser();
+        document.getElementById("bienvenida").textContent = "Bienvenido, " + getUsernameLogedUser();
     }
 }
 
