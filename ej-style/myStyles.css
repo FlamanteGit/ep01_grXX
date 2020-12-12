@@ -716,7 +716,6 @@ nav {
 #logout {
     grid-area: logout;
     display: flex;
-    justify-self: end;
     align-self: flex-start;
     text-align: right;
 }
