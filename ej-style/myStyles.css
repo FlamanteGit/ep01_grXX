@@ -543,11 +543,21 @@ a.navegation:hover {
 
 nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "logo navContenedor user-header";
+    grid-template-columns: 0.7fr 1.5fr 1fr 1fr;
+    grid-template-areas: "logo buscador header-icon-list user-header";
     width: 100%;
     padding: 10px;
     align-items: center;
+}
+
+#header-icon-list {
+    display: block;
+    margin: auto;
+}
+
+.header-icons {
+    height: 20px;
+    width: auto;
 }
 
 #logo {
