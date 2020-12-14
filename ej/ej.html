@@ -22,19 +22,19 @@
     <header id="main-header">
         <nav>
             <div id="top-header">
-                <!--<div id="burger-menu" style="display: none;">
+                <div id="burger-menu">
                     <input type="checkbox" />
                     <span></span>
                     <span></span>
                     <span></span>
-                    <ul id="menu">  
-                        <li id="mis-asignaturas-link"><a onclick="showElement('mis-asignaturas');">Asignaturas</a></li>
-                        <li id="calificaciones-link"><a onclick="showElement('calificaciones');">Calificaciones</a></li>
-                        <li id="calificaciones-alumnos-link"><a onclick="showElement('calificaciones-alumno');">Calificaciones</a></li>
-                        <li id="estudiantes-link"><a onclick="showElement('estudiantes');">Estudiantes</a></li>
+                    <ul id="menu">
+                        <li id="mis-asignaturas-link-burguer"><a onclick="showElement('mis-asignaturas');">Asignaturas</a></li>
+                        <li id="calificaciones-link-burguer"><a onclick="showElement('calificaciones');">Calificaciones</a></li>
+                        <li id="calificaciones-alumnos-link-burguer"><a onclick="showElement('calificaciones-alumno');">Calificaciones</a></li>
+                        <li id="estudiantes-link-burguer"><a onclick="showElement('estudiantes');">Estudiantes</a></li>
                         <li><a onclick="showElement('foro');">Foro</a></li>
                     </ul>
-                </div>-->
+                </div>
                 <a href="ej.html"><img id="logo" src="../ej-images/uc3m.png" /></a>
 
                 <!--<a id="boton-menu"><i class="fa fa-bars"></i></a>-->
@@ -51,7 +51,7 @@
 
                     </div>
 
-                    <a><img class="header_icon" src="../ej-images/bocadillo.png"></a>
+                    <a onclick="showElement('foro');"><img class="header_icon" src="../ej-images/bocadillo.png"></a>
                     <a id="logout" style="color: white;"><img class="header_icon" src="../ej-images/logout.png"></a>
                 </div>
                 <span id="user" style="color: white;">aqui va el usuario</span>
@@ -147,7 +147,6 @@
                 </form>
             </div>
         </div>
-
     </div>
 
     <div class="contenedor">
@@ -217,85 +216,93 @@
                 </main>
             </div>
 
+            <!-- TEMAS -->
             <div id="interfacesTopic" class="contenido">
-                <div class="cards-set">
-                    <div class="card">
-                        <div class="heading" style="background-color: #070e78">
-                            <h1 style="color: white">Tema 1</h1>
+                <h1>INTERFACES DE USUARIO</h1>
+                <div class="cards-set" id="interfacesCardset">
+                    <div class="card" onclick="showElement('topicHTML');">
+                        <div class="heading" style="background: url( '../ej-images/tema-htmlpng.png'); background-size:cover;">
                         </div>
                         <div class="content">
-                            <p>HTML</p>
+                            <h1>HTML</h1>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
-                            <h1 style="color: white">Tema 2</h1>
+                        <div class="heading" style="background: url( '../ej-images/CSS.png'); background-size:cover;">
                         </div>
                         <div class="content">
-                            <p>CSS</p>
+                            <h1>CSS</h1>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
-                            <h1 style="color: white">Tema 3</h1>
+                        <div class="heading" style="background: url( '../ej-images/javascript.png'); background-size:cover ;">
                         </div>
                         <div class="content">
-                            <p>JavaScript</p>
+                            <h1>JAVASCRIPT</h1>
+                        </div>
+                    </div>
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('interfacesCardset');">
+                        <div class="heading" style="background: url( '../ej-images/plus.png'); background-size:cover ;">
+                        </div>
+                        <div class="content">
+                            <h1>AÑADIR TEMA</h1>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div id="arquitecturaTopic" class="contenido">
-                <div class="cards-set">
+                <h1>ARQUITECTURA DE COMPUTADORES</h1>
+                <div class="cards-set" id="arquitecturaCardset">
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
-                            <h1 style="color: white">Tema 1</h1>
+                        <div class="heading">
+                            <h1 style="color: white">Rendimiento y Paralelismo</h1>
                         </div>
                         <div class="content">
-                            <p>HTML</p>
+                            <p>ey</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
-                            <h1 style="color: white">Tema 2</h1>
+                        <div class="heading">
+                            <h1 style="color: white">C++</h1>
                         </div>
                         <div class="content">
-                            <p>CSS</p>
+                            <p>ey</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
-                            <h1 style="color: white">Tema 3</h1>
+                        <div class="heading">
+                            <h1 style="color: white">Concurrencia</h1>
                         </div>
                         <div class="content">
-                            <p>JavaScript</p>
+                            <p>ey</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div id="heuristicaTopic" class="contenido">
-                <div class="cards-set">
+                <h1>HEURISTICA Y OPTIMIZACION</h1>
+                <div class="cards-set" id="heuristicaCardset">
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
-                            <h1 style="color: white">Tema 1</h1>
+                        <div class="heading">
+                            <h1 style="color: white">Simplex</h1>
                         </div>
                         <div class="content">
                             <p>HTML</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
-                            <h1 style="color: white">Tema 2</h1>
+                        <div class="heading">
+                            <h1 style="color: white">Satisfabilidad</h1>
                         </div>
                         <div class="content">
                             <p>CSS</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
-                            <h1 style="color: white">Tema 3</h1>
+                        <div class="heading">
+                            <h1 style="color: white">Heurística</h1>
                         </div>
                         <div class="content">
                             <p>JavaScript</p>
@@ -305,55 +312,56 @@
             </div>
 
             <div id="ingenieriaTopic" class="contenido">
-                <div class="cards-set">
+                <h1>INGENIERIA DEL SOFTWARE</h1>
+                <div class="cards-set" id="ingenieriaCardset">
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
+                        <div class="heading">
                             <h1 style="color: white">Tema 1</h1>
                         </div>
                         <div class="content">
-                            <p>HTML</p>
+                            <p>Requisitos</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
+                        <div class="heading">
                             <h1 style="color: white">Tema 2</h1>
                         </div>
                         <div class="content">
-                            <p>CSS</p>
+                            <p>Modelado Conceptual</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
+                        <div class="heading">
                             <h1 style="color: white">Tema 3</h1>
                         </div>
                         <div class="content">
-                            <p>JavaScript</p>
+                            <p>Modelado Arquitectonico</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div id="redesTopic" class="contenido">
-
-                <div class="cards-set">
+                <h1>REDES DE ORDENADORES</h1>
+                <div class="cards-set" id="redesCardset">
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
-                            <h1 style="color: white">Tema 1</h1>
+                        <div class="heading">
+                            <h1 style="color: white">IPs</h1>
                         </div>
                         <div class="content">
-                            <p>HTML</p>
+                            <p>Asignación de IPs</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
+                        <div class="heading">
                             <h1 style="color: white">Tema 2</h1>
                         </div>
                         <div class="content">
-                            <p>CSS</p>
+                            <p>Routers y Switch</p>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="heading" style="background-color: #070e78">
+                        <div class="heading">
                             <h1 style="color: white">Tema 3</h1>
                         </div>
                         <div class="content">
@@ -363,7 +371,37 @@
                 </div>
             </div>
 
+            <!--CREACION DE NUEVO TEMA-->
+            <div id="newTopicCreation" style="display: none;">
+                <h1>CREACIÓN DE UN NUEVO TEMA</h1>
+                <label style="color: black;">Introduce el título</label>
+                <textarea id="headingArea"></textarea>
+                <label style="color: black;">Introduce la descripción del tema</label>
+                <textarea id="descriptionArea"></textarea>
+                <label style="color: black;">Introduce la información del tema</label>
+                <textarea id="informationArea"></textarea>
+                <a onclick="addTopic(getLastTopic());"><span>+</span></a>
+            </div>
 
+            <!-- SUBTEMAS -->
+            <div id="subTopics">
+                <div id="topicHTML" class="contenido">
+                    <h1> TEMA 1: Inroducción al HTML</h1>
+                    <p> HTML es el lenguaje con el que se escribe el contenido de las páginas web. Las páginas web pueden ser vistas por el usuario mediante un tipo de aplicación llamada cliente web o más comúnmente "navegador". Podemos decir por lo tanto
+                        que el HTML es el lenguaje usado por para especificar el contenido que los navegadores deben representar a la hora de mostrar una página web. Este lenguaje nos permite aglutinar textos, imágenes, enlaces... y combinarlos a nuestro
+                        gusto. La ventaja del HTML a la hora de representar el contenido en un navegador, con respecto a otros formatos físicos como libros o revistas, es justamente la posibilidad de colocar referencias a otras páginas, por medio de los
+                        enlaces hipertexto.
+                    </p>
+                    <div id="videoText">
+                        <iframe height="280" width="450" src="https://www.youtube.com/embed/cqMfPS8jPys" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p> Aprender HTML consiste en conocer y saber utilizar dichas etiquetas. Para realizar este curso no necesitas ningún software específico, sino que tan sólo necesitas un editor de texto, como puede ser el bloc de notas de Windows,
+                            aunque se recomienda usar algún otro editor más especializado que te ayude en la escritura del código, como puede ser el Macromedia Dreamweaver.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASIGNATURAS-->
             <div id="mis-asignaturas" class="contenido">
                 <main class="main-content">
                     <h1>MIS ASIGNATURAS</h1>

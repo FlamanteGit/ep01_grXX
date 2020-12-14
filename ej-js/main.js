@@ -19,7 +19,7 @@ function loadAll() {
 
     selectProfilePhoto();
 
-    //specificContent();
+    specificContent();
 }
 
 //funcion encargada de mostrar el contenido que corresponde a cada rol
@@ -30,12 +30,20 @@ function specificContent() {
         document.getElementById('mis-asignaturas-link').style.display = "block";
         document.getElementById('calificaciones-link').style.display = "none";
         document.getElementById('calificaciones-alumnos-link').style.display = "block";
+        document.getElementById('estudiantes-link-burguer').style.display = "none";
+        document.getElementById('mis-asignaturas-link-burguer').style.display = "block";
+        document.getElementById('calificaciones-link-burguer').style.display = "none";
+        document.getElementById('calificaciones-alumnos-link-burguer').style.display = "block";
 
     } else {
         document.getElementById('mis-asignaturas-link').style.display = "none";
         document.getElementById('estudiantes-link').style.display = "block";
         document.getElementById('calificaciones-link').style.display = "block";
         document.getElementById('calificaciones-alumnos-link').style.display = "none";
+        document.getElementById('mis-asignaturas-link-burguer').style.display = "none";
+        document.getElementById('estudiantes-link-burguer').style.display = "block";
+        document.getElementById('calificaciones-link-burguer').style.display = "block";
+        document.getElementById('calificaciones-alumnos-link-burguer').style.display = "none";
     }
 }
 //funcion para seleccionar foto de perfil dependiendo del rol
@@ -60,7 +68,7 @@ function cargaPagina() {
     if (login == "false" || login == "") {
         document.getElementsByClassName("container")[0].style.display = "block";
     } else {
-        document.getElementById("main-header").style.display = "block";
+        document.getElementById("main-header").style.display = "grid";
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
         document.getElementById("main-block").style.display = "block";
         document.getElementById("user").textContent = getUsernameLogedUser();
@@ -94,6 +102,9 @@ function showElement(id) {
     document.getElementById("redesTopic").style.display = "none";
     document.getElementById("arquitecturaTopic").style.display = "none";
     document.getElementById("ingenieriaTopic").style.display = "none";
+    document.getElementById("topicHTML").style.display = "none";
+    document.getElementById("newTopicCreation").style.display = "none";
+    hideNewTopics();
     document.getElementById(id).style.display = "block";
 }
 
@@ -602,3 +613,79 @@ $("#boton-menu").click(function() {
         document.getElementById("right-column").style.display = "none";
     }
 });
+
+var lastTopic;
+
+function getLastTopic() {
+    return lastTopic;
+}
+
+function setLastTopic(topic) {
+    lastTopic = topic;
+}
+
+function addTopic(topic) {
+    const cardset = document.getElementById(topic);
+    const subtopics = document.getElementById("subtopics");
+
+    newCard = document.createElement("div");
+    newCard.class = "card";
+
+    newHeading = document.createElement("div");
+    heading = document.getElementById("headingArea").value;
+    newHeading.class = "heading";
+    newHeading.textContent = heading;
+
+    newCard.appendChild(newHeading);
+
+    newContent = document.createElement("div");
+    newContent.class = "content";
+
+    newH1 = document.createElement("h1");
+    newContent.appendChild(newH1)
+
+    newCard.appendChild(newContent);
+    /* Creamos una estructura card
+    <div class = "card">
+        <div class = "heading">
+        </div>
+        <div class = "content">
+            <h1></h1>
+        </div>
+    </div>
+    */
+
+    newTopic = document.createElement("div");
+    newTopic.class = "createdTopics";
+    newTopic.id = heading;
+    newTopic.style.display = "none";
+
+    desc = document.createElement("h1");
+    description = document.getElementById("descriptionArea").value;
+    desc.textContent = description;
+    newTopic.appendChild(desc)
+
+    info = document.createElement("p");
+    p = document.getElementById("informationArea").value;
+    info.textContent = p;
+    newTopic.appendChild(info);
+
+    /* Creamos una estructura newTopic
+    <div class = "createdTopics">
+        <h1>desc</h1>
+        <p>info</p>
+    </div>
+    */
+    newCard.onclick = "showElement(" + newTopic.id + ");";
+    cardset.appendChild(newCard);
+    subtopics.appendChild(newTopic);
+
+}
+
+function hideNewTopics() {
+    newTopics = document.getElementsByClassName("createdTopics");
+    if (newTopics == null) return;
+    for (i = 0; i < newTopics.length; i++) {
+        newTopics[i].style.display = "none";
+    }
+}
