@@ -103,6 +103,8 @@ function showElement(id) {
     document.getElementById("arquitecturaTopic").style.display = "none";
     document.getElementById("ingenieriaTopic").style.display = "none";
     document.getElementById("topicHTML").style.display = "none";
+    document.getElementById("topicCSS").style.display = "none";
+    document.getElementById("topicJAVASCRIPT").style.display = "none";
     document.getElementById("newTopicCreation").style.display = "none";
     hideNewTopics();
     document.getElementById(id).style.display = "block";

@@ -796,6 +796,10 @@ a.navegation:hover {
     background-color: darkblue;
 }
 
+.heading h1 {
+    color: white;
+}
+
 .card .heading {
     border-radius: 2px;
     position: relative;
@@ -947,7 +951,7 @@ p {
 }
 
 .introTema p {
-    border: 2px solid orange;
+    border: 2px solid darkblue;
     border-radius: 5px;
     text-align: center;
 }

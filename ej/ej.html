@@ -221,24 +221,30 @@
                 <h1>INTERFACES DE USUARIO</h1>
                 <div class="cards-set" id="interfacesCardset">
                     <div class="card" onclick="showElement('topicHTML');">
-                        <div class="heading" style="background: url( '../ej-images/tema-htmlpng.png'); background-size:cover;">
+                        <div class="heading">
+                            <h1>TEMA 1</h1>
                         </div>
                         <div class="content">
-                            <h1>HTML</h1>
+                            <h2>HTML</h2>
+                            <p>(impartido)</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="heading" style="background: url( '../ej-images/CSS.png'); background-size:cover;">
+                    <div class="card" onclick="showElement('topicCSS');">
+                        <div class="heading">
+                            <h1>TEMA 2</h1>
                         </div>
                         <div class="content">
-                            <h1>CSS</h1>
+                            <h2>CSS</h2>
+                            <p>(impartido)</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="heading" style="background: url( '../ej-images/javascript.png'); background-size:cover ;">
+                    <div class="card" onclick="showElement('topicJAVASCRIPT');">
+                        <div class="heading">
+                            <h1>TEMA 3</h1>
                         </div>
                         <div class="content">
-                            <h1>JAVASCRIPT</h1>
+                            <h2>JAVASCRIPT</h2>
+                            <p>(nuevo)</p>
                         </div>
                     </div>
                     <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('interfacesCardset');">
@@ -387,15 +393,33 @@
             <div id="subTopics">
                 <div id="topicHTML" class="contenido">
                     <h1> TEMA 1: Inroducción al HTML</h1>
-                    <p> HTML es el lenguaje con el que se escribe el contenido de las páginas web. Las páginas web pueden ser vistas por el usuario mediante un tipo de aplicación llamada cliente web o más comúnmente "navegador". Podemos decir por lo tanto
-                        que el HTML es el lenguaje usado por para especificar el contenido que los navegadores deben representar a la hora de mostrar una página web. Este lenguaje nos permite aglutinar textos, imágenes, enlaces... y combinarlos a nuestro
-                        gusto. La ventaja del HTML a la hora de representar el contenido en un navegador, con respecto a otros formatos físicos como libros o revistas, es justamente la posibilidad de colocar referencias a otras páginas, por medio de los
-                        enlaces hipertexto.
-                    </p>
-                    <div id="videoText">
-                        <iframe height="280" width="450" src="https://www.youtube.com/embed/cqMfPS8jPys" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <p> Aprender HTML consiste en conocer y saber utilizar dichas etiquetas. Para realizar este curso no necesitas ningún software específico, sino que tan sólo necesitas un editor de texto, como puede ser el bloc de notas de Windows,
-                            aunque se recomienda usar algún otro editor más especializado que te ayude en la escritura del código, como puede ser el Macromedia Dreamweaver.
+
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/html.png" alt="Tema1-Imagen" />
+                        <p>
+                            HTML es el lenguaje con el que se escribe el contenido de las páginas web. Las páginas web pueden ser vistas por el usuario mediante un tipo de aplicación llamada cliente web o más comúnmente "navegador". Podemos decir por lo tanto que el HTML es el lenguaje
+                            usado por para especificar el contenido que los navegadores deben representar a la hora de mostrar una página web. Este lenguaje nos permite aglutinar textos, imágenes, enlaces... y combinarlos a nuestro gusto. La ventaja del
+                            HTML a la hora de representar el contenido en un navegador, con respecto a otros formatos físicos como libros o revistas, es justamente la posibilidad de colocar referencias a otras páginas, por medio de los enlaces hipertexto.
+                        </p>
+                    </div>
+                </div>
+                <div id="topicCSS" class="contenido">
+                    <h1>Tema 2: Introduccion a CSS</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/CSS.png" alt="Tema1-Imagen" />
+                        <p>
+                            CSS son las siglas de Cascading Style Sheets - Hojas de Estilo en Cascada - que es un lenguaje que describe la presentación de los documentos estructurados en hojas de estilo para diferentes métodos de interpretación, es decir, describe como se va a mostrar
+                            un documento en pantalla, por impresora, por voz (cuando la información es pronunciada a través de un dispositivo de lectura) o en dispositivos táctiles basados en Braille
+                        </p>
+                    </div>
+                </div>
+                <div id="topicJAVASCRIPT" class="contenido">
+                    <h1>Tema 3: Introduccion a JavaScript</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/javascript.png" alt="Tema1-Imagen" />
+                        <p>
+                            JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas
+                            actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado.
                         </p>
                     </div>
                 </div>
