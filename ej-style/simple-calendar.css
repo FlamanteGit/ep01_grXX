@@ -19,13 +19,13 @@
     height: 30px;
     text-align: center;
     line-height: 30px;
-    color: white;
+    color: darkblue;
     border-radius: 50%;
     border: 2px solid white;
 }
 
 .calendar header .simple-calendar-btn:hover {
-    background: black;
+    background: darkblue;
     color: white;
 }
 
@@ -98,8 +98,8 @@
 }
 
 .calendar .day.today {
-    background: black;
-    color: orange;
+    background: darkblue;
+    color: white;
 }
 
 .calendar .day.today.has-event:after {

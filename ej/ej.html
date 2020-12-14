@@ -41,7 +41,16 @@
 
                 <input id="buscador" placeholder="Escribe aquí para buscar">
                 <div id="header-icon-list">
-                    <a><img class="header_icon" src="../ej-images/calendario2.png"></a>
+                    <a id="myBtn"><img class="header_icon" src="../ej-images/calendario2.png"></a>
+                    <div id="myModal" class="modal">
+
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="calendar"></div>
+                        </div>
+
+                    </div>
+
                     <a><img class="header_icon" src="../ej-images/bocadillo.png"></a>
                     <a id="logout" style="color: white;"><img class="header_icon" src="../ej-images/logout.png"></a>
                 </div>
@@ -51,11 +60,11 @@
 
 
             <div id="sub-header" style="background-color: white;">
-                <span><a>Redes de Ordenadores</a></span>
-                <span><a>Interfaces de Usuario</a></span>
-                <span><a>Ingenieria del software</a></span>
-                <span><a>Heuristica y optimizacion</a></span>
-                <span><a>Arquitectura de computadores</a></span>
+                <span><a onclick="showElement('redesTopic');">Redes de Ordenadores</a></span>
+                <span><a onclick="showElement('interfacesTopic');">Interfaces de Usuario</a></span>
+                <span><a onclick="showElement('ingenieriaTopic');">Ingenieria del software</a></span>
+                <span><a onclick="showElement('heuristicaTopic');">Heuristica y optimizacion</a></span>
+                <span><a onclick="showElement('arquitecturaTopic');">Arquitectura de computadores</a></span>
 
             </div>
         </nav>
@@ -159,949 +168,1059 @@
 
         <!--zona principal-->
         <div id="main-block" class="contenido">
-            <main class="main-content">
-                <h1 id="bienvenida"></h1>
+            <div id="principal">
+                <main class="main-content">
+                    <h1 id="bienvenida"></h1>
 
+                    <div class="cards-set">
+                        <div class="card" onclick="showElement('interfacesTopic');">
+                            <div class="heading" style="background: url('../ej-images/interfaces-de-usuario.png'); background-size:cover ;">
+                            </div>
+                            <div class="content">
+                                <h1>Interfaces de usuario</h1>
+                            </div>
+                        </div>
+
+                        <div class="card" onclick="showElement('arquitecturaTopic');">
+                            <div class="heading" style="background: url('../ej-images/arquitectura-de-compus.png'); background-size:cover ;">
+                            </div>
+                            <div class="content">
+                                <h1>Arquitectura de computadores</h1>
+
+                            </div>
+                        </div>
+
+                        <div class=" card" onclick="showElement( 'heuristicaTopic');">
+                            <div class="heading" style="background: url( '../ej-images/heuristica.png'); background-size:cover ;">
+                            </div>
+                            <div class="content">
+                                <h1>Heuristica y Optimizacion</h1>
+                            </div>
+                        </div>
+
+                        <div class="card" onclick="showElement( 'redesTopic');">
+                            <div class="heading" style="background: url( '../ej-images/redes-de-ordenadores.png'); background-size:cover ;">
+                            </div>
+                            <div class="content">
+                                <h1>Redes de ordenadores</h1>
+                            </div>
+                        </div>
+
+                        <div class="card" onclick="showElement( 'ingenieriaTopic');">
+                            <div class="heading" style="background: url( '../ej-images/ingenieria.png'); background-size:cover ;">
+                            </div>
+                            <div class="content">
+                                <h1>Ingenieria de software</h1>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <div id="interfacesTopic" class="contenido">
                 <div class="cards-set">
                     <div class="card">
-                        <div class="heading" style="background: url('../ej-images/foto-interfaces.png')"></div>
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 1</h1>
+                        </div>
                         <div class="content">
-                            <p>This is a text</p>
+                            <p>HTML</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 2</h1>
+                        </div>
+                        <div class="content">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 3</h1>
+                        </div>
+                        <div class="content">
+                            <p>JavaScript</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="card">
-                    <div class="heading" style="background-color: #070e78">
-                        <h1 style="color: white">Arquitectura de computadores</h1>
+            <div id="arquitecturaTopic" class="contenido">
+                <div class="cards-set">
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 1</h1>
+                        </div>
+                        <div class="content">
+                            <p>HTML</p>
+                        </div>
                     </div>
-                    <div class="content">
-                        <span>Aula 2.3.A04</span><br>
-                        <span>Profesor: Teresa Onorati</span>
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 2</h1>
+                        </div>
+                        <div class="content">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 3</h1>
+                        </div>
+                        <div class="content">
+                            <p>JavaScript</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="card">
-                    <div class="heading" style="background-color: #070e78">
-                        <h1 style="color: white">Heuristica y Optimizacion</h1>
+            <div id="heuristicaTopic" class="contenido">
+                <div class="cards-set">
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 1</h1>
+                        </div>
+                        <div class="content">
+                            <p>HTML</p>
+                        </div>
                     </div>
-                    <div class="content">
-                        <span>Aula 2.3.A04</span><br>
-                        <span>Profesor: Teresa Onorati</span>
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 2</h1>
+                        </div>
+                        <div class="content">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 3</h1>
+                        </div>
+                        <div class="content">
+                            <p>JavaScript</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="card">
-                    <div class="heading" style="background-color: #070e78">
-                        <h1 style="color: white">Redes de ordenadores</h1>
+            <div id="ingenieriaTopic" class="contenido">
+                <div class="cards-set">
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 1</h1>
+                        </div>
+                        <div class="content">
+                            <p>HTML</p>
+                        </div>
                     </div>
-                    <div class="content">
-                        <span>Aula 2.3.A04</span><br>
-                        <span>Profesor: Teresa Onorati</span>
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 2</h1>
+                        </div>
+                        <div class="content">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 3</h1>
+                        </div>
+                        <div class="content">
+                            <p>JavaScript</p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="card">
-                    <div class="heading" style="background-color: #070e78">
-                        <h1 style="color: white">Ingenieria de software</h1>
+            <div id="redesTopic" class="contenido">
+
+                <div class="cards-set">
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 1</h1>
+                        </div>
+                        <div class="content">
+                            <p>HTML</p>
+                        </div>
                     </div>
-                    <div class="content">
-                        <span>Aula 2.3.A04</span><br>
-                        <span>Profesor: Teresa Onorati</span>
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 2</h1>
+                        </div>
+                        <div class="content">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="heading" style="background-color: #070e78">
+                            <h1 style="color: white">Tema 3</h1>
+                        </div>
+                        <div class="content">
+                            <p>JavaScript</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+
+            <div id="mis-asignaturas" class="contenido">
+                <main class="main-content">
+                    <h1>MIS ASIGNATURAS</h1>
+                    <h2 class="asignaturas-title">MAGISTRALES</h2>
+                    <ul id="magistrales">
+                        <li>
+                            <span>80 MAG. Interfaces de Usuario 20/21</span></li>
+                        <li>
+                            <span>80 MAG. Redes de Ordenadores 20/21</span></li>
+                        <li>
+                            <span>80 MAG. Arquitectura de computadores 20/21</span></li>
+                        <li>
+                            <span>80 MAG. Ingenieria del SoftWare 20/21</span></li>
+                        <li>
+                            <span>80 MAG. Heuristica y Optimizacion 20/21</span></li>
+                    </ul>
+                    <h2 class="asignaturas-title">GRUPO REDUCIDO</h2>
+                    <ul id="reducidas">
+                        <li>
+                            <span>81 Interfaces de Usuario 20/21</span></li>
+                        <li>
+                            <span>81 Redes de Ordenadores 20/21</span></li>
+                        <li>
+                            <span>81 Arquitectura de computadores 20/21</span></li>
+                        <li>
+                            <span>81 Ingenieria del SoftWare 20/21</span></li>
+                        <li>
+                            <span>81 Heuristica y Optimizacion 20/21</span></li>
+                    </ul>
+                </main>
+            </div>
+
+            <!--asignatura-->
+            <div id="asignatura" class="contenido">
+                <main class="main-content">
+                    <h1>ASIGNATURA</h1>
+                    <br />
+                    <h3>Introduccion</h3>
+                    <p>
+                        La interfaz de usuario es el medio con que el usuario puede comunicarse con una máquina, equipo, computadora o dispositivo, y comprende todos los puntos de contacto entre el usuario y el equipo. Normalmente suelen ser fáciles de entender y fáciles de
+                        accionar, aunque en el ámbito de la informática es preferible referirse a que suelen ser"usables","amigables e intuitivos" porque es complejo y subjetivo decir"fácil".
+                    </p>
+                    <br />
+                    <h3>Definicion</h3>
+                    <p>
+                        La interfaz de usuario es el espacio donde se producen las interacciones entre seres humanos y máquinas. El objetivo de esta interacción es permitir el funcionamiento y control más efectivo de la máquina desde la interacción con el humano. Las interfaces
+                        básicas de usuario son aquellas que incluyen elementos como menús, ventanas, contenido gráfico, cursor, los beeps y algunos otros sonidos que la computadora hace, y en general, todos aquellos canales por los cuales se permite la
+                        comunicación entre el ser humano y la computadora. El objetivo del diseño de una interfaz es producir una interfaz que sea fácil de usar (explicarse por sí misma), eficiente y agradable para que al operar la máquina dé el resultado
+                        deseado.
+                    </p>
+                    <h3>Funciones principales</h3>
+                    <p>Las funciones principales son las siguientes:</p>
+                    <p>
+                        Puesta en marcha y apagado. Control de las funciones manipulables del equipo. Manipulación de archivos y directorios. Herramientas de desarrollo de aplicaciones. Comunicación con otros sistemas. Información de estado. Configuración de la propia interfaz
+                        y entorno. Intercambio de datos entre aplicaciones. Sistema de ayuda interactivo.
+                    </p>
+                </main>
+            </div>
+
+            <div id="iu" class="contenido">
+                <h1>INTERFACES DE USUARIO</h1>
+                <div>
+                    <table class="table-page">
+                        <thead>
+                            <tr>
+                                <th>Item de calificacion</th>
+                                <th>Rango</th>
+                                <th>Calificacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Practica 1</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica 2</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica 3</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica final</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 1</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 2</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Examen final</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <button class="button">DESCARGAR</button>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+
+            <div id="ro" class="contenido">
+                <h1>REDES DE ORDENADORES</h1>
+                <div>
+                    <table class="table-page">
+                        <thead>
+                            <tr>
+                                <th>Item de calificacion</th>
+                                <th>Rango</th>
+                                <th>Calificacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Practica 1</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica 2</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica 3</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica final</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 1</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 2</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Examen final</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <button class="button">DESCARGAR</button>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+
+            <div id="ac" class="contenido">
+                <h1>ARQUITECTURA DE COMPUTADORES</h1>
+                <div>
+                    <table class="table-page">
+                        <thead>
+                            <tr>
+                                <th>Item de calificacion</th>
+                                <th>Rango</th>
+                                <th>Calificacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Practica 1</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica 2</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica 3</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica final</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 1</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 2</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Examen final</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <button class="button">DESCARGAR</button>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+
+            <div id="is" class="contenido">
+                <h1>INGENIERIA DEL SOFTWARE</h1>
+                <div>
+                    <table class="table-page">
+                        <thead>
+                            <tr>
+                                <th>Item de calificacion</th>
+                                <th>Rango</th>
+                                <th>Calificacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Practica 1</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica 2</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica 3</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica final</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 1</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 2</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Examen final</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br/>
+                    <button class="button">DESCARGAR</button>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+
+            <div id="ho" class="contenido">
+                <h1>HEURISTICA Y OPTIMIZACION</h1>
+                <div>
+                    <table class="table-page">
+                        <thead>
+                            <tr>
+                                <th>Item de calificacion</th>
+                                <th>Rango</th>
+                                <th>Calificacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Practica 1</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica 2</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica 3</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Practica final</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 1</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 2</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                            <tr>
+                                <td>Examen final</td>
+                                <td>99.99 - 100</td>
+                                <td>9.9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <button class="button">DESCARGAR</button>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+
+            <!--calificaciones vista alumno-->
+            <div id="calificaciones-alumno" class="contenido">
+                <main class="main-content">
+                    <h1>CALIFICACIONES</h1>
+                    <ul id="ul-calificaciones-alumno">
+                        <li>
+                            <a onclick="showElement( 'iu')" class="navegation">Interfaces de Usuario</a></li>
+                        <li>
+                            <a onclick="showElement( 'ro')" class="navegation">Redes de Ordenadores</a></li>
+                        <li>
+                            <a onclick="showElement( 'ac')" class="navegation">Arquitectura de computadores</a></li>
+                        <li>
+                            <a onclick="showElement( 'is')" class="navegation">Ingenieria del Software</a></li>
+                        <li>
+                            <a onclick="showElement( 'ho')" class="navegation">Heuristica y Optimizacion</a></li>
+                    </ul>
+                </main>
+            </div>
+
+            <!--calificaciones vista administrador/profesor-->
+            <div id="calificaciones" class="contenido">
+                <main class="main-content">
+                    <h1>CALIFICACIONES</h1>
+                    <div>
+                        <table id="table-notas" class="table-page">
+                            <thead>
+                                <tr>
+                                    <th>NIA</th>
+                                    <th>Parcial 1</th>
+                                    <th>Parcial 2</th>
+                                    <th>Practica final</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>100405861</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>100405862</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>100405863</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>100405864</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>100405865</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>100405866</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>100405867</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>100405868</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>100405869</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>100405870</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <button id="export-button" class="button">DESCARGAR</button>
+
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </main>
+            </div>
+
+            <!--contacto-->
+            <div id="contacto" class="contenido">
+                <main class="main-content">
+                    <div class="contact">
+                        <h3>ANA TAJADURA JIMENEZ</h3>
+                        Correo: atajadur@inf.uc3m.es
+                        <br />Despacho: 2.2.C02
+                    </div>
+                    <div class="contact">
+                        <h3>JAVIER SANZ RODRIGUEZ</h3>
+                        Correo: jsrodrig@inf.uc3m.es
+                        <br />Despacho: 2.2.C03
+                    </div>
+                    <div class="contact">
+                        <h3>TERESA ONORATI</h3>
+                        Correo: tonorati@inf.uc3m.es
+                        <br />Despacho: 2.2.C03
+                    </div>
+                </main>
+            </div>
+
+            <!--estudiantes-->
+            <div id="estudiantes" class="contenido">
+                <main class="main-content">
+                    <h1>LISTADO DE ESTUDIANTES</h1>
+                    <div>
+                        <table class="table-page">
+                            <thead>
+                                <tr>
+                                    <th>Foto</th>
+                                    <th>Nombre</th>
+                                    <th>Apellidos</th>
+                                    <th>Correo</th>
+                                    <th>Mensaje</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th><img src="../ej-images/alumno6.jpg" alt="alumno1" /></th>
+                                    <th>Raul</th>
+                                    <th>Gimenez de Dios</th>
+                                    <th>100405861@alumnos.uc3m.es</th>
+                                    <th><i class="far fa-comment"></i></th>
+                                </tr>
+                                <tr>
+                                    <th><img src="../ej-images/alumno2.jpg" alt="alumno1" /></th>
+                                    <th>Rodrigo</th>
+                                    <th>Fernandez Liñan</th>
+                                    <th>100405862@alumnos.uc3m.es</th>
+                                    <th><i class="far fa-comment"></i></th>
+                                </tr>
+                                <tr>
+                                    <th><img src="../ej-images/alumno3.jpg" alt="alumno1" /></th>
+                                    <th>Diego</th>
+                                    <th>Fernandez Plaza</th>
+                                    <th>100405863@alumnos.uc3m.es</th>
+                                    <th><i class="far fa-comment"></i></th>
+                                </tr>
+                                <tr>
+                                    <th><img src="../ej-images/alumno4.jpg" alt="alumno1" /></th>
+                                    <th>Daniel</th>
+                                    <th>Garcia Barroso</th>
+                                    <th>100405864@alumnos.uc3m.es</th>
+                                    <th><i class="far fa-comment"></i></th>
+                                </tr>
+                                <tr>
+                                    <th><img src="../ej-images/alumno5.jpg" alt="alumno1" /></th>
+                                    <th>Jose</th>
+                                    <th>Gallego Casilda</th>
+                                    <th>100405865@alumnos.uc3m.es</th>
+                                    <th><i class="far fa-comment"></i></th>
+                                </tr>
+                                <tr>
+                                    <th><img src="../ej-images/alumno1.jpg" alt="alumno1" /></th>
+                                    <th>Mohamed</th>
+                                    <th>El Aakil</th>
+                                    <th>100405866@alumnos.uc3m.es</th>
+                                    <th><i class="far fa-comment"></i></th>
+                                </tr>
+                                <tr>
+                                    <th><img src="../ej-images/alumno7.jpg" alt="alumno1" /></th>
+                                    <th>Adrian</th>
+                                    <th>Giron Jimenez</th>
+                                    <th>100405867@alumnos.uc3m.es</th>
+                                    <th><i class="far fa-comment"></i></th>
+                                </tr>
+                                <tr>
+                                    <th><img src="../ej-images/alumno8.jpg" alt="alumno1" /></th>
+                                    <th>Mario</th>
+                                    <th>Dominguez Garcia</th>
+                                    <th>100405868@alumnos.uc3m.es</th>
+                                    <th><i class="far fa-comment"></i></th>
+                                </tr>
+                                <tr>
+                                    <th><img src="../ej-images/alumno9.jpg" alt="alumno1" /></th>
+                                    <th>Miguel</th>
+                                    <th>Garcia Trigueros</th>
+                                    <th>100405869@alumnos.uc3m.es</th>
+                                    <th><i class="far fa-comment"></i></th>
+                                </tr>
+                                <tr>
+                                    <th><img src="../ej-images/alumno10.jpg" alt="alumno1" /></th>
+                                    <th>Amalia</th>
+                                    <th>Cid Blasco</th>
+                                    <th>100405870@alumnos.uc3m.es</th>
+                                    <th><i class="far fa-comment"></i></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
+            </div>
+
+            <!--faq-->
+            <div id="faq" class="contenido">
+                <main class="main-content">
+                    <h1>PREGUNTAS FRECUENTES</h1>
+                    <br />
+                    <h3>¿Hay nota mínima en los parciales y en el trabajo?</h3>
+                    <p>
+                        No, no existe una nota mínima, siempre que la media sea mayor o igual a 5 se aprobará la asignatura.
+                    </p>
+                    <h3>¿Qué temas entran en el primer parcial?</h3>
+                    <p>
+                        Los temas 1, 2, 3 y 4, además de preguntas relacionadas con la practica 1.
+                    </p>
+                    <h3>¿Qué temas entran en el segundo parcial?</h3>
+                    <p>
+                        Los temas 5, 6, 7 y 8, además de preguntas relacionadas con la practica 2.
+                    </p>
+                    <h3>¿Qué peso tiene cada parcial en la nota final?¿Y la práctica?</h3>
+                    <p>
+                        Cada parcial tiene un peso del 10% (1 pto) sobre la practica final
+                    </p>
+                    <h3>
+                        ¿Cual es la maxima nota que se puede obtener sin seguir la evaluacion continua?
+                    </h3>
+                    <p>
+                        La maxima nota que se puede obtener es un 6 en el caso de que solo se realizase el examen final dado que este tiene un peso del 60% si el alumno no sigue la EC
+                    </p>
+                    <h3>¿Cual es la bibliografia recomendada?</h3>
+                    <p>The Design of Everyday Things (Libro de Donald Norman)</p>
+                </main>
+            </div>
+
+            <!--foro-->
+            <div id="foro" class="contenido">
+                <main class="main-content">
+                    <h1>FORO</h1>
+                    <div>
+                        <table class="table-page">
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Nº de mensajes enviados</th>
+                                    <th>Último mensaje</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a class="forum-odd-link" onclick="showElement( 'tema1-foro')">Avisos</a></td>
+                                    <td class="numero-msg-enviados">6</td>
+                                    <td>05/10/2020 19:02</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="forum-even-link" onclick="showElement( 'tema2-foro')">Buenas prácticas del estudiante</a></td>
+                                    <td class="numero-msg-enviados">1</td>
+                                    <td>04/09/2020 10:02</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="forum-odd-link" onclick="showElement( 'tema3-foro')">Centrar elementos de un div</a></td>
+                                    <td class="numero-msg-enviados">3</td>
+                                    <td>05/10/2020 15:22</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="forum-even-link" onclick="showElement( 'tema4-foro')">Diferencias grid y flex</a></td>
+                                    <td class="numero-msg-enviados">5</td>
+                                    <td>27/09/2020 11:45</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="forum-odd-link" onclick="showElement( 'tema5-foro')">Header fijo</a></td>
+                                    <td class="numero-msg-enviados">4</td>
+                                    <td>01/10/2020 22:15</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </main>
+            </div>
+
+            <div id="tema1-foro" class="contenido">
+                <main class="main-content">
+                    <h1>Avisos</h1>
+                    <h2 class="asignaturas-title">Introduce tu pregunta</h2>
+                    <br>
+                    <div id="mensajes-1">
+                        <div class="send-msg-aera">
+                            <textarea class="forum-chat-input" name="Text1"></textarea>
+                            <button id="forum1" class="button">ENVIAR</button>
+                        </div>
+                        <br>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
+                            <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
+                            <p class="profile-entry">Hay clase presencial mañana?</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
+                            <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
+                            <p class="profile-entry">Si.</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
+                            <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
+                            <p class="profile-entry">Vale, gracias.</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
+                            <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
+                            <p class="profile-entry">De nada bro.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <div id="tema2-foro" class="contenido">
+                <main class="main-content">
+                    <h1>Buenas prácticas del estudiante</h1>
+                    <h2 class="asignaturas-title">Introduce tu pregunta</h2>
+                    <br>
+                    <div id="mensajes-2">
+                        <div class="send-msg-aera">
+                            <textarea class="forum-chat-input" name="Text2"></textarea>
+                            <button id="forum2" class="button">ENVIAR</button>
+                        </div>
+                        <br>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
+                            <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
+                            <p class="profile-entry">Hay clase presencial mañana?</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
+                            <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
+                            <p class="profile-entry">Si.</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
+                            <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
+                            <p class="profile-entry">Vale, gracias.</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
+                            <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
+                            <p class="profile-entry">De nada bro.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <div id="tema3-foro" class="contenido">
+                <main class="main-content">
+                    <h1>Centrar elementos de un div</h1>
+                    <h2 class="asignaturas-title">Introduce tu pregunta</h2>
+                    <br>
+                    <div id="mensajes-3">
+                        <div class="send-msg-aera">
+                            <textarea class="forum-chat-input" name="Text3"></textarea>
+                            <button id="forum3" class="button">ENVIAR</button>
+                        </div>
+                        <br>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
+                            <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
+                            <p class="profile-entry">Hay clase presencial mañana?</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
+                            <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
+                            <p class="profile-entry">Si.</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
+                            <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
+                            <p class="profile-entry">Vale, gracias.</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
+                            <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
+                            <p class="profile-entry">De nada bro.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <div id="tema4-foro" class="contenido">
+                <main class="main-content">
+                    <h1>Diferencias grid y flex</h1>
+                    <h2 class="asignaturas-title">Introduce tu pregunta</h2>
+                    <br>
+                    <div id="mensajes-4">
+                        <div class="send-msg-aera">
+                            <textarea class="forum-chat-input" name="Text4"></textarea>
+                            <button id="forum4" class="button">ENVIAR</button>
+                        </div>
+                        <br>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
+                            <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
+                            <p class="profile-entry">Hay clase presencial mañana?</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
+                            <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
+                            <p class="profile-entry">Si.</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
+                            <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
+                            <p class="profile-entry">Vale, gracias.</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
+                            <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
+                            <p class="profile-entry">De nada bro.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <div id="tema5-foro" class="contenido">
+                <main class="main-content">
+                    <h1>Header fijo</h1>
+                    <h2 class="asignaturas-title">Introduce tu pregunta</h2>
+                    <br>
+                    <div id="mensajes-5">
+                        <div class="send-msg-aera">
+                            <textarea class="forum-chat-input" name="Text5"></textarea>
+                            <button id="forum5" class="button">ENVIAR</button>
+                        </div>
+                        <br>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
+                            <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
+                            <p class="profile-entry">Hay clase presencial mañana?</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
+                            <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
+                            <p class="profile-entry">Si.</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
+                            <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
+                            <p class="profile-entry">Vale, gracias.</p>
+                        </div>
+                        <div class="chat-entry">
+                            <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
+                            <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
+                            <p class="profile-entry">De nada bro.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
         </div>
-        </main>
-        <div id="interfacesTopic" class="cards-set" style="display: none;">
-            <div class="card">
-                <div class="heading" style="background-color: #070e78">
-                    <h1 style="color: white">Tema 1</h1>
-                </div>
-                <div class="content">
-                    <p>HTML</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="heading" style="background-color: #070e78">
-                    <h1 style="color: white">Tema 2</h1>
-                </div>
-                <div class="content">
-                    <p>CSS</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="heading" style="background-color: #070e78">
-                    <h1 style="color: white">Tema 3</h1>
-                </div>
-                <div class="content">
-                    <p>JavaScript</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
-
-
-    <!--asignatura-->
-    <div id="asignatura" class="contenido">
-        <main class="main-content">
-            <h1>ASIGNATURA</h1>
-            <br />
-            <h3>Introduccion</h3>
-            <p>
-                La interfaz de usuario es el medio con que el usuario puede comunicarse con una máquina, equipo, computadora o dispositivo, y comprende todos los puntos de contacto entre el usuario y el equipo. Normalmente suelen ser fáciles de entender y fáciles de
-                accionar, aunque en el ámbito de la informática es preferible referirse a que suelen ser"usables","amigables e intuitivos" porque es complejo y subjetivo decir"fácil".
-            </p>
-            <br />
-            <h3>Definicion</h3>
-            <p>
-                La interfaz de usuario es el espacio donde se producen las interacciones entre seres humanos y máquinas. El objetivo de esta interacción es permitir el funcionamiento y control más efectivo de la máquina desde la interacción con el humano. Las interfaces
-                básicas de usuario son aquellas que incluyen elementos como menús, ventanas, contenido gráfico, cursor, los beeps y algunos otros sonidos que la computadora hace, y en general, todos aquellos canales por los cuales se permite la comunicación
-                entre el ser humano y la computadora. El objetivo del diseño de una interfaz es producir una interfaz que sea fácil de usar (explicarse por sí misma), eficiente y agradable para que al operar la máquina dé el resultado deseado.
-            </p>
-            <h3>Funciones principales</h3>
-            <p>Las funciones principales son las siguientes:</p>
-            <p>
-                Puesta en marcha y apagado. Control de las funciones manipulables del equipo. Manipulación de archivos y directorios. Herramientas de desarrollo de aplicaciones. Comunicación con otros sistemas. Información de estado. Configuración de la propia interfaz
-                y entorno. Intercambio de datos entre aplicaciones. Sistema de ayuda interactivo.
-            </p>
-        </main>
-    </div>
-    <!--mis asignaturas-->
-    <div id="mis-asignaturas" class="contenido">
-        <main class="main-content">
-            <h1>MIS ASIGNATURAS</h1>
-            <h2 class="asignaturas-title">MAGISTRALES</h2>
-            <ul id="magistrales">
-                <li>
-                    <span>80 MAG. Interfaces de Usuario 20/21</span></li>
-                <li>
-                    <span>80 MAG. Redes de Ordenadores 20/21</span></li>
-                <li>
-                    <span>80 MAG. Arquitectura de computadores 20/21</span></li>
-                <li>
-                    <span>80 MAG. Ingenieria del SoftWare 20/21</span></li>
-                <li>
-                    <span>80 MAG. Heuristica y Optimizacion 20/21</span></li>
-            </ul>
-            <h2 class="asignaturas-title">GRUPO REDUCIDO</h2>
-            <ul id="reducidas">
-                <li>
-                    <span>81 Interfaces de Usuario 20/21</span></li>
-                <li>
-                    <span>81 Redes de Ordenadores 20/21</span></li>
-                <li>
-                    <span>81 Arquitectura de computadores 20/21</span></li>
-                <li>
-                    <span>81 Ingenieria del SoftWare 20/21</span></li>
-                <li>
-                    <span>81 Heuristica y Optimizacion 20/21</span></li>
-            </ul>
-        </main>
-    </div>
-    <div id="iu" class="contenido">
-        <h1>INTERFACES DE USUARIO</h1>
-        <div>
-            <table class="table-page">
-                <thead>
-                    <tr>
-                        <th>Item de calificacion</th>
-                        <th>Rango</th>
-                        <th>Calificacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Practica 1</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica 2</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica 3</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica final</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Parcial 1</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Parcial 2</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Examen final</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br/>
-            <button class="button">DESCARGAR</button>
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-        </div>
-    </div>
-    <div id="ro" class="contenido">
-        <h1>REDES DE ORDENADORES</h1>
-        <div>
-            <table class="table-page">
-                <thead>
-                    <tr>
-                        <th>Item de calificacion</th>
-                        <th>Rango</th>
-                        <th>Calificacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Practica 1</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica 2</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica 3</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica final</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Parcial 1</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Parcial 2</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Examen final</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br/>
-            <button class="button">DESCARGAR</button>
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-        </div>
-    </div>
-    <div id="ac" class="contenido">
-        <h1>ARQUITECTURA DE COMPUTADORES</h1>
-        <div>
-            <table class="table-page">
-                <thead>
-                    <tr>
-                        <th>Item de calificacion</th>
-                        <th>Rango</th>
-                        <th>Calificacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Practica 1</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica 2</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica 3</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica final</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Parcial 1</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Parcial 2</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Examen final</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br/>
-            <button class="button">DESCARGAR</button>
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-        </div>
-    </div>
-    <div id="is" class="contenido">
-        <h1>INGENIERIA DEL SOFTWARE</h1>
-        <div>
-            <table class="table-page">
-                <thead>
-                    <tr>
-                        <th>Item de calificacion</th>
-                        <th>Rango</th>
-                        <th>Calificacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Practica 1</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica 2</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica 3</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica final</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Parcial 1</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Parcial 2</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Examen final</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <br/>
-            <button class="button">DESCARGAR</button>
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-        </div>
-    </div>
-    <div id="ho" class="contenido">
-        <h1>HEURISTICA Y OPTIMIZACION</h1>
-        <div>
-            <table class="table-page">
-                <thead>
-                    <tr>
-                        <th>Item de calificacion</th>
-                        <th>Rango</th>
-                        <th>Calificacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Practica 1</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica 2</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica 3</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Practica final</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Parcial 1</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Parcial 2</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                    <tr>
-                        <td>Examen final</td>
-                        <td>99.99 - 100</td>
-                        <td>9.9</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br/>
-            <button class="button">DESCARGAR</button>
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-        </div>
-    </div>
-    <!--calificaciones vista alumno-->
-    <div id="calificaciones-alumno" class="contenido">
-        <main class="main-content">
-            <h1>CALIFICACIONES</h1>
-            <ul id="ul-calificaciones-alumno">
-                <li>
-                    <a onclick="showElement( 'iu')" class="navegation">Interfaces de Usuario</a></li>
-                <li>
-                    <a onclick="showElement( 'ro')" class="navegation">Redes de Ordenadores</a></li>
-                <li>
-                    <a onclick="showElement( 'ac')" class="navegation">Arquitectura de computadores</a></li>
-                <li>
-                    <a onclick="showElement( 'is')" class="navegation">Ingenieria del Software</a></li>
-                <li>
-                    <a onclick="showElement( 'ho')" class="navegation">Heuristica y Optimizacion</a></li>
-            </ul>
-        </main>
-    </div>
-    <!--calificaciones vista administrador/profesor-->
-    <div id="calificaciones" class="contenido">
-        <main class="main-content">
-            <h1>CALIFICACIONES</h1>
-            <div>
-                <table id="table-notas" class="table-page">
-                    <thead>
-                        <tr>
-                            <th>NIA</th>
-                            <th>Parcial 1</th>
-                            <th>Parcial 2</th>
-                            <th>Practica final</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>100405861</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>100405862</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>100405863</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>100405864</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>100405865</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>100405866</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>100405867</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>100405868</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>100405869</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>100405870</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br/>
-                <button id="export-button" class="button">DESCARGAR</button>
-
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-            </div>
-        </main>
-    </div>
-
-    <!--contacto-->
-    <div id="contacto" class="contenido">
-        <main class="main-content">
-            <div class="contact">
-                <h3>ANA TAJADURA JIMENEZ</h3>
-                Correo: atajadur@inf.uc3m.es
-                <br />Despacho: 2.2.C02
-            </div>
-            <div class="contact">
-                <h3>JAVIER SANZ RODRIGUEZ</h3>
-                Correo: jsrodrig@inf.uc3m.es
-                <br />Despacho: 2.2.C03
-            </div>
-            <div class="contact">
-                <h3>TERESA ONORATI</h3>
-                Correo: tonorati@inf.uc3m.es
-                <br />Despacho: 2.2.C03
-            </div>
-        </main>
-    </div>
-
-    <!--estudiantes-->
-    <div id="estudiantes" class="contenido">
-        <main class="main-content">
-            <h1>LISTADO DE ESTUDIANTES</h1>
-            <div>
-                <table class="table-page">
-                    <thead>
-                        <tr>
-                            <th>Foto</th>
-                            <th>Nombre</th>
-                            <th>Apellidos</th>
-                            <th>Correo</th>
-                            <th>Mensaje</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th><img src="../ej-images/alumno6.jpg" alt="alumno1" /></th>
-                            <th>Raul</th>
-                            <th>Gimenez de Dios</th>
-                            <th>100405861@alumnos.uc3m.es</th>
-                            <th><i class="far fa-comment"></i></th>
-                        </tr>
-                        <tr>
-                            <th><img src="../ej-images/alumno2.jpg" alt="alumno1" /></th>
-                            <th>Rodrigo</th>
-                            <th>Fernandez Liñan</th>
-                            <th>100405862@alumnos.uc3m.es</th>
-                            <th><i class="far fa-comment"></i></th>
-                        </tr>
-                        <tr>
-                            <th><img src="../ej-images/alumno3.jpg" alt="alumno1" /></th>
-                            <th>Diego</th>
-                            <th>Fernandez Plaza</th>
-                            <th>100405863@alumnos.uc3m.es</th>
-                            <th><i class="far fa-comment"></i></th>
-                        </tr>
-                        <tr>
-                            <th><img src="../ej-images/alumno4.jpg" alt="alumno1" /></th>
-                            <th>Daniel</th>
-                            <th>Garcia Barroso</th>
-                            <th>100405864@alumnos.uc3m.es</th>
-                            <th><i class="far fa-comment"></i></th>
-                        </tr>
-                        <tr>
-                            <th><img src="../ej-images/alumno5.jpg" alt="alumno1" /></th>
-                            <th>Jose</th>
-                            <th>Gallego Casilda</th>
-                            <th>100405865@alumnos.uc3m.es</th>
-                            <th><i class="far fa-comment"></i></th>
-                        </tr>
-                        <tr>
-                            <th><img src="../ej-images/alumno1.jpg" alt="alumno1" /></th>
-                            <th>Mohamed</th>
-                            <th>El Aakil</th>
-                            <th>100405866@alumnos.uc3m.es</th>
-                            <th><i class="far fa-comment"></i></th>
-                        </tr>
-                        <tr>
-                            <th><img src="../ej-images/alumno7.jpg" alt="alumno1" /></th>
-                            <th>Adrian</th>
-                            <th>Giron Jimenez</th>
-                            <th>100405867@alumnos.uc3m.es</th>
-                            <th><i class="far fa-comment"></i></th>
-                        </tr>
-                        <tr>
-                            <th><img src="../ej-images/alumno8.jpg" alt="alumno1" /></th>
-                            <th>Mario</th>
-                            <th>Dominguez Garcia</th>
-                            <th>100405868@alumnos.uc3m.es</th>
-                            <th><i class="far fa-comment"></i></th>
-                        </tr>
-                        <tr>
-                            <th><img src="../ej-images/alumno9.jpg" alt="alumno1" /></th>
-                            <th>Miguel</th>
-                            <th>Garcia Trigueros</th>
-                            <th>100405869@alumnos.uc3m.es</th>
-                            <th><i class="far fa-comment"></i></th>
-                        </tr>
-                        <tr>
-                            <th><img src="../ej-images/alumno10.jpg" alt="alumno1" /></th>
-                            <th>Amalia</th>
-                            <th>Cid Blasco</th>
-                            <th>100405870@alumnos.uc3m.es</th>
-                            <th><i class="far fa-comment"></i></th>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </main>
-    </div>
-
-    <!--faq-->
-    <div id="faq" class="contenido">
-        <main class="main-content">
-            <h1>PREGUNTAS FRECUENTES</h1>
-            <br />
-            <h3>¿Hay nota mínima en los parciales y en el trabajo?</h3>
-            <p>
-                No, no existe una nota mínima, siempre que la media sea mayor o igual a 5 se aprobará la asignatura.
-            </p>
-            <h3>¿Qué temas entran en el primer parcial?</h3>
-            <p>
-                Los temas 1, 2, 3 y 4, además de preguntas relacionadas con la practica 1.
-            </p>
-            <h3>¿Qué temas entran en el segundo parcial?</h3>
-            <p>
-                Los temas 5, 6, 7 y 8, además de preguntas relacionadas con la practica 2.
-            </p>
-            <h3>¿Qué peso tiene cada parcial en la nota final?¿Y la práctica?</h3>
-            <p>
-                Cada parcial tiene un peso del 10% (1 pto) sobre la practica final
-            </p>
-            <h3>
-                ¿Cual es la maxima nota que se puede obtener sin seguir la evaluacion continua?
-            </h3>
-            <p>
-                La maxima nota que se puede obtener es un 6 en el caso de que solo se realizase el examen final dado que este tiene un peso del 60% si el alumno no sigue la EC
-            </p>
-            <h3>¿Cual es la bibliografia recomendada?</h3>
-            <p>The Design of Everyday Things (Libro de Donald Norman)</p>
-        </main>
-    </div>
-
-    <!--foro-->
-    <div id="foro" class="contenido">
-        <main class="main-content">
-            <h1>FORO</h1>
-            <div>
-                <table class="table-page">
-                    <thead>
-                        <tr>
-                            <th>Título</th>
-                            <th>Nº de mensajes enviados</th>
-                            <th>Último mensaje</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a class="forum-odd-link" onclick="showElement( 'tema1-foro')">Avisos</a></td>
-                            <td class="numero-msg-enviados">6</td>
-                            <td>05/10/2020 19:02</td>
-                        </tr>
-                        <tr>
-                            <td><a class="forum-even-link" onclick="showElement( 'tema2-foro')">Buenas prácticas del estudiante</a></td>
-                            <td class="numero-msg-enviados">1</td>
-                            <td>04/09/2020 10:02</td>
-                        </tr>
-                        <tr>
-                            <td><a class="forum-odd-link" onclick="showElement( 'tema3-foro')">Centrar elementos de un div</a></td>
-                            <td class="numero-msg-enviados">3</td>
-                            <td>05/10/2020 15:22</td>
-                        </tr>
-                        <tr>
-                            <td><a class="forum-even-link" onclick="showElement( 'tema4-foro')">Diferencias grid y flex</a></td>
-                            <td class="numero-msg-enviados">5</td>
-                            <td>27/09/2020 11:45</td>
-                        </tr>
-                        <tr>
-                            <td><a class="forum-odd-link" onclick="showElement( 'tema5-foro')">Header fijo</a></td>
-                            <td class="numero-msg-enviados">4</td>
-                            <td>01/10/2020 22:15</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-            </div>
-        </main>
-    </div>
-
-    <div id="tema1-foro" class="contenido">
-        <main class="main-content">
-            <h1>Avisos</h1>
-            <h2 class="asignaturas-title">Introduce tu pregunta</h2>
-            <br>
-            <div id="mensajes-1">
-                <div class="send-msg-aera">
-                    <textarea class="forum-chat-input" name="Text1"></textarea>
-                    <button id="forum1" class="button">ENVIAR</button>
-                </div>
-                <br>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
-                    <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
-                    <p class="profile-entry">Hay clase presencial mañana?</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
-                    <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
-                    <p class="profile-entry">Si.</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
-                    <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
-                    <p class="profile-entry">Vale, gracias.</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
-                    <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
-                    <p class="profile-entry">De nada bro.</p>
-                </div>
-            </div>
-        </main>
-    </div>
-    <div id="tema2-foro" class="contenido">
-        <main class="main-content">
-            <h1>Buenas prácticas del estudiante</h1>
-            <h2 class="asignaturas-title">Introduce tu pregunta</h2>
-            <br>
-            <div id="mensajes-2">
-                <div class="send-msg-aera">
-                    <textarea class="forum-chat-input" name="Text2"></textarea>
-                    <button id="forum2" class="button">ENVIAR</button>
-                </div>
-                <br>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
-                    <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
-                    <p class="profile-entry">Hay clase presencial mañana?</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
-                    <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
-                    <p class="profile-entry">Si.</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
-                    <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
-                    <p class="profile-entry">Vale, gracias.</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
-                    <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
-                    <p class="profile-entry">De nada bro.</p>
-                </div>
-            </div>
-        </main>
-    </div>
-    <div id="tema3-foro" class="contenido">
-        <main class="main-content">
-            <h1>Centrar elementos de un div</h1>
-            <h2 class="asignaturas-title">Introduce tu pregunta</h2>
-            <br>
-            <div id="mensajes-3">
-                <div class="send-msg-aera">
-                    <textarea class="forum-chat-input" name="Text3"></textarea>
-                    <button id="forum3" class="button">ENVIAR</button>
-                </div>
-                <br>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
-                    <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
-                    <p class="profile-entry">Hay clase presencial mañana?</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
-                    <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
-                    <p class="profile-entry">Si.</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
-                    <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
-                    <p class="profile-entry">Vale, gracias.</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
-                    <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
-                    <p class="profile-entry">De nada bro.</p>
-                </div>
-            </div>
-        </main>
-    </div>
-    <div id="tema4-foro" class="contenido">
-        <main class="main-content">
-            <h1>Diferencias grid y flex</h1>
-            <h2 class="asignaturas-title">Introduce tu pregunta</h2>
-            <br>
-            <div id="mensajes-4">
-                <div class="send-msg-aera">
-                    <textarea class="forum-chat-input" name="Text4"></textarea>
-                    <button id="forum4" class="button">ENVIAR</button>
-                </div>
-                <br>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
-                    <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
-                    <p class="profile-entry">Hay clase presencial mañana?</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
-                    <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
-                    <p class="profile-entry">Si.</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
-                    <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
-                    <p class="profile-entry">Vale, gracias.</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
-                    <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
-                    <p class="profile-entry">De nada bro.</p>
-                </div>
-            </div>
-        </main>
-    </div>
-    <div id="tema5-foro" class="contenido">
-        <main class="main-content">
-            <h1>Header fijo</h1>
-            <h2 class="asignaturas-title">Introduce tu pregunta</h2>
-            <br>
-            <div id="mensajes-5">
-                <div class="send-msg-aera">
-                    <textarea class="forum-chat-input" name="Text5"></textarea>
-                    <button id="forum5" class="button">ENVIAR</button>
-                </div>
-                <br>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
-                    <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
-                    <p class="profile-entry">Hay clase presencial mañana?</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
-                    <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
-                    <p class="profile-entry">Si.</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno6.jpg" alt="">
-                    <span class="profile-name">RAUL GIMENEZ DE DIOS</span>
-                    <p class="profile-entry">Vale, gracias.</p>
-                </div>
-                <div class="chat-entry">
-                    <img class="profile-img" src="../ej-images/alumno1.jpg" alt="">
-                    <span class="profile-name">MOHAMED EL AAKIL MESAOUDI</span>
-                    <p class="profile-entry">De nada bro.</p>
-                </div>
-            </div>
-        </main>
-    </div>
 
     </div>
 
     <!-- barra derecha-->
-    <div id="right-column">
+    <!--<div id="right-column">
         <section id="noticias">
-            <h2 id="myBtn">EVENTOS</h2>
+            <h2>EVENTOS</h2>
 
-            <div id="myModal" class="modal">
-
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <div class="calendar"></div>
-                </div>
-
-            </div>
-            <div id="content-news">
-                <h4 id="ev1">Calificaciones 1er parcial publicadas</h4>
-                <span id="ev1-date">October 29, 2020 12:30 PM</span>
-                <h4 id="ev2">Nueva entrada en el foro</h4>
-                <span id="ev2-date">October 20, 2020 12:30 PM</span>
-                <h4 id="ev3">Fecha entrega practica 1 actualizada</h4>
-                <span id="ev3-date">October 15, 2020 12:30 PM</span>
-
-            </div>
         </section>
-    </div>
+    </div>-->
 
     <div id="auxiliar"></div>
 

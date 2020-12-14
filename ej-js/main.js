@@ -70,7 +70,7 @@ function cargaPagina() {
 
 //funcion para mostrar la pagina que corresponde
 function showElement(id) {
-    document.getElementById("main-block").style.display = "none";
+    document.getElementById("principal").style.display = "none";
     document.getElementById("asignatura").style.display = "none";
     document.getElementById("calificaciones").style.display = "none";
     document.getElementById("calificaciones-alumno").style.display = "none";
@@ -90,6 +90,10 @@ function showElement(id) {
     document.getElementById("tema4-foro").style.display = "none";
     document.getElementById("tema5-foro").style.display = "none";
     document.getElementById("interfacesTopic").style.display = "none";
+    document.getElementById("heuristicaTopic").style.display = "none";
+    document.getElementById("redesTopic").style.display = "none";
+    document.getElementById("arquitecturaTopic").style.display = "none";
+    document.getElementById("ingenieriaTopic").style.display = "none";
     document.getElementById(id).style.display = "block";
 }
 
@@ -123,24 +127,40 @@ $(function() {
         displayEvent: true,
         displayYear: true,
         // event dates
-        events: [
-            // generate new event after tomorrow for one hour
-            {
-                startDate: new Date(Date.parse(document.getElementById('ev1-date').textContent)),
-                endDate: new Date(Date.parse(document.getElementById('ev1-date').textContent)),
-                summary: document.getElementById('ev1').innerText
+        events: [{
+                startDate: new Date(Date.parse("November 25, 2020 12:30 PM")),
+                endDate: new Date(Date.parse("November 26, 2020 12:30 PM")),
+                summary: "Calificaciones 1er parcial publicadas"
             },
-            // generate new event for yesterday at noon
             {
-                startDate: new Date(Date.parse(document.getElementById('ev2-date').textContent)),
-                endDate: new Date(Date.parse(document.getElementById('ev2-date').textContent)),
-                summary: document.getElementById('ev2').innerText
+                startDate: new Date(Date.parse("December 2, 2020 11:00 PM")),
+                endDate: new Date(Date.parse("December 9, 2020 23:59 PM")),
+                summary: "Test 4 Redes"
             },
-            // generate new event for the last two days
             {
-                startDate: new Date(Date.parse(document.getElementById('ev3-date').textContent)),
-                endDate: new Date(Date.parse(document.getElementById('ev3-date').textContent)),
-                summary: document.getElementById('ev3').innerText
+                startDate: new Date(Date.parse("November 25, 2020 7:55 PM")),
+                endDate: new Date(Date.parse("December 6, 2020 23:59 PM")),
+                summary: "Segunda Entrega Ingenieria del Software"
+            },
+            {
+                startDate: new Date(Date.parse("November 28, 2020 10:15 PM")),
+                endDate: new Date(Date.parse("December 8, 2020 23:59 PM")),
+                summary: "Entrega Trabajo Final Arquitectura de Computadores"
+            },
+            {
+                startDate: new Date(Date.parse("December 14, 2020 9:30 PM")),
+                endDate: new Date(Date.parse("December 14, 2020 23:59 PM")),
+                summary: "Exposicion 3 Ingenieria del Software"
+            },
+            {
+                startDate: new Date(Date.parse("November 18, 2020 9:30 PM")),
+                endDate: new Date(Date.parse("December 17, 2020 23:59 PM")),
+                summary: "Practica Final Interfaces de Usuario"
+            },
+            {
+                startDate: new Date(Date.parse("November 4, 2020 9:30 PM")),
+                endDate: new Date(Date.parse("December 22, 2020 23:59 PM")),
+                summary: "Segunda Practica de Heuristica"
             }
         ],
         disableEventDetails: false,
