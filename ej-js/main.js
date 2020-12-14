@@ -64,7 +64,7 @@ function cargaPagina() {
         document.getElementsByClassName("contenedor")[0].style.display = "grid";
         document.getElementById("main-block").style.display = "block";
         document.getElementById("user").textContent = getUsernameLogedUser();
-        document.getElementById("bienvenida").textContent = "Bienvenido, " + getUsernameLogedUser();
+        document.getElementById("bienvenida").textContent = "Bienvenido," + getUsernameLogedUser();
     }
 }
 
@@ -203,7 +203,7 @@ $(function() {
             return;
         }
 
-        document.getElementById("user").textContent = "Bienvenido, " + getUsernameLogedUser();
+        document.getElementById("user").textContent = "Bienvenido," + getUsernameLogedUser();
 
         setCookie("login", true, 30);
         setCookie("logedUser", getCookie(cmail), 30);
@@ -261,17 +261,17 @@ $(function() {
             return;
         }
 
-        if (crol == " -- Selecciona un rol -- ") {
+        if (crol == " -- Selecciona un rol --") {
             alert("SELECCIONA UN ROL");
             return;
         }
 
-        if (clanguage == " -- Selecciona un idioma -- ") {
+        if (clanguage == " -- Selecciona un idioma --") {
             alert("SELECCIONA UN IDIOMA");
             return;
         }
 
-        if (crol == "estudiante" && cdegree == " -- Selecciona un grado -- ") {
+        if (crol == "estudiante" && cdegree == " -- Selecciona un grado --") {
             alert("SELECCIONA UN GRADO");
             return;
         }
