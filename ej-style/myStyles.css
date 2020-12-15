@@ -219,7 +219,7 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-label {
+.frame label {
     font-weight: 400;
     text-transform: uppercase;
     font-size: 13px;
@@ -227,6 +227,34 @@ label {
     padding-bottom: 10px;
     color: rgba(255, 255, 255, 0.7);
     display: block;
+}
+
+#newTopicCreation textarea {
+    border-style: solid;
+    border-width: 1px;
+}
+
+#newTopicCreation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "portada titulo multimedia" "portada descripcion multimedia";
+}
+
+#new-portada {
+    grid-area: portada;
+}
+
+#new-titulo {
+    grid-area: titulo;
+}
+
+#new-descricion {
+    grid-area: descripcion;
+}
+
+#new-multimedia {
+    grid-area: multimedia;
 }
 
 :focus {
@@ -819,6 +847,10 @@ a.navegation:hover {
     width: 100%;
 }
 
+.imgNewTema {
+    height: 160px;
+}
+
 .navContenedor {
     grid-area: navContenedor;
     float: right;
@@ -835,6 +867,10 @@ a.navegation:hover {
     grid-template-columns: 1fr 5fr;
     grid-template-areas: "left-column main-block";
     margin-top: 150px;
+}
+
+.add-new-tema {
+    display: none;
 }
 
 #auxiliar {
@@ -940,7 +976,7 @@ li {
 
 .introTema {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
     column-gap: 10px;
     margin: 2%;
 }
@@ -1213,7 +1249,7 @@ i.far.fa-comment:hover {
         height: 190px;
         grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
         grid-template-rows: 100px 90px;
-        grid-template-areas: "burger logo header-icon-list user profile-img" "buscador buscador buscador buscador buscador";
+        grid-template-areas: "burger logo header-icon-list user profile-img""buscador buscador buscador buscador buscador";
     }
     .contenedor {
         margin-top: 190px;

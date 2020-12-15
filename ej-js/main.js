@@ -18,7 +18,6 @@ function loadAll() {
     cargaPagina();
 
     selectProfilePhoto();
-
     specificContent();
 }
 
@@ -44,6 +43,9 @@ function specificContent() {
         document.getElementById('estudiantes-link-burguer').style.display = "block";
         document.getElementById('calificaciones-link-burguer').style.display = "block";
         document.getElementById('calificaciones-alumnos-link-burguer').style.display = "none";
+        for (let index = 0; index < document.getElementsByClassName('add-new-tema').length; index++) {
+            document.getElementsByClassName('add-new-tema')[index].style.display = "inline-block";
+        }
     }
 }
 //funcion para seleccionar foto de perfil dependiendo del rol
@@ -105,8 +107,9 @@ function showElement(id) {
     document.getElementById("topicHTML").style.display = "none";
     document.getElementById("topicCSS").style.display = "none";
     document.getElementById("topicJAVASCRIPT").style.display = "none";
+    document.getElementById("topicRendimiento").style.display = "none";
     document.getElementById("newTopicCreation").style.display = "none";
-    hideNewTopics();
+    // hideNewTopics();
     document.getElementById(id).style.display = "block";
 }
 
@@ -124,14 +127,14 @@ btn.onclick = function() {
     modal.style.display = "block";
 }
 
-$('select[name ="rol"]').change(function() {
+$('select[name = "rol"]').change(function() {
     var rol = $(this).val();
     if (rol == 'estudiante') {
         document.getElementById("student-form").style.display = "block";
     } else {
         document.getElementById("student-form").style.display = "none";
     }
-})
+});
 
 //JS CALENDAR CODE
 $(function() {
@@ -616,78 +619,78 @@ $("#boton-menu").click(function() {
     }
 });
 
-var lastTopic;
+// var lastTopic;
 
-function getLastTopic() {
-    return lastTopic;
-}
+// function getLastTopic() {
+//     return lastTopic;
+// }
 
-function setLastTopic(topic) {
-    lastTopic = topic;
-}
+// function setLastTopic(topic) {
+//     lastTopic = topic;
+// }
 
-function addTopic(topic) {
-    const cardset = document.getElementById(topic);
-    const subtopics = document.getElementById("subtopics");
+// function addTopic(topic) {
+//     const cardset = document.getElementById(topic);
+//     const subtopics = document.getElementById("subtopics");
 
-    newCard = document.createElement("div");
-    newCard.class = "card";
+//     newCard = document.createElement("div");
+//     newCard.class = "card";
 
-    newHeading = document.createElement("div");
-    heading = document.getElementById("headingArea").value;
-    newHeading.class = "heading";
-    newHeading.textContent = heading;
+//     newHeading = document.createElement("div");
+//     heading = document.getElementById("headingArea").value;
+//     newHeading.class = "heading";
+//     newHeading.textContent = heading;
 
-    newCard.appendChild(newHeading);
+//     newCard.appendChild(newHeading);
 
-    newContent = document.createElement("div");
-    newContent.class = "content";
+//     newContent = document.createElement("div");
+//     newContent.class = "content";
 
-    newH1 = document.createElement("h1");
-    newContent.appendChild(newH1)
+//     newH1 = document.createElement("h1");
+//     newContent.appendChild(newH1)
 
-    newCard.appendChild(newContent);
-    /* Creamos una estructura card
-    <div class = "card">
-        <div class = "heading">
-        </div>
-        <div class = "content">
-            <h1></h1>
-        </div>
-    </div>
-    */
+//     newCard.appendChild(newContent);
+//     /* Creamos una estructura card
+//     <div class ="card">
+//         <div class ="heading">
+//         </div>
+//         <div class ="content">
+//             <h1></h1>
+//         </div>
+//     </div>
+//     */
 
-    newTopic = document.createElement("div");
-    newTopic.class = "createdTopics";
-    newTopic.id = heading;
-    newTopic.style.display = "none";
+//     newTopic = document.createElement("div");
+//     newTopic.class = "createdTopics";
+//     newTopic.id = heading;
+//     newTopic.style.display = "none";
 
-    desc = document.createElement("h1");
-    description = document.getElementById("descriptionArea").value;
-    desc.textContent = description;
-    newTopic.appendChild(desc)
+//     desc = document.createElement("h1");
+//     description = document.getElementById("descriptionArea").value;
+//     desc.textContent = description;
+//     newTopic.appendChild(desc)
 
-    info = document.createElement("p");
-    p = document.getElementById("informationArea").value;
-    info.textContent = p;
-    newTopic.appendChild(info);
+//     info = document.createElement("p");
+//     p = document.getElementById("informationArea").value;
+//     info.textContent = p;
+//     newTopic.appendChild(info);
 
-    /* Creamos una estructura newTopic
-    <div class = "createdTopics">
-        <h1>desc</h1>
-        <p>info</p>
-    </div>
-    */
-    newCard.onclick = "showElement(" + newTopic.id + ");";
-    cardset.appendChild(newCard);
-    subtopics.appendChild(newTopic);
+//     /* Creamos una estructura newTopic
+//     <div class ="createdTopics">
+//         <h1>desc</h1>
+//         <p>info</p>
+//     </div>
+//     */
+//     newCard.onclick = "showElement(" + newTopic.id + ");";
+//     cardset.appendChild(newCard);
+//     subtopics.appendChild(newTopic);
 
-}
+// }
 
-function hideNewTopics() {
-    newTopics = document.getElementsByClassName("createdTopics");
-    if (newTopics == null) return;
-    for (i = 0; i < newTopics.length; i++) {
-        newTopics[i].style.display = "none";
-    }
-}
+// function hideNewTopics() {
+//     newTopics = document.getElementsByClassName("createdTopics");
+//     if (newTopics == null) return;
+//     for (i = 0; i < newTopics.length; i++) {
+//         newTopics[i].style.display = "none";
+//     }
+// }

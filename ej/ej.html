@@ -248,10 +248,10 @@
                         </div>
                     </div>
                     <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('interfacesCardset');">
-                        <div class="heading" style="background: url( '../ej-images/plus.png'); background-size:cover ;">
-                        </div>
+                        <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
                         <div class="content">
-                            <h1>AÑADIR TEMA</h1>
+                            <h2>AÑADIR TEMA</h2>
+                            <p style="font-size: 12px;">Pulse para añadir un nuevo tema</p>
                         </div>
                     </div>
                 </div>
@@ -260,7 +260,7 @@
             <div id="arquitecturaTopic" class="contenido">
                 <h1>ARQUITECTURA DE COMPUTADORES</h1>
                 <div class="cards-set" id="arquitecturaCardset">
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicRendimiento');">
                         <div class="heading">
                             <h1 style="color: white">Rendimiento y Paralelismo</h1>
                         </div>
@@ -268,7 +268,7 @@
                             <p>ey</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" onclick="showElement( 'topicC');">
                         <div class="heading">
                             <h1 style="color: white">C++</h1>
                         </div>
@@ -276,12 +276,19 @@
                             <p>ey</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" onclick="showElement('');">
                         <div class="heading">
                             <h1 style="color: white">Concurrencia</h1>
                         </div>
                         <div class="content">
                             <p>ey</p>
+                        </div>
+                    </div>
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('arquitecturaCardset');">
+                        <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
+                        <div class="content">
+                            <h2>AÑADIR TEMA</h2>
+                            <p style="font-size: 12px;">Pulse para añadir un nuevo tema</p>
                         </div>
                     </div>
                 </div>
@@ -314,6 +321,13 @@
                             <p>JavaScript</p>
                         </div>
                     </div>
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('heuristicaCardset');">
+                        <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
+                        <div class="content">
+                            <h2>AÑADIR TEMA</h2>
+                            <p style="font-size: 12px;">Pulse para añadir un nuevo tema</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -342,6 +356,13 @@
                         </div>
                         <div class="content">
                             <p>Modelado Arquitectonico</p>
+                        </div>
+                    </div>
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('ingenieriaCardset');">
+                        <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
+                        <div class="content">
+                            <h2>AÑADIR TEMA</h2>
+                            <p style="font-size: 12px;">Pulse para añadir un nuevo tema</p>
                         </div>
                     </div>
                 </div>
@@ -374,37 +395,53 @@
                             <p>JavaScript</p>
                         </div>
                     </div>
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('redesCardset');">
+                        <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
+                        <div class="content">
+                            <h2>AÑADIR TEMA</h2>
+                            <p style="font-size: 12px;">Pulse para añadir un nuevo tema</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!--CREACION DE NUEVO TEMA-->
+            <!-- CREACION DE NUEVO TEMA -->
             <div id="newTopicCreation" style="display: none;">
-                <h1>CREACIÓN DE UN NUEVO TEMA</h1>
-                <label style="color: black;">Introduce el título</label>
-                <textarea id="headingArea"></textarea>
-                <label style="color: black;">Introduce la descripción del tema</label>
-                <textarea id="descriptionArea"></textarea>
-                <label style="color: black;">Introduce la información del tema</label>
-                <textarea id="informationArea"></textarea>
+                <h1 style="color: black;">INTERFACES DE USUARIO</h1>
+                <h3>CREACIÓN DE UN NUEVO TEMA</h3>
+                <div class="input-form">
+                    <label style="color: black;">Portada</label>
+                    <textarea id="area-portada"></textarea>
+                </div>
+
+                <div class="input-form">
+                    <label style="color: black;">Titulo del tema</label>
+                    <textarea id="area-titulo"></textarea>
+                </div>
+
+                <div class="input-form">
+                    <label style="color: black;">Descripción del tema</label>
+                    <textarea id="area-descripcion"></textarea>
+                </div>
+
                 <a onclick="addTopic(getLastTopic());"><span>+</span></a>
             </div>
 
             <!-- SUBTEMAS -->
-            <div id="subTopics">
+            <div class="subTopics">
                 <div id="topicHTML" class="contenido">
                     <h1> TEMA 1: Introducción al HTML</h1>
-
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/html.png" alt="Tema1-Imagen" />
                         <p>
-                            HTML es el lenguaje con el que se escribe el contenido de las páginas web. Las páginas web pueden ser vistas por el usuario mediante un tipo de aplicación llamada cliente web o más comúnmente "navegador". Podemos decir por lo tanto que el HTML es el lenguaje
+                            HTML es el lenguaje con el que se escribe el contenido de las páginas web. Las páginas web pueden ser vistas por el usuario mediante un tipo de aplicación llamada cliente web o más comúnmente"navegador". Podemos decir por lo tanto que el HTML es el lenguaje
                             usado por para especificar el contenido que los navegadores deben representar a la hora de mostrar una página web. Este lenguaje nos permite aglutinar textos, imágenes, enlaces... y combinarlos a nuestro gusto. La ventaja del
                             HTML a la hora de representar el contenido en un navegador, con respecto a otros formatos físicos como libros o revistas, es justamente la posibilidad de colocar referencias a otras páginas, por medio de los enlaces hipertexto.
                         </p>
                     </div>
                 </div>
                 <div id="topicCSS" class="contenido">
-                    <h1>Tema 2: Introduccion a CSS</h1>
+                    <h1>TEMA 2: Introduccion a CSS</h1>
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/CSS.png" alt="Tema1-Imagen" />
                         <p>
@@ -414,7 +451,39 @@
                     </div>
                 </div>
                 <div id="topicJAVASCRIPT" class="contenido">
-                    <h1>Tema 3: Introduccion a JavaScript</h1>
+                    <h1>TEMA 3: Introduccion a JavaScript</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/javascript.png" alt="Tema1-Imagen" />
+                        <p>
+                            JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas
+                            actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subTopics">
+                <div id="topicRendimiento" class="contenido">
+                    <h1> TEMA 1: Introducción al HTML</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/html.png" alt="Tema1-Imagen" />
+                        <p>
+                            El rendimiento del Sistema de Información o de la computadora es la cantidad de trabajo realizado por un sistema informático. Dependiendo del contexto, un alto rendimiento de equipo puede incluir uno o más de los siguientes:
+                        </p>
+                    </div>
+                </div>
+                <div id="topicC" class="contenido">
+                    <h1>TEMA 2: Introduccion a CSS</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/CSS.png" alt="Tema1-Imagen" />
+                        <p>
+                            CSS son las siglas de Cascading Style Sheets - Hojas de Estilo en Cascada - que es un lenguaje que describe la presentación de los documentos estructurados en hojas de estilo para diferentes métodos de interpretación, es decir, describe como se va a mostrar
+                            un documento en pantalla, por impresora, por voz (cuando la información es pronunciada a través de un dispositivo de lectura) o en dispositivos táctiles basados en Braille
+                        </p>
+                    </div>
+                </div>
+                <div id="topicConcurrencia" class="contenido">
+                    <h1>TEMA 3: Introduccion a JavaScript</h1>
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/javascript.png" alt="Tema1-Imagen" />
                         <p>
@@ -488,7 +557,7 @@
             <div id="iu" class="contenido">
                 <h1>INTERFACES DE USUARIO</h1>
                 <div>
-                    <table class="table-page">
+                    <table class="table-page" id="table-interfaces">
                         <thead>
                             <tr>
                                 <th>Item de calificacion</th>
@@ -535,7 +604,7 @@
                         </tbody>
                     </table>
                     <br/>
-                    <button class="button">DESCARGAR</button>
+                    <button class="button" id="interfaces">DESCARGAR</button>
 
                     <br />
                     <br />
@@ -549,7 +618,7 @@
             <div id="ro" class="contenido">
                 <h1>REDES DE ORDENADORES</h1>
                 <div>
-                    <table class="table-page">
+                    <table class="table-page" id="table-redes">
                         <thead>
                             <tr>
                                 <th>Item de calificacion</th>
@@ -596,7 +665,7 @@
                         </tbody>
                     </table>
                     <br/>
-                    <button class="button">DESCARGAR</button>
+                    <button class="button" id="redes">DESCARGAR</button>
 
                     <br />
                     <br />
@@ -610,7 +679,7 @@
             <div id="ac" class="contenido">
                 <h1>ARQUITECTURA DE COMPUTADORES</h1>
                 <div>
-                    <table class="table-page">
+                    <table class="table-page" id="table-computadores">
                         <thead>
                             <tr>
                                 <th>Item de calificacion</th>
@@ -657,7 +726,7 @@
                         </tbody>
                     </table>
                     <br/>
-                    <button class="button">DESCARGAR</button>
+                    <button class="button" id="computadores">DESCARGAR</button>
 
                     <br />
                     <br />
@@ -671,7 +740,7 @@
             <div id="is" class="contenido">
                 <h1>INGENIERIA DEL SOFTWARE</h1>
                 <div>
-                    <table class="table-page">
+                    <table class="table-page" id="table-software">
                         <thead>
                             <tr>
                                 <th>Item de calificacion</th>
@@ -719,7 +788,7 @@
                     </table>
 
                     <br/>
-                    <button class="button">DESCARGAR</button>
+                    <button class="button" id="software">DESCARGAR</button>
 
                     <br />
                     <br />
@@ -733,7 +802,7 @@
             <div id="ho" class="contenido">
                 <h1>HEURISTICA Y OPTIMIZACION</h1>
                 <div>
-                    <table class="table-page">
+                    <table class="table-page" id="table-heuristica">
                         <thead>
                             <tr>
                                 <th>Item de calificacion</th>
@@ -780,7 +849,7 @@
                         </tbody>
                     </table>
                     <br/>
-                    <button class="button">DESCARGAR</button>
+                    <button class="button" id="heuristica">DESCARGAR</button>
 
                     <br />
                     <br />
