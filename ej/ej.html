@@ -212,6 +212,14 @@
                                 <h1>Ingenieria de software</h1>
                             </div>
                         </div>
+
+                        <div class="card" id="add-new-asignatura" onclick="showElement('newSubjectCreation');">
+                            <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
+                            <div class="content">
+                                <h2>AÑADIR ASIGNATURA</h2>
+                                <p style="font-size: 12px;">Pulse para añadir un nuevo asignatura</p>
+                            </div>
+                        </div>
                     </div>
                 </main>
             </div>
@@ -247,7 +255,8 @@
                             <p>(nuevo)</p>
                         </div>
                     </div>
-                    <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('interfacesCardset');">
+
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation');">
                         <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
                         <div class="content">
                             <h2>AÑADIR TEMA</h2>
@@ -409,22 +418,58 @@
             <div id="newTopicCreation" style="display: none;">
                 <h1 style="color: black;">INTERFACES DE USUARIO</h1>
                 <h3>CREACIÓN DE UN NUEVO TEMA</h3>
-                <div class="input-form">
-                    <label style="color: black;">Portada</label>
-                    <textarea id="area-portada"></textarea>
-                </div>
+                <div id="input-grid">
+                    <div class="input-form" id="new-portada">
+                        <label style="color: black; font-weight: bolder;">Portada</label>
+                        <textarea id="area-portada"></textarea>
+                    </div>
 
-                <div class="input-form">
-                    <label style="color: black;">Titulo del tema</label>
-                    <textarea id="area-titulo"></textarea>
-                </div>
+                    <div class="input-form" id="new-titulo">
+                        <label style="color: black; font-weight: bolder;">Titulo del tema</label>
+                        <textarea id="area-titulo"></textarea>
+                    </div>
 
-                <div class="input-form">
-                    <label style="color: black;">Descripción del tema</label>
-                    <textarea id="area-descripcion"></textarea>
-                </div>
+                    <div class="input-form" id="new-descripcion">
+                        <label style="color: black; font-weight: bolder;">Descripción del tema</label>
+                        <textarea id="area-descripcion"></textarea>
+                    </div>
 
-                <a onclick="addTopic(getLastTopic());"><span>+</span></a>
+                    <div class="input-form" id="new-botones">
+                        <button id="boton-tema" class="button" style="display: inline-block;">GUARDAR</button>
+                        <a style="display: inline-block;">Cancelar</a>
+                    </div>
+
+                    <!-- <a onclick="addTopic(getLastTopic());"><span>+</span></a> -->
+                </div>
+            </div>
+
+            <!-- CREACION DE NUEVO TEMA -->
+            <div id="newSubjectCreation" style="display: none;">
+                <h1 style="color: black;">NUEVA ASIGNATURA</h1>
+                <h3>CREACIÓN DE UN NUEVO ASIGNATURA</h3>
+                <div id="input-grid">
+                    <div class="input-form" id="new-portada">
+                        <label style="color: black; font-weight: bolder;">Portada</label>
+                        <textarea id="area-portada"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-titulo">
+                        <label style="color: black; font-weight: bolder;">Titulo de la asignatura</label>
+                        <textarea id="area-titulo"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-descripcion">
+                        <label style="color: black; font-weight: bolder;">Descripción de la asignatura</label>
+                        <textarea id="area-descripcion"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-botones">
+                        <button class="button" style="display: inline-block;">GUARDAR</button>
+                        <a style="display: inline-block;">Cancelar</a>
+                    </div>
+
+                    <!-- <a onclick="addTopic(getLastTopic());"><span>+</span></a> -->
+                </div>
             </div>
 
             <!-- SUBTEMAS -->

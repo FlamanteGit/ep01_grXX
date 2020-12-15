@@ -34,7 +34,7 @@ function specificContent() {
         document.getElementById('calificaciones-link-burguer').style.display = "none";
         document.getElementById('calificaciones-alumnos-link-burguer').style.display = "block";
 
-    } else {
+    } else if (logedRol == "profesor") {
         document.getElementById('mis-asignaturas-link').style.display = "none";
         document.getElementById('estudiantes-link').style.display = "block";
         document.getElementById('calificaciones-link').style.display = "block";
@@ -46,6 +46,17 @@ function specificContent() {
         for (let index = 0; index < document.getElementsByClassName('add-new-tema').length; index++) {
             document.getElementsByClassName('add-new-tema')[index].style.display = "inline-block";
         }
+    } else {
+        document.getElementById('mis-asignaturas-link').style.display = "none";
+        document.getElementById('estudiantes-link').style.display = "block";
+        document.getElementById('calificaciones-link').style.display = "block";
+        document.getElementById('calificaciones-alumnos-link').style.display = "none";
+        document.getElementById('mis-asignaturas-link-burguer').style.display = "none";
+        document.getElementById('estudiantes-link-burguer').style.display = "block";
+        document.getElementById('calificaciones-link-burguer').style.display = "block";
+        document.getElementById('calificaciones-alumnos-link-burguer').style.display = "none";
+        document.getElementById('add-new-asignatura').style.display = "inline-block";
+
     }
 }
 //funcion para seleccionar foto de perfil dependiendo del rol
@@ -535,6 +546,16 @@ $("#forum1").click(function() {
     $("#mensajes-1").append(bloque);
     document.getElementsByName("Text1")[0].value = "";
 });
+
+$("#boton-tema").click(function() {
+
+    var titulo = document.getElementById("area-titulo").value;
+    var description = "JQUERY"
+    var bloque = '<div class="card" onclick="showElement("topicJAVASCRIPT");"><div class="heading"><h1>' + titulo + '</h1></div><div class="content"><h2>' + description + '</h2><p>(nuevo)</p></div></div>';
+    showElement("interfacesTopic");
+    $("#interfacesCardset").append(bloque);
+});
+
 
 $("#forum2").click(function() {
     var foto;

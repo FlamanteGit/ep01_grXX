@@ -229,16 +229,34 @@
     display: block;
 }
 
-#newTopicCreation textarea {
+.input-form label {
+    display: block;
+}
+
+.input-form {
+    padding: 20px;
+}
+
+.input-form textarea {
+    display: block;
     border-style: solid;
     border-width: 1px;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
 }
 
 #newTopicCreation {
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+#input-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    grid-template-areas: "portada titulo multimedia" "portada descripcion multimedia";
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: 100px 250px 100px;
+    grid-template-areas: "portada titulo" "portada descripcion" "botones botones";
 }
 
 #new-portada {
@@ -249,12 +267,23 @@
     grid-area: titulo;
 }
 
-#new-descricion {
+#new-descripcion {
     grid-area: descripcion;
 }
 
-#new-multimedia {
-    grid-area: multimedia;
+#new-botones {
+    grid-area: botones;
+    align-self: center;
+    justify-self: end;
+    padding: 20px;
+}
+
+#new-botones a {
+    color: #000E78;
+}
+
+#new-botones a:hover {
+    color: #d80000;
 }
 
 :focus {
@@ -554,6 +583,7 @@ body * {
     background-color: darkblue;
     font-weight: bolder;
     border-radius: 3px;
+    margin: 10px;
 }
 
 #boton-menu {
