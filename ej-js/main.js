@@ -32,8 +32,11 @@ function specificContent() {
         document.getElementById('estudiantes-link-burguer').style.display = "none";
         document.getElementById('mis-asignaturas-link-burguer').style.display = "block";
         document.getElementById('calificaciones-link-burguer').style.display = "none";
+        document.getElementById('add-new-asignatura').style.display = "none";
         document.getElementById('calificaciones-alumnos-link-burguer').style.display = "block";
-
+        for (let index = 0; index < document.getElementsByClassName('delete-button').length; index++) {
+            document.getElementsByClassName('delete-button')[index].style.display = "none";
+        }
     } else if (logedRol == "profesor") {
         document.getElementById('mis-asignaturas-link').style.display = "none";
         document.getElementById('estudiantes-link').style.display = "block";
@@ -42,9 +45,13 @@ function specificContent() {
         document.getElementById('mis-asignaturas-link-burguer').style.display = "none";
         document.getElementById('estudiantes-link-burguer').style.display = "block";
         document.getElementById('calificaciones-link-burguer').style.display = "block";
+        document.getElementById('add-new-asignatura').style.display = "none";
         document.getElementById('calificaciones-alumnos-link-burguer').style.display = "none";
         for (let index = 0; index < document.getElementsByClassName('add-new-tema').length; index++) {
             document.getElementsByClassName('add-new-tema')[index].style.display = "inline-block";
+        }
+        for (let index = 0; index < document.getElementsByClassName('delete-button').length; index++) {
+            document.getElementsByClassName('delete-button')[index].style.display = "none";
         }
     } else {
         document.getElementById('mis-asignaturas-link').style.display = "none";
@@ -56,7 +63,6 @@ function specificContent() {
         document.getElementById('calificaciones-link-burguer').style.display = "block";
         document.getElementById('calificaciones-alumnos-link-burguer').style.display = "none";
         document.getElementById('add-new-asignatura').style.display = "inline-block";
-
     }
 }
 //funcion para seleccionar foto de perfil dependiendo del rol
@@ -91,6 +97,8 @@ function cargaPagina() {
 
 //funcion para mostrar la pagina que corresponde
 function showElement(id) {
+
+
     document.getElementById("principal").style.display = "none";
     document.getElementById("asignatura").style.display = "none";
     document.getElementById("calificaciones").style.display = "none";
@@ -120,11 +128,96 @@ function showElement(id) {
     document.getElementById("topicJAVASCRIPT").style.display = "none";
     document.getElementById("topicRendimiento").style.display = "none";
     document.getElementById("newTopicCreation").style.display = "none";
+    document.getElementById("newSubjectCreation").style.display = "none";
+
     // hideNewTopics();
     document.getElementById(id).style.display = "block";
 }
 
-// Get the modal
+
+// $(function() {
+//     $("#delete-iu").click(function() {
+//         document.getElementById("interfaces-carta").display = "none";
+//     });
+// });
+
+//delete subjects admin view
+document.getElementById("delete-iu").onclick = function() {
+    document.getElementById("interfaces-carta").style.display = "none";
+}
+document.getElementById("delete-ac").onclick = function() {
+    document.getElementById("arquitectura-carta").style.display = "none";
+}
+document.getElementById("delete-ho").onclick = function() {
+    document.getElementById("heuristica-carta").style.display = "none";
+}
+document.getElementById("delete-ro").onclick = function() {
+    document.getElementById("redes-carta").style.display = "none";
+}
+document.getElementById("delete-is").onclick = function() {
+    document.getElementById("sw-carta").style.display = "none";
+}
+document.getElementById("delete-so").onclick = function() {
+    document.getElementById("operativos-carta").style.display = "none";
+}
+document.getElementById("delete-md").onclick = function() {
+    document.getElementById("discreta-carta").style.display = "none";
+}
+document.getElementById("delete-cd").onclick = function() {
+    document.getElementById("calculo-carta").style.display = "none";
+}
+document.getElementById("delete-al").onclick = function() {
+    document.getElementById("algebra-carta").style.display = "none";
+}
+document.getElementById("delete-f").onclick = function() {
+        document.getElementById("fisica-carta").style.display = "none";
+    }
+
+//añdir asignatura
+document.getElementById("add-iu").onclick = function() {
+    showElement("principal");
+    document.getElementById("interfaces-carta").style.display = "inline-block";
+}
+document.getElementById("add-ac").onclick = function() {
+    showElement("principal");
+    document.getElementById("arquitectura-carta").style.display = "inline-block";
+}
+document.getElementById("add-ho").onclick = function() {
+    showElement("principal");
+    document.getElementById("heuristica-carta").style.display = "inline-block";
+}
+document.getElementById("add-ro").onclick = function() {
+    showElement("principal");
+    document.getElementById("redes-carta").style.display = "inline-block";
+}
+document.getElementById("add-is").onclick = function() {
+    showElement("principal");
+    document.getElementById("sw-carta").style.display = "inline-block";
+}
+document.getElementById("add-so").onclick = function() {
+    showElement("principal");
+    document.getElementById("operativos-carta").style.display = "inline-block";
+}
+document.getElementById("add-md").onclick = function() {
+    showElement("principal");
+    document.getElementById("discreta-carta").style.display = "inline-block";
+}
+document.getElementById("add-cd").onclick = function() {
+    showElement("principal");
+    document.getElementById("calculo-carta").style.display = "inline-block";
+}
+document.getElementById("add-al").onclick = function() {
+    showElement("principal");
+    document.getElementById("algebra-carta").style.display = "inline-block";
+}
+document.getElementById("add-f").onclick = function() {
+    showElement("principal");
+    document.getElementById("fisica-carta").style.display = "inline-block";
+   
+
+}
+
+    // Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
@@ -550,13 +643,19 @@ $("#forum1").click(function() {
 $("#boton-tema").click(function() {
 
     var titulo = document.getElementById("area-titulo").value;
-    var description = "JQUERY"
+    var description = document.getElementById("area-descripcion").value;
     var bloque = '<div class="card" onclick="showElement("topicJAVASCRIPT");"><div class="heading"><h1>' + titulo + '</h1></div><div class="content"><h2>' + description + '</h2><p>(nuevo)</p></div></div>';
     showElement("interfacesTopic");
     $("#interfacesCardset").append(bloque);
 });
 
+/*$("#add-al").click(function() {
 
+    var bloque = '<div id="algebra-carta" class="card" style="display: none;"><div class="heading"></div><div class="content"><h1>ALGEBRA LINEAL</h1></div><button id="delete-al" class="delete-button" style="display: inline-block;">ELIMINAR</button></div>';
+    showElement("principal");
+    $("#cards-set").append(bloque);
+});
+*/
 $("#forum2").click(function() {
     var foto;
 

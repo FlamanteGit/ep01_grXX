@@ -172,53 +172,100 @@
                     <h1 id="bienvenida"></h1>
 
                     <div class="cards-set">
-                        <div class="card" onclick="showElement('interfacesTopic');">
-                            <div class="heading" style="background: url('../ej-images/interfaces-de-usuario.png'); background-size:cover ;">
+
+
+                        <div id="interfaces-carta" class="card">
+                            <div class="heading" style="background: url('../ej-images/interfaces-de-usuario.png'); background-size:cover ;" onclick="showElement('interfacesTopic');">
                             </div>
-                            <div class="content">
+                            <div class="content" onclick="showElement('interfacesTopic');">
                                 <h1>Interfaces de usuario</h1>
                             </div>
+                            <button id="delete-iu" class="delete-button" style="display: inline-block;">ELIMINAR</button>
                         </div>
 
-                        <div class="card" onclick="showElement('arquitecturaTopic');">
-                            <div class="heading" style="background: url('../ej-images/arquitectura-de-compus.png'); background-size:cover ;">
+                        <div id="arquitectura-carta" class="card">
+                            <div class="heading" style="background: url('../ej-images/arquitectura-de-compus.png'); background-size:cover ;" onclick="showElement('arquitecturaTopic');">
                             </div>
-                            <div class="content">
+                            <div class="content" onclick="showElement('arquitecturaTopic');">
                                 <h1>Arquitectura de computadores</h1>
-
                             </div>
+                            <button id="delete-ac" class="delete-button" style="display: inline-block;">ELIMINAR</button>
                         </div>
 
-                        <div class=" card" onclick="showElement( 'heuristicaTopic');">
-                            <div class="heading" style="background: url( '../ej-images/heuristica.png'); background-size:cover ;">
+                        <div id="heuristica-carta" class=" card">
+                            <div class="heading" style="background: url( '../ej-images/heuristica.png'); background-size:cover ;" onclick="showElement( 'heuristicaTopic');">
                             </div>
-                            <div class="content">
+                            <div class="content" onclick="showElement( 'heuristicaTopic');">
                                 <h1>Heuristica y Optimizacion</h1>
                             </div>
+                            <button id="delete-ho" class="delete-button" style="display: inline-block;">ELIMINAR</button>
                         </div>
 
-                        <div class="card" onclick="showElement( 'redesTopic');">
-                            <div class="heading" style="background: url( '../ej-images/redes-de-ordenadores.png'); background-size:cover ;">
+                        <div id="redes-carta" class="card">
+                            <div class="heading" style="background: url( '../ej-images/redes-de-ordenadores.png'); background-size:cover ;" onclick="showElement( 'redesTopic');">
                             </div>
-                            <div class="content">
+                            <div class="content" onclick="showElement( 'redesTopic');">
                                 <h1>Redes de ordenadores</h1>
                             </div>
+                            <button id="delete-ro" class="delete-button" style="display: inline-block;">ELIMINAR</button>
                         </div>
 
-                        <div class="card" onclick="showElement( 'ingenieriaTopic');">
+                        <div id="sw-carta" class="card">
+                            <div class="heading" style="background: url( '../ej-images/ingenieria.png'); background-size:cover ;" onclick="showElement('ingenieriaTopic');">
+                            </div>
+                            <div class="content" onclick="showElement('ingenieriaTopic');">
+                                <h1>Ingenieria de software</h1>
+                            </div>
+                            <button id="delete-is" class="delete-button" style="display: inline-block;">ELIMINAR</button>
+                        </div>
+
+                       <div id="operativos-carta" class="card" style="display: none;">
                             <div class="heading" style="background: url( '../ej-images/ingenieria.png'); background-size:cover ;">
                             </div>
                             <div class="content">
-                                <h1>Ingenieria de software</h1>
+                                <h1>SISTEMAS OPERATIVOS</h1>
                             </div>
+                            <button id="delete-so" class="delete-button" style="display: inline-block;">ELIMINAR</button>
                         </div>
-
+                        <div id="discreta-carta" class="card" style="display: none;">
+                            <div class="heading" style="background: url( '../ej-images/ingenieria.png'); background-size:cover ;">
+                            </div>
+                            <div class="content">
+                                <h1>MATEMATICA DISCRETA</h1>
+                            </div>
+                            <button id="delete-md" class="delete-button" style="display: inline-block;">ELIMINAR</button>
+                        </div>
+                        <div id="calculo-carta" class="card" style="display: none;">
+                            <div class="heading" style="background: url( '../ej-images/ingenieria.png'); background-size:cover ;">
+                            </div>
+                            <div class="content">
+                                <h1>CALCULO DIFERENCIAL</h1>
+                            </div>
+                            <button id="delete-cd" class="delete-button" style="display: inline-block;">ELIMINAR</button>
+                        </div>
+                        <div id="algebra-carta" class="card" style="display: none;">
+                            <div class="heading" style="background: url( '../ej-images/ingenieria.png'); background-size:cover ;">
+                            </div>
+                            <div class="content">
+                                <h1>ALGEBRA LINEAL</h1>
+                            </div>
+                            <button id="delete-al" class="delete-button" style="display: inline-block;">ELIMINAR</button>
+                        </div>
+                        <div id="fisica-carta" class="card" style="display: none;">
+                            <div class="heading" style="background: url( '../ej-images/ingenieria.png'); background-size:cover ;">
+                            </div>
+                            <div class="content">
+                                <h1>FISICA</h1>
+                            </div>
+                            <button id="delete-f" class="delete-button" style="display: inline-block;">ELIMINAR</button>
+                        </div>
                         <div class="card" id="add-new-asignatura" onclick="showElement('newSubjectCreation');">
                             <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
                             <div class="content">
                                 <h2>AÑADIR ASIGNATURA</h2>
                                 <p style="font-size: 12px;">Pulse para añadir un nuevo asignatura</p>
                             </div>
+                            <br>
                         </div>
                     </div>
                 </main>
@@ -271,26 +318,26 @@
                 <div class="cards-set" id="arquitecturaCardset">
                     <div class="card" onclick="showElement('topicRendimiento');">
                         <div class="heading">
-                            <h1 style="color: white">Rendimiento y Paralelismo</h1>
+                            <h1>TEMA 1</h1>
                         </div>
                         <div class="content">
-                            <p>ey</p>
+                            <h2>PARALELISMO</h2>
                         </div>
                     </div>
                     <div class="card" onclick="showElement( 'topicC');">
                         <div class="heading">
-                            <h1 style="color: white">C++</h1>
+                            <h1>TEMA 2</h1>
                         </div>
                         <div class="content">
-                            <p>ey</p>
+                            <h2>MEMORRIA CACHE</h2>
                         </div>
                     </div>
                     <div class="card" onclick="showElement('');">
                         <div class="heading">
-                            <h1 style="color: white">Concurrencia</h1>
+                            <h1>TEMA 3</h1>
                         </div>
                         <div class="content">
-                            <p>ey</p>
+                            <h2>CONCURRENCIA</h2>
                         </div>
                     </div>
                     <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('arquitecturaCardset');">
@@ -445,9 +492,23 @@
 
             <!-- CREACION DE NUEVO TEMA -->
             <div id="newSubjectCreation" style="display: none;">
-                <h1 style="color: black;">NUEVA ASIGNATURA</h1>
-                <h3>CREACIÓN DE UN NUEVO ASIGNATURA</h3>
-                <div id="input-grid">
+                <h1 style="color: black;">AÑADA UNA ASIGNATURA</h1>
+                <h3>LISTADO DE ASIGNATURAS:</h3>
+                <ul id="asignaturas-para-añadir">
+
+                    <li><a id="add-iu" class="navegation">INTERFACES DE USUARIO</a></li>
+                    <li><a id="add-ac" class="navegation">ARQUITECTURA DE COMPUTADORES</a></li>
+                    <li><a id="add-ho" class="navegation">HEURISTICA Y OPTIMIZACION</a></li>
+                    <li><a id="add-ro" class="navegation">REDES DE ORDENADORES</a></li>
+                    <li><a id="add-is" class="navegation">INGENIERIA DEL SOFTWARE</a></li>
+                    <li><a id="add-so" class="navegation">SISTEMAS OPERATIVOS</a></li>
+                    <li><a id="add-md" class="navegation">MATEMATICA DISCRETA</a></li>
+                    <li><a id="add-al" class="navegation">ALGEBRA LINEAL</a></li>
+                    <li><a id="add-cd" class="navegation">CALCULO DIFERENCIAL</a></li>
+                    <li><a id="add-f" class="navegation">FISICA</a></li>
+
+                </ul>
+                <!-- <div id="input-grid">
                     <div class="input-form" id="new-portada">
                         <label style="color: black; font-weight: bolder;">Portada</label>
                         <textarea id="area-portada"></textarea>
@@ -466,10 +527,10 @@
                     <div class="input-form" id="new-botones">
                         <button class="button" style="display: inline-block;">GUARDAR</button>
                         <a style="display: inline-block;">Cancelar</a>
-                    </div>
+                    </div>-->
 
-                    <!-- <a onclick="addTopic(getLastTopic());"><span>+</span></a> -->
-                </div>
+                <!-- <a onclick="addTopic(getLastTopic());"><span>+</span></a>
+                </div> -->
             </div>
 
             <!-- SUBTEMAS -->
