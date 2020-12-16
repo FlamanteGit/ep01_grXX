@@ -1083,7 +1083,10 @@ table {
     color: white;
     font-weight: bold;
 }
-
+#tabla-estudiantes th{
+    color: darkblue;
+    background:white;
+}
 .table-page th img {
     border-radius: 3px;
     width: 50px;
