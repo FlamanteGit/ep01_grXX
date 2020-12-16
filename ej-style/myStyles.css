@@ -254,9 +254,9 @@
 
 #input-grid {
     display: grid;
-    grid-template-columns: 3fr 3fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 100px 250px 100px;
-    grid-template-areas: "portada titulo" "portada descripcion" "botones botones";
+    grid-template-areas: "titulo" "descripcion" "botones";
 }
 
 #new-portada {
@@ -585,7 +585,8 @@ body * {
     border-radius: 3px;
     margin: 10px;
 }
-.delete-button{
+
+.delete-button {
     color: white;
     padding: 10px;
     background-color: red;
@@ -594,6 +595,7 @@ body * {
     margin: 10px;
     z-index: 5;
 }
+
 #boton-menu {
     display: none;
 }
@@ -649,6 +651,7 @@ body * {
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
+
 .delete-button:hover {
     cursor: pointer;
     background-color: rgb(245, 120, 120);
@@ -656,6 +659,7 @@ body * {
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
+
 
 /* BODY */
 
@@ -1001,9 +1005,11 @@ h3 {
 p {
     margin: 10px;
 }
-#asignaturas-para-añadir{
+
+#asignaturas-para-añadir {
     margin-left: 0;
 }
+
 ul {
     list-style-type: none;
     text-align: left;
@@ -1083,10 +1089,12 @@ table {
     color: white;
     font-weight: bold;
 }
-#tabla-estudiantes th{
+
+#tabla-estudiantes th {
     color: darkblue;
-    background:white;
+    background: white;
 }
+
 .table-page th img {
     border-radius: 3px;
     width: 50px;

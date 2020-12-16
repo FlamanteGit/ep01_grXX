@@ -35,7 +35,7 @@
                         <li><a onclick="showElement('foro');">Foro</a></li>
                     </ul>
                 </div>
-                <a href="ej.html"><img id="logo" src="../ej-images/uc3m.png" alt="logo-uc3m"/></a>
+                <a href="ej.html"><img id="logo" src="../ej-images/uc3m.png" alt="logo-uc3m" /></a>
 
                 <!--<a id="boton-menu"><i class="fa fa-bars"></i></a>-->
 
@@ -96,7 +96,7 @@
                     <label>Contraseña</label>
                     <input class="form-styling" type="password" name="password" placeholder="" />
                     <div class="btn-animate">
-                        <a class="btn-signin">Iniciar sesión</a>
+                        <a id="login" class="btn-signin">Iniciar sesión</a>
                     </div>
                 </form>
 
@@ -219,7 +219,7 @@
                             <button id="delete-is" class="delete-button" style="display: inline-block;">ELIMINAR</button>
                         </div>
 
-                       <div id="operativos-carta" class="card" style="display: none;">
+                        <div id="operativos-carta" class="card" style="display: none;">
                             <div class="heading" style="background: url( '../ej-images/ingenieria.png'); background-size:cover ;">
                             </div>
                             <div class="content">
@@ -303,7 +303,7 @@
                         </div>
                     </div>
 
-                    <div class="card add-new-tema" onclick="showElement('newTopicCreation');">
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation-interfaces');">
                         <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
                         <div class="content">
                             <h2>AÑADIR TEMA</h2>
@@ -346,7 +346,7 @@
 
                         </div>
                     </div>
-                    <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('arquitecturaCardset');">
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation-arquitectura');">
                         <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
                         <div class="content">
                             <h2>AÑADIR TEMA</h2>
@@ -386,7 +386,7 @@
                             <p>(nuevo)</p>
                         </div>
                     </div>
-                    <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('heuristicaCardset');">
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation-heuristica');">
                         <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
                         <div class="content">
                             <h2>AÑADIR TEMA</h2>
@@ -426,7 +426,7 @@
                             <p>(nuevo)</p>
                         </div>
                     </div>
-                    <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('ingenieriaCardset');">
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation-ingenieria');">
                         <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
                         <div class="content">
                             <h2>AÑADIR TEMA</h2>
@@ -466,7 +466,7 @@
                             <p>(nuevo)</p>
                         </div>
                     </div>
-                    <div class="card add-new-tema" onclick="showElement('newTopicCreation'); setLastTopic('redesCardset');">
+                    <div class="card add-new-tema" onclick="showElement('newTopicCreation-redes');">
                         <img class="imgNewTema" src="../ej-images/plus.png" alt="newTema">
                         <div class="content">
                             <h2>AÑADIR TEMA</h2>
@@ -477,30 +477,113 @@
             </div>
 
             <!-- CREACION DE NUEVO TEMA -->
-            <div id="newTopicCreation" style="display: none;">
-                <h1 style="color: black;">INTERFACES DE USUARIO</h1>
+            <div id="newTopicCreation-interfaces" style="display: none;">
+                <h1 style="color: black;">NUEVO TEMA</h1>
                 <h3>CREACIÓN DE UN NUEVO TEMA</h3>
                 <div id="input-grid">
-                    <div class="input-form" id="new-portada">
-                        <label style="color: black; font-weight: bolder;">Portada</label>
-                        <textarea id="area-portada"></textarea>
-                    </div>
-
-                    <div class="input-form" id="new-titulo">
+                    <div class="input-form" id="new-titulo-interfaces">
                         <label style="color: black; font-weight: bolder;">Tema</label>
-                        <textarea id="area-titulo"></textarea>
+                        <textarea id="area-titulo-interfaces"></textarea>
                     </div>
 
-                    <div class="input-form" id="new-descripcion">
+                    <div class="input-form" id="new-descripcion-interfaces">
                         <label style="color: black; font-weight: bolder;">Descripción del tema</label>
-                        <textarea id="area-descripcion"></textarea>
+                        <textarea id="area-descripcion-interfaces"></textarea>
                     </div>
 
-                    <div class="input-form" id="new-botones">
-                        <button id="boton-tema" class="button" style="display: inline-block;">GUARDAR</button>
+                    <div class="input-form" id="new-botones-interfaces">
+                        <button id="boton-tema-interfaces" class="button" style="display: inline-block;">GUARDAR</button>
                         <a style="display: inline-block;">Cancelar</a>
                     </div>
 
+                    <!-- <a onclick="addTopic(getLastTopic());"><span>+</span></a> -->
+                </div>
+            </div>
+
+            <div id="newTopicCreation-arquitectura" style="display: none;">
+                <h1 style="color: black;">ARQUITECTURA DE COMPUTADORES</h1>
+                <h3>CREACIÓN DE UN NUEVO TEMA</h3>
+                <div id="input-grid">
+                    <div class="input-form" id="new-titulo-arquitectura">
+                        <label style="color: black; font-weight: bolder;">Tema</label>
+                        <textarea id="area-titulo-arquitectura"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-descripcion-arquitectura">
+                        <label style="color: black; font-weight: bolder;">Descripción del tema</label>
+                        <textarea id="area-descripcion-arquitectura"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-botones-arquitectura">
+                        <button id="boton-tema-arquitectura" class="button" style="display: inline-block;">GUARDAR</button>
+                        <a style="display: inline-block;">Cancelar</a>
+                    </div>
+                    <!-- <a onclick="addTopic(getLastTopic());"><span>+</span></a> -->
+                </div>
+            </div>
+
+            <div id="newTopicCreation-heuristica" style="display: none;">
+                <h1 style="color: black;">HEURISTICA Y OPTIMIZACION</h1>
+                <h3>CREACIÓN DE UN NUEVO TEMA</h3>
+                <div id="input-grid">
+                    <div class="input-form" id="new-titulo-heuristica">
+                        <label style="color: black; font-weight: bolder;">Tema</label>
+                        <textarea id="area-titulo-heuristica"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-descripcion-heuristica">
+                        <label style="color: black; font-weight: bolder;">Descripción del tema</label>
+                        <textarea id="area-descripcion-heuristica"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-botones-heuristica">
+                        <button id="boton-tema-heuristica" class="button" style="display: inline-block;">GUARDAR</button>
+                        <a style="display: inline-block;">Cancelar</a>
+                    </div>
+                    <!-- <a onclick="addTopic(getLastTopic());"><span>+</span></a> -->
+                </div>
+            </div>
+
+            <div id="newTopicCreation-redes" style="display: none;">
+                <h1 style="color: black;">REDES DE ORDENADORES</h1>
+                <h3>CREACIÓN DE UN NUEVO TEMA</h3>
+                <div id="input-grid">
+                    <div class="input-form" id="new-titulo-redes">
+                        <label style="color: black; font-weight: bolder;">Tema</label>
+                        <textarea id="area-titulo-redes"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-descripcion-redes">
+                        <label style="color: black; font-weight: bolder;">Descripción del tema</label>
+                        <textarea id="area-descripcion-redes"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-botones-redes">
+                        <button id="boton-tema-redes" class="button" style="display: inline-block;">GUARDAR</button>
+                        <a style="display: inline-block;">Cancelar</a>
+                    </div>
+                    <!-- <a onclick="addTopic(getLastTopic());"><span>+</span></a> -->
+                </div>
+            </div>
+
+            <div id="newTopicCreation-ingenieria" style="display: none;">
+                <h1 style="color: black;">INGENIERIA DE SOFTWARE</h1>
+                <h3>CREACIÓN DE UN NUEVO TEMA</h3>
+                <div id="input-grid">
+                    <div class="input-form" id="new-titulo-ingenieria">
+                        <label style="color: black; font-weight: bolder;">Tema</label>
+                        <textarea id="area-titulo-ingenieria"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-descripcion-ingenieria">
+                        <label style="color: black; font-weight: bolder;">Descripción del tema</label>
+                        <textarea id="area-descripcion-ingenieria"></textarea>
+                    </div>
+
+                    <div class="input-form" id="new-botones-ingenieria">
+                        <button id="boton-tema-ingenieria" class="button" style="display: inline-block;">GUARDAR</button>
+                        <a style="display: inline-block;">Cancelar</a>
+                    </div>
                     <!-- <a onclick="addTopic(getLastTopic());"><span>+</span></a> -->
                 </div>
             </div>
@@ -589,7 +672,8 @@
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/paralelismo.png" alt="Tema1-Imagen" />
                         <p>
-                            El paralelismo es una forma de computación en la cual varios cálculos pueden realizarse simultáneamente,1​ basado en el principio de dividir los problemas grandes para obtener varios problemas pequeños, que son posteriormente solucionados en paralelo. Hay varios tipos diferentes de paralelismo: nivel de bit, nivel de instrucción, de datos y de tarea. El paralelismo ha sido empleado durante muchos años, sobre todo para la Computación de alto rendimiento.
+                            El paralelismo es una forma de computación en la cual varios cálculos pueden realizarse simultáneamente,1​ basado en el principio de dividir los problemas grandes para obtener varios problemas pequeños, que son posteriormente solucionados en paralelo.
+                            Hay varios tipos diferentes de paralelismo: nivel de bit, nivel de instrucción, de datos y de tarea. El paralelismo ha sido empleado durante muchos años, sobre todo para la Computación de alto rendimiento.
                         </p>
                     </div>
                 </div>
@@ -598,7 +682,10 @@
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/cache.png" alt="Tema2-Imagen" />
                         <p>
-                            En informática, una caché, antememoria1​ o memoria intermedia2​ es un componente de hardware o software que guarda datos para que las solicitudes futuras de esos datos se puedan atender con mayor rapidez; los datos almacenados en una caché pueden ser el resultado de un cálculo anterior o el duplicado de datos almacenados en otro lugar, generalmente, da velocidad de acceso más rápido. Se produce un acierto de caché cuando los datos solicitados se pueden encontrar en esta, mientras que un fallo de caché ocurre cuando no están dichos datos. La lectura de la caché es más rápida que volver a calcular un resultado o leer desde un almacén de datos más lento; por lo tanto, cuantas más solicitudes se puedan atender desde la memoria caché, más rápido funcionará el sistema.
+                            En informática, una caché, antememoria1​ o memoria intermedia2​ es un componente de hardware o software que guarda datos para que las solicitudes futuras de esos datos se puedan atender con mayor rapidez; los datos almacenados en una caché pueden ser
+                            el resultado de un cálculo anterior o el duplicado de datos almacenados en otro lugar, generalmente, da velocidad de acceso más rápido. Se produce un acierto de caché cuando los datos solicitados se pueden encontrar en esta,
+                            mientras que un fallo de caché ocurre cuando no están dichos datos. La lectura de la caché es más rápida que volver a calcular un resultado o leer desde un almacén de datos más lento; por lo tanto, cuantas más solicitudes se
+                            puedan atender desde la memoria caché, más rápido funcionará el sistema.
                         </p>
                     </div>
                 </div>
@@ -607,7 +694,9 @@
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/concurrencia.png" alt="Tema3-Imagen" />
                         <p>
-                            En ciencias de la computación, concurrencia se refiere a la habilidad de distintas partes de un programa, algoritmo, o problema de ser ejecutado en desorden o en orden parcial, sin afectar el resultado final. Los cálculos (operaciones) pueden ser ejecutados en múltiples procesadores, o ejecutados en procesadores separados físicamente o virtualmente en distintos hilos de ejecución. Un sin número de modelos matemáticos han sido desarrollados para cálculos de la concurrencia en general incluyendo redes de Petri, procesos Calculi, el modelo máquina de accesos random en paralelo, el Modelo Actor y el Lenguaje Reo.
+                            En ciencias de la computación, concurrencia se refiere a la habilidad de distintas partes de un programa, algoritmo, o problema de ser ejecutado en desorden o en orden parcial, sin afectar el resultado final. Los cálculos (operaciones) pueden ser ejecutados
+                            en múltiples procesadores, o ejecutados en procesadores separados físicamente o virtualmente en distintos hilos de ejecución. Un sin número de modelos matemáticos han sido desarrollados para cálculos de la concurrencia en general
+                            incluyendo redes de Petri, procesos Calculi, el modelo máquina de accesos random en paralelo, el Modelo Actor y el Lenguaje Reo.
                         </p>
                     </div>
                 </div>
@@ -619,8 +708,8 @@
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/ips.png" alt="Tema1-Imagen" />
                         <p>
-                            IP es la sigla de Internet Protocol o, en nuestro idioma, Protocolo de Internet. Se trata de un estándar que se emplea para el envío y recepción de información mediante una red que reúne paquetes conmutados.
-                            El IP no cuenta con la posibilidad de confirmar si un paquete de datos llegó a su destino. Esto puede permitir que el paquete arribe duplicado, con daños, en un orden erróneo o que, simplemente, no llegue a destino.
+                            IP es la sigla de Internet Protocol o, en nuestro idioma, Protocolo de Internet. Se trata de un estándar que se emplea para el envío y recepción de información mediante una red que reúne paquetes conmutados. El IP no cuenta con la posibilidad de confirmar
+                            si un paquete de datos llegó a su destino. Esto puede permitir que el paquete arribe duplicado, con daños, en un orden erróneo o que, simplemente, no llegue a destino.
                         </p>
                     </div>
                 </div>
@@ -629,7 +718,8 @@
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/routers.png" alt="Tema2-Imagen" />
                         <p>
-                            Un rúter,​ enrutador,​ (del inglés router) o encaminador, es un dispositivo que permite interconectar computadoras que funcionan en el marco de una red. Su función: se encarga de establecer la ruta que destinará a cada paquete de datos dentro de una red informática.
+                            Un rúter,​ enrutador,​ (del inglés router) o encaminador, es un dispositivo que permite interconectar computadoras que funcionan en el marco de una red. Su función: se encarga de establecer la ruta que destinará a cada paquete de datos dentro de una red
+                            informática.
                         </p>
                     </div>
                 </div>
@@ -638,7 +728,9 @@
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/dns.png" alt="Tema3-Imagen" />
                         <p>
-                            El sistema de nombres de dominio (Domain Name System o DNS, por sus siglas en inglés)1​ es un sistema de nomenclatura jerárquico descentralizado para dispositivos conectados a redes IP como Internet o una red privada. Este sistema asocia información variada con nombres de dominio asignados a cada uno de los participantes. Su función más importante es "traducir" nombres inteligibles para las personas en identificadores binarios asociados con los equipos conectados a la red, esto con el propósito de poder localizar y direccionar estos equipos mundialmente.
+                            El sistema de nombres de dominio (Domain Name System o DNS, por sus siglas en inglés)1​ es un sistema de nomenclatura jerárquico descentralizado para dispositivos conectados a redes IP como Internet o una red privada. Este sistema asocia información variada
+                            con nombres de dominio asignados a cada uno de los participantes. Su función más importante es "traducir" nombres inteligibles para las personas en identificadores binarios asociados con los equipos conectados a la red, esto
+                            con el propósito de poder localizar y direccionar estos equipos mundialmente.
                         </p>
                     </div>
                 </div>
@@ -650,7 +742,9 @@
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/simplex.png" alt="Tema1-Imagen" />
                         <p>
-                            En optimización matemática, el término algoritmo símplex habitualmente se refiere a un conjunto de métodos muy usados para resolver problemas de programación lineal, en los cuales de alguna manera se busca el máximo de una función lineal sobre un conjunto de variables que satisfaga un conjunto de inecuaciones lineales. El algoritmo símplex primal fue desarrollado por el matemático norteamericano George Dantzig en 1947, y procede examinando vértices adyacentes del poliedro de soluciones. Un algoritmo símplex es de alguna manera un algoritmo de pivote.
+                            En optimización matemática, el término algoritmo símplex habitualmente se refiere a un conjunto de métodos muy usados para resolver problemas de programación lineal, en los cuales de alguna manera se busca el máximo de una función lineal sobre un conjunto
+                            de variables que satisfaga un conjunto de inecuaciones lineales. El algoritmo símplex primal fue desarrollado por el matemático norteamericano George Dantzig en 1947, y procede examinando vértices adyacentes del poliedro de
+                            soluciones. Un algoritmo símplex es de alguna manera un algoritmo de pivote.
                         </p>
                     </div>
                 </div>
@@ -659,17 +753,21 @@
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/csp.png" alt="Tema2-Imagen" />
                         <p>
-                            Problemas de satisfacción de restricciones (CSP) por sus siglas en inglés, son problemas matemáticos definido como un conjunto de objetos tal que su estado debe satisfacer un número de restricciones o limitaciones. Los CSP representa las entidades de un problema como una colección homogénea finita de restricciones sobre variables, las que son resueltas por métodos de satisfacción de restricciones. Los CSP son el tema de una intensa investigación en Inteligencia Artificial e Investigación de operaciones, dado que la generalidad en su formulación provee un principio básico para analizar y resolver problemas de distintos tipos. Los CSP a menudo muestran gran complejidad, requiriendo una combinación de métodos heurísticos y búsqueda combinatoria para ser resueltos en un tiempo razonable. El Problema de satisfacibilidad booleana (SAT), el Satisfiability Modulo Theories (SMT) y answer set programming (ASP) pueden ser a grandes rasgos modelados como una forma de problema de satisfacción de restricciones.
+                            Problemas de satisfacción de restricciones (CSP) por sus siglas en inglés, son problemas matemáticos definido como un conjunto de objetos tal que su estado debe satisfacer un número de restricciones o limitaciones. Los CSP representa las entidades de
+                            un problema como una colección homogénea finita de restricciones sobre variables, las que son resueltas por métodos de satisfacción de restricciones. Los CSP son el tema de una intensa investigación en Inteligencia Artificial
+                            e Investigación de operaciones, dado que la generalidad en su formulación provee un principio básico para analizar y resolver problemas de distintos tipos. Los CSP a menudo muestran gran complejidad, requiriendo una combinación
+                            de métodos heurísticos y búsqueda combinatoria para ser resueltos en un tiempo razonable. El Problema de satisfacibilidad booleana (SAT), el Satisfiability Modulo Theories (SMT) y answer set programming (ASP) pueden ser a grandes
+                            rasgos modelados como una forma de problema de satisfacción de restricciones.
                         </p>
                     </div>
                 </div>
-            <div id="topicBUSQUEDA" class="contenido">
+                <div id="topicBUSQUEDA" class="contenido">
                     <h1>TEMA 3: Busqueda</h1>
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/busqueda.png" alt="Tema3-Imagen" />
                         <p>
-                            Un algoritmo de búsqueda es un conjunto de instrucciones que están diseñadas para localizar un elemento con ciertas propiedades dentro de una estructura de datos; por ejemplo, ubicar el registro correspondiente a cierta persona en una base de datos, o el mejor movimiento en una partida de ajedrez.
-                            La variante más simple del problema es la búsqueda de un número en un vector.
+                            Un algoritmo de búsqueda es un conjunto de instrucciones que están diseñadas para localizar un elemento con ciertas propiedades dentro de una estructura de datos; por ejemplo, ubicar el registro correspondiente a cierta persona en una base de datos, o
+                            el mejor movimiento en una partida de ajedrez. La variante más simple del problema es la búsqueda de un número en un vector.
                         </p>
                     </div>
                 </div>
@@ -681,7 +779,8 @@
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/requisitos.png" alt="Tema1-Imagen" />
                         <p>
-                            En la ingeniería de desarrollo de sistemas, un requisito es una necesidad documentada sobre el contenido, forma o funcionalidad de un producto o servicio. Se usa en un sentido formal en la ingeniería de sistemas, ingeniería de software e ingeniería de requisitos.
+                            En la ingeniería de desarrollo de sistemas, un requisito es una necesidad documentada sobre el contenido, forma o funcionalidad de un producto o servicio. Se usa en un sentido formal en la ingeniería de sistemas, ingeniería de software e ingeniería de
+                            requisitos.
                         </p>
                     </div>
                 </div>
@@ -690,16 +789,20 @@
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/modelado.png" alt="Tema2-Imagen" />
                         <p>
-                            Un modelo conceptual es una representación de un sistema, hecho de la composición de conceptos que se utilizan para ayudar a las personas a conocer, comprender o simular un tema que representa el modelo. También es un conjunto de conceptos. Algunos modelos son objetos físicos; por ejemplo, un modelo de juguete que se puede ensamblar y se puede hacer que funcione como el objeto que representa.
+                            Un modelo conceptual es una representación de un sistema, hecho de la composición de conceptos que se utilizan para ayudar a las personas a conocer, comprender o simular un tema que representa el modelo. También es un conjunto de conceptos. Algunos modelos
+                            son objetos físicos; por ejemplo, un modelo de juguete que se puede ensamblar y se puede hacer que funcione como el objeto que representa.
                         </p>
                     </div>
                 </div>
-                 <div id="topicARQUITECTURA" class="contenido">
+                <div id="topicARQUITECTURA" class="contenido">
                     <h1>TEMA 3: Arquitectura</h1>
                     <div class="introTema">
                         <img class="imagenTema" src="../ej-images/arquitectura.png" alt="Tema3-Imagen" />
                         <p>
-                            En los inicios de la informática, la programación se consideraba un arte y se desarrollaba como tal debido a la dificultad que entrañaba para la mayoría de las personas, pero con el tiempo se han ido descubriendo y desarrollando formas y guías generales, con base a las cuales se puedan resolver los problemas. A estas, se les ha denominado arquitectura de software, porque, a semejanza de los planos de un edificio o construcción, estas indican la estructura, funcionamiento e interacción entre las partes del software. En el libro "An introduction to Software Architecture", David Garlan y Mary Shaw definen que la arquitectura es un nivel de diseño que hace foco en aspectos "más allá de los algoritmos y estructuras de datos de la computación; el diseño y especificación de la estructura global del sistema es un nuevo tipo de problema".
+                            En los inicios de la informática, la programación se consideraba un arte y se desarrollaba como tal debido a la dificultad que entrañaba para la mayoría de las personas, pero con el tiempo se han ido descubriendo y desarrollando formas y guías generales,
+                            con base a las cuales se puedan resolver los problemas. A estas, se les ha denominado arquitectura de software, porque, a semejanza de los planos de un edificio o construcción, estas indican la estructura, funcionamiento e
+                            interacción entre las partes del software. En el libro "An introduction to Software Architecture", David Garlan y Mary Shaw definen que la arquitectura es un nivel de diseño que hace foco en aspectos "más allá de los algoritmos
+                            y estructuras de datos de la computación; el diseño y especificación de la estructura global del sistema es un nuevo tipo de problema".
                         </p>
                     </div>
                 </div>

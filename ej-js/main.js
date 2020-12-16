@@ -138,7 +138,7 @@ function showElement(id) {
     document.getElementById("topicROUTERS").style.display = "none";
     document.getElementById("topicDNS").style.display = "none";
     document.getElementById("topicIPS").style.display = "none";
-   
+
     document.getElementById("topicCSP").style.display = "none";
     document.getElementById("topicBUSQUEDA").style.display = "none";
     document.getElementById("topicSIMPLEX").style.display = "none";
@@ -147,8 +147,12 @@ function showElement(id) {
     document.getElementById("topicARQUITECTURA").style.display = "none";
     document.getElementById("topicREQUISITOS").style.display = "none";
 
-    document.getElementById("newTopicCreation").style.display = "none";
+    document.getElementById("newTopicCreation-interfaces").style.display = "none";
     document.getElementById("newSubjectCreation").style.display = "none";
+    document.getElementById("newTopicCreation-arquitectura").style.display = "none";
+    document.getElementById("newTopicCreation-heuristica").style.display = "none";
+    document.getElementById("newTopicCreation-redes").style.display = "none";
+    document.getElementById("newTopicCreation-ingenieria").style.display = "none";
 
     // hideNewTopics();
     document.getElementById(id).style.display = "block";
@@ -599,6 +603,10 @@ document.getElementsByClassName("far fa-comment")[9].onclick = function() {
     window.location = "mailto:xyz@loadAll.com";
 }
 
+$("#login").click(function() {
+    loadAll();
+});
+
 //a continuacion funciones encargadas de la descarga de calificaciones en excell
 $("#notas-global").click(function() {
     $("table-page").table2excel({
@@ -642,6 +650,13 @@ $("#heuristica").click(function() {
     });
 });
 
+$("#export-button").click(function() {
+    $("#table-notas").table2excel({
+        name: "notas",
+        filename: "calificaciones.xls"
+    });
+});
+
 //funcion encargada de controlar nav
 $("menu").click(function() {
     document.getElementsByTagName("nav")[0].style.gridTemplateRows = "1fr 1fr";
@@ -666,14 +681,51 @@ $("#forum1").click(function() {
     document.getElementsByName("Text1")[0].value = "";
 });
 
-$("#boton-tema").click(function() {
+$("#boton-tema-interfaces").click(function() {
 
-    var titulo = document.getElementById("area-titulo").value;
-    var description = document.getElementById("area-descripcion").value;
+    var titulo = document.getElementById("area-titulo-interfaces").value;
+    var description = document.getElementById("area-descripcion-interfaces").value;
     var bloque = '<div class="card" onclick="showElement("topicJAVASCRIPT");"><div class="heading"><h1>' + titulo + '</h1></div><div class="content"><h2>' + description + '</h2><p>(nuevo)</p></div></div>';
     showElement("interfacesTopic");
     $("#interfacesCardset").append(bloque);
 });
+
+$("#boton-tema-arquitectura").click(function() {
+
+    var titulo = document.getElementById("area-titulo-arquitectura").value;
+    var description = document.getElementById("area-descripcion-arquitectura").value;
+    var bloque = '<div class="card" onclick="showElement("topicJAVASCRIPT");"><div class="heading"><h1>' + titulo + '</h1></div><div class="content"><h2>' + description + '</h2><p>(nuevo)</p></div></div>';
+    showElement("arquitecturaTopic");
+    $("#arquitecturaCardset").append(bloque);
+});
+
+$("#boton-tema-heuristica").click(function() {
+
+    var titulo = document.getElementById("area-titulo-heuristica").value;
+    var description = document.getElementById("area-descripcion-heuristica").value;
+    var bloque = '<div class="card" onclick="showElement("topicJAVASCRIPT");"><div class="heading"><h1>' + titulo + '</h1></div><div class="content"><h2>' + description + '</h2><p>(nuevo)</p></div></div>';
+    showElement("heuristicaTopic");
+    $("#heuristicaCardset").append(bloque);
+});
+
+$("#boton-tema-redes").click(function() {
+
+    var titulo = document.getElementById("area-titulo-redes").value;
+    var description = document.getElementById("area-descripcion-redes").value;
+    var bloque = '<div class="card" onclick="showElement("topicJAVASCRIPT");"><div class="heading"><h1>' + titulo + '</h1></div><div class="content"><h2>' + description + '</h2><p>(nuevo)</p></div></div>';
+    showElement("redesTopic");
+    $("#redesCardset").append(bloque);
+});
+
+$("#boton-tema-ingenieria").click(function() {
+
+    var titulo = document.getElementById("area-titulo-ingenieria").value;
+    var description = document.getElementById("area-descripcion-ingenieria").value;
+    var bloque = '<div class="card" onclick="showElement("topicJAVASCRIPT");"><div class="heading"><h1>' + titulo + '</h1></div><div class="content"><h2>' + description + '</h2><p>(nuevo)</p></div></div>';
+    showElement("ingenieriaTopic");
+    $("#ingenieriaCardset").append(bloque);
+});
+
 
 /*$("#add-al").click(function() {
 
