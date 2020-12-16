@@ -35,13 +35,13 @@
                         <li><a onclick="showElement('foro');">Foro</a></li>
                     </ul>
                 </div>
-                <a href="ej.html"><img id="logo" src="../ej-images/uc3m.png" /></a>
+                <a href="ej.html"><img id="logo" src="../ej-images/uc3m.png" alt="logo-uc3m"/></a>
 
                 <!--<a id="boton-menu"><i class="fa fa-bars"></i></a>-->
 
                 <input id="buscador" placeholder="Escribe aquí para buscar">
                 <div id="header-icon-list">
-                    <a id="myBtn"><img class="header_icon" src="../ej-images/calendario2.png"></a>
+                    <a id="myBtn"><img class="header_icon" src="../ej-images/calendario2.png" alt="calendario"></a>
                     <div id="myModal" class="modal">
 
                         <div class="modal-content">
@@ -51,8 +51,8 @@
 
                     </div>
 
-                    <a onclick="showElement('foro');"><img class="header_icon" src="../ej-images/bocadillo.png"></a>
-                    <a id="logout" style="color: white;"><img class="header_icon" src="../ej-images/logout.png"></a>
+                    <a onclick="showElement('foro');"><img class="header_icon" src="../ej-images/bocadillo.png" alt="bocadillo"></a>
+                    <a id="logout" style="color: white;"><img class="header_icon" src="../ej-images/logout.png" alt="cerrar-sesion"></a>
                 </div>
                 <span id="user" style="color: white;">aqui va el usuario</span>
                 <img id="profile-img" src="../ej-images/user.png" alt="imagen de perfil">
@@ -84,39 +84,39 @@
         <img id="logo-inicio-registro" src="../ej-images/Logo-UC3M-nuevo.png" alt="logo-inicio-registro">
         <div class="frame">
             <div class="nav">
-                <ul class "links">
+                <ul class="links">
                     <li class="signin-active"><a class="btn">INICIAR SESIÓN</a></li>
                     <li class="signup-inactive"><a class="btn">REGISTRARSE</a></li>
                 </ul>
             </div>
-            <div ng-app ng-init="checked = false">
-                <form class="form-signin" action="" method="post" name="form">
-                    <label for="email">Correo electrónico</label>
+            <div>
+                <form class="form-signin" method="post" name="form">
+                    <label>Correo electrónico</label>
                     <input class="form-styling" type="text" name="username" placeholder="" />
-                    <label for="password">Contraseña</label>
+                    <label>Contraseña</label>
                     <input class="form-styling" type="password" name="password" placeholder="" />
                     <div class="btn-animate">
                         <a class="btn-signin">Iniciar sesión</a>
                     </div>
                 </form>
 
-                <form class="form-signup" action="" method="post" name="form">
-                    <label for="username">Nombre de usuario *</label>
+                <form class="form-signup" method="post" name="form">
+                    <label>Nombre de usuario *</label>
                     <input class="form-styling" type="text" name="username" placeholder="Nombre de usuario" />
-                    <label for="nia">NIA *</label>
+                    <label>NIA *</label>
                     <input class="form-styling" type="text" name="nia" pattern="100+[0-9]{6}" placeholder="Tiene que seguir el formato 100XXXXXX" />
-                    <label for="password">Introduzca la contraseña *</label>
+                    <label>Introduzca la contraseña *</label>
                     <input class="form-styling" type="password" name="password" placeholder="Números, mayúsculas y minusculas. No puede ser mayor de 8 dígitos." />
 
-                    <label for="fullname">Nombre y apellidos *</label>
+                    <label>Nombre y apellidos *</label>
                     <input class="form-styling" type="text" name="fullname" placeholder="Nombre y apellidos" />
-                    <label for="email">Correo electrónico *</label>
+                    <label>Correo electrónico *</label>
                     <input class="form-styling" type="text" name="email" placeholder="Introduzca un correo electrónico válido" />
-                    <label for="date">Fecha de nacimiento *</label>
+                    <label>Fecha de nacimiento *</label>
                     <input class="form-styling" type="text" name="date" placeholder="Tiene que seguir el siguiente formato dd/mm/aaaa" />
-                    <label for="dni">DNI/NIF *</label>
+                    <label>DNI/NIF *</label>
                     <input class="form-styling" type="text" name="dni" placeholder="Introduzca tu DNI" />
-                    <label for="rol">Rol *</label>
+                    <label>Rol *</label>
                     <select class="form-styling" name="rol" style="color: white; background-color: rgb(80, 80, 80)">
                         <option disabled selected value> -- Selecciona un rol -- </option>
                         <option value="estudiante">Estudiante</option>
@@ -124,7 +124,7 @@
                         <option value="admin">Administrador</option>
                     </select>
                     <div id="student-form">
-                        <select class="form-styling" for="student-degree" style="color: white; background-color: rgb(80, 80, 80)">
+                        <select class="form-styling" style="color: white; background-color: rgb(80, 80, 80)">
                             <option disabled selected value> -- Selecciona un grado -- </option>
                             <option value="informatica">Grado en Ingenieria Informatica</option>
                             <option value="mecanica">Grado en Ingenieria Mecanica</option>
@@ -134,13 +134,13 @@
                             <option value="biomedica">Grado en Ingenieria Biomedica</option>
                         </select>
                     </div>
-                    <label for="language">Idioma</label>
-                    <select class="form-styling" for="language" style="color: white; background-color: rgb(80, 80, 80)">
+                    <label>Idioma</label>
+                    <select class="form-styling" style="color: white; background-color: rgb(80, 80, 80)">
                         <option disabled selected value> -- Selecciona un idioma -- </option>
                         <option value="informatica">Español</option>
                         <option value="mecanica">Inglés</option>
                     </select>
-                    <label for="university">Universidad</label>
+                    <label>Universidad</label>
                     <input class="form-styling" type="text" name="university" readonly disabled value="Universidad Carlos III Madrid" placeholder="" />
                     <label><input type="checkbox" value="" id="iveread">  He leído y acepto las Condiciones de uso</label>
                     <a class="btn-signup">Registrarse</a>
@@ -152,7 +152,7 @@
     <div class="contenedor">
         <!--barra izquierda-->
         <div id="left-column">
-            <section id="curso">
+            <div id="curso">
                 <ul>
                     <li id="mis-asignaturas-link"><a onclick="showElement('mis-asignaturas');">Asignaturas</a></li>
                     <li id="calificaciones-link"><a onclick="showElement('calificaciones');">Calificaciones</a></li>
@@ -162,14 +162,14 @@
                     <li id="estudiantes-link"><a onclick="showElement('estudiantes');">Estudiantes</a></li>
                     <li><a onclick="showElement('foro');">Foro</a></li>
                 </ul>
-            </section>
+            </div>
         </div>
 
         <!--zona principal-->
         <div id="main-block" class="contenido">
             <div id="principal">
                 <main class="main-content">
-                    <h1 id="bienvenida"></h1>
+                    <h1 id="bienvenida">(user)</h1>
 
                     <div class="cards-set">
 
@@ -602,7 +602,7 @@
 
             <!-- ASIGNATURAS-->
             <div id="mis-asignaturas" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>MIS ASIGNATURAS</h1>
                     <h2 class="asignaturas-title">MAGISTRALES</h2>
                     <ul id="magistrales">
@@ -630,12 +630,12 @@
                         <li>
                             <span>81 Heuristica y Optimizacion 20/21</span></li>
                     </ul>
-                </main>
+                </div>
             </div>
 
             <!--asignatura-->
             <div id="asignatura" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>ASIGNATURA</h1>
                     <br />
                     <h3>Introduccion</h3>
@@ -657,7 +657,7 @@
                         Puesta en marcha y apagado. Control de las funciones manipulables del equipo. Manipulación de archivos y directorios. Herramientas de desarrollo de aplicaciones. Comunicación con otros sistemas. Información de estado. Configuración de la propia interfaz
                         y entorno. Intercambio de datos entre aplicaciones. Sistema de ayuda interactivo.
                     </p>
-                </main>
+                </div>
             </div>
 
             <div id="iu" class="contenido">
@@ -968,7 +968,7 @@
 
             <!--calificaciones vista alumno-->
             <div id="calificaciones-alumno" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>CALIFICACIONES</h1>
                     <ul id="ul-calificaciones-alumno">
                         <li>
@@ -982,12 +982,12 @@
                         <li>
                             <a onclick="showElement( 'ho')" class="navegation">Heuristica y Optimizacion</a></li>
                     </ul>
-                </main>
+                </div>
             </div>
 
             <!--calificaciones vista administrador/profesor-->
             <div id="calificaciones" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>CALIFICACIONES</h1>
                     <div>
                         <table id="table-notas" class="table-page">
@@ -1072,12 +1072,12 @@
                         <br />
                         <br />
                     </div>
-                </main>
+                </div>
             </div>
 
             <!--contacto-->
             <div id="contacto" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <div class="contact">
                         <h3>ANA TAJADURA JIMENEZ</h3>
                         Correo: atajadur@inf.uc3m.es
@@ -1093,12 +1093,12 @@
                         Correo: tonorati@inf.uc3m.es
                         <br />Despacho: 2.2.C03
                     </div>
-                </main>
+                </div>
             </div>
 
             <!--estudiantes-->
             <div id="estudiantes" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>LISTADO DE ESTUDIANTES</h1>
                     <div>
                         <table class="table-page">
@@ -1185,12 +1185,12 @@
                             </tbody>
                         </table>
                     </div>
-                </main>
+                </div>
             </div>
 
             <!--faq-->
             <div id="faq" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>PREGUNTAS FRECUENTES</h1>
                     <br />
                     <h3>¿Hay nota mínima en los parciales y en el trabajo?</h3>
@@ -1217,12 +1217,12 @@
                     </p>
                     <h3>¿Cual es la bibliografia recomendada?</h3>
                     <p>The Design of Everyday Things (Libro de Donald Norman)</p>
-                </main>
+                </div>
             </div>
 
             <!--foro-->
             <div id="foro" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>FORO</h1>
                     <div>
                         <table class="table-page">
@@ -1268,11 +1268,11 @@
                         <br />
                         <br />
                     </div>
-                </main>
+                </div>
             </div>
 
             <div id="tema1-foro" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>Avisos</h1>
                     <h2 class="asignaturas-title">Introduce tu pregunta</h2>
                     <br>
@@ -1303,11 +1303,11 @@
                             <p class="profile-entry">De nada bro.</p>
                         </div>
                     </div>
-                </main>
+                </div>
             </div>
 
             <div id="tema2-foro" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>Buenas prácticas del estudiante</h1>
                     <h2 class="asignaturas-title">Introduce tu pregunta</h2>
                     <br>
@@ -1338,11 +1338,11 @@
                             <p class="profile-entry">De nada bro.</p>
                         </div>
                     </div>
-                </main>
+                </div>
             </div>
 
             <div id="tema3-foro" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>Centrar elementos de un div</h1>
                     <h2 class="asignaturas-title">Introduce tu pregunta</h2>
                     <br>
@@ -1373,11 +1373,11 @@
                             <p class="profile-entry">De nada bro.</p>
                         </div>
                     </div>
-                </main>
+                </div>
             </div>
 
             <div id="tema4-foro" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>Diferencias grid y flex</h1>
                     <h2 class="asignaturas-title">Introduce tu pregunta</h2>
                     <br>
@@ -1408,11 +1408,11 @@
                             <p class="profile-entry">De nada bro.</p>
                         </div>
                     </div>
-                </main>
+                </div>
             </div>
 
             <div id="tema5-foro" class="contenido">
-                <main class="main-content">
+                <div class="main-content">
                     <h1>Header fijo</h1>
                     <h2 class="asignaturas-title">Introduce tu pregunta</h2>
                     <br>
@@ -1443,7 +1443,7 @@
                             <p class="profile-entry">De nada bro.</p>
                         </div>
                     </div>
-                </main>
+                </div>
             </div>
         </div>
 
