@@ -125,10 +125,28 @@ function showElement(id) {
     document.getElementById("redesTopic").style.display = "none";
     document.getElementById("arquitecturaTopic").style.display = "none";
     document.getElementById("ingenieriaTopic").style.display = "none";
+
     document.getElementById("topicHTML").style.display = "none";
     document.getElementById("topicCSS").style.display = "none";
     document.getElementById("topicJAVASCRIPT").style.display = "none";
-    document.getElementById("topicRendimiento").style.display = "none";
+
+
+    document.getElementById("topicCONCURRENCIA").style.display = "none";
+    document.getElementById("topicCACHE").style.display = "none";
+    document.getElementById("topicPARALELISMO").style.display = "none";
+
+    document.getElementById("topicROUTERS").style.display = "none";
+    document.getElementById("topicDNS").style.display = "none";
+    document.getElementById("topicIPS").style.display = "none";
+   
+    document.getElementById("topicCSP").style.display = "none";
+    document.getElementById("topicBUSQUEDA").style.display = "none";
+    document.getElementById("topicSIMPLEX").style.display = "none";
+
+    document.getElementById("topicMODELADO").style.display = "none";
+    document.getElementById("topicARQUITECTURA").style.display = "none";
+    document.getElementById("topicREQUISITOS").style.display = "none";
+
     document.getElementById("newTopicCreation").style.display = "none";
     document.getElementById("newSubjectCreation").style.display = "none";
 
@@ -433,6 +451,12 @@ $(function() {
         pattern = /^(((0[1-9]|[12][0-9]|3[01])[- /.](0[13578]|1[02])|(0[1-9]|[12][0-9]|30)[- /.](0[469]|11)|(0[1-9]|1\d|2[0-8])[- /.]02)[- /.]\d{4}|29[- /.]02[- /.](\d{2}(0[48]|[2468][048]|[13579][26])|([02468][048]|[1359][26])00))$/
         if (!pattern.test(cdate)) {
             alert("INTRODUCE UNA FECHA CON EL FORMATO dd/mm/aaaa");
+            return;
+        }
+
+        pattern = /[a-zA-Z0-9]{1,8}/
+        if (!pattern.test(cpsw)) {
+            alert("COMPRUEBA QUE EL FORMATO DE LA CONTRASEÑA ES CORRECTO");
             return;
         }
 

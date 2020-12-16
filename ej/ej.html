@@ -316,7 +316,7 @@
             <div id="arquitecturaTopic" class="contenido">
                 <h1>ARQUITECTURA DE COMPUTADORES</h1>
                 <div class="cards-set" id="arquitecturaCardset">
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicPARALELISMO');">
                         <div class="heading">
                             <h1>TEMA 1</h1>
                         </div>
@@ -326,7 +326,7 @@
 
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicCACHE');">
                         <div class="heading">
                             <h1>TEMA 2</h1>
                         </div>
@@ -336,7 +336,7 @@
 
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicCONCURRENCIA');">
                         <div class="heading">
                             <h1>TEMA 3</h1>
                         </div>
@@ -359,7 +359,7 @@
             <div id="heuristicaTopic" class="contenido">
                 <h1>HEURISTICA Y OPTIMIZACION</h1>
                 <div class="cards-set" id="heuristicaCardset">
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicSIMPLEX');">
                         <div class="heading">
                             <h1>TEMA 1</h1>
                         </div>
@@ -368,7 +368,7 @@
                             <p>(impartido)</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicCSP');">
                         <div class="heading">
                             <h1>TEMA 2</h1>
                         </div>
@@ -377,7 +377,7 @@
                             <p>(impartido)</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicBUSQUEDA');">
                         <div class="heading">
                             <h1>TEMA 3</h1>
                         </div>
@@ -399,7 +399,7 @@
             <div id="ingenieriaTopic" class="contenido">
                 <h1>INGENIERIA DEL SOFTWARE</h1>
                 <div class="cards-set" id="ingenieriaCardset">
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicREQUISITOS');">
                         <div class="heading">
                             <h1>TEMA 1</h1>
                         </div>
@@ -408,7 +408,7 @@
                             <p>(impartido)</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicMODELADO');">
                         <div class="heading">
                             <h1>TEMA 2</h1>
                         </div>
@@ -417,7 +417,7 @@
                             <p>(impartido)</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicARQUITECTURA');">
                         <div class="heading">
                             <h1>TEMA 3</h1>
                         </div>
@@ -439,7 +439,7 @@
             <div id="redesTopic" class="contenido">
                 <h1>REDES DE ORDENADORES</h1>
                 <div class="cards-set" id="redesCardset">
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicIPS');">
                         <div class="heading">
                             <h1>TEMA 1</h1>
                         </div>
@@ -448,7 +448,7 @@
                             <p>(impartido)</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicROUTERS');">
                         <div class="heading">
                             <h1>TEMA 2</h1>
                         </div>
@@ -457,7 +457,7 @@
                             <p>(impartido)</p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" onclick="showElement('topicDNS');">
                         <div class="heading">
                             <h1>TEMA 3</h1>
                         </div>
@@ -564,7 +564,7 @@
                 <div id="topicCSS" class="contenido">
                     <h1>TEMA 2: Introduccion a CSS</h1>
                     <div class="introTema">
-                        <img class="imagenTema" src="../ej-images/CSS.png" alt="Tema1-Imagen" />
+                        <img class="imagenTema" src="../ej-images/CSS.png" alt="Tema2-Imagen" />
                         <p>
                             CSS son las siglas de Cascading Style Sheets - Hojas de Estilo en Cascada - que es un lenguaje que describe la presentación de los documentos estructurados en hojas de estilo para diferentes métodos de interpretación, es decir, describe como se va a mostrar
                             un documento en pantalla, por impresora, por voz (cuando la información es pronunciada a través de un dispositivo de lectura) o en dispositivos táctiles basados en Braille
@@ -574,7 +574,7 @@
                 <div id="topicJAVASCRIPT" class="contenido">
                     <h1>TEMA 3: Introduccion a JavaScript</h1>
                     <div class="introTema">
-                        <img class="imagenTema" src="../ej-images/javascript.png" alt="Tema1-Imagen" />
+                        <img class="imagenTema" src="../ej-images/javascript.png" alt="Tema3-Imagen" />
                         <p>
                             JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas
                             actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado.
@@ -584,32 +584,122 @@
             </div>
 
             <div class="subTopics">
-                <div id="topicRendimiento" class="contenido">
-                    <h1> TEMA 1: Introducción al HTML</h1>
+                <div id="topicPARALELISMO" class="contenido">
+                    <h1> TEMA 1: Paralelismo</h1>
                     <div class="introTema">
-                        <img class="imagenTema" src="../ej-images/html.png" alt="Tema1-Imagen" />
+                        <img class="imagenTema" src="../ej-images/paralelismo.png" alt="Tema1-Imagen" />
                         <p>
-                            El rendimiento del Sistema de Información o de la computadora es la cantidad de trabajo realizado por un sistema informático. Dependiendo del contexto, un alto rendimiento de equipo puede incluir uno o más de los siguientes:
+                            El paralelismo es una forma de computación en la cual varios cálculos pueden realizarse simultáneamente,1​ basado en el principio de dividir los problemas grandes para obtener varios problemas pequeños, que son posteriormente solucionados en paralelo. Hay varios tipos diferentes de paralelismo: nivel de bit, nivel de instrucción, de datos y de tarea. El paralelismo ha sido empleado durante muchos años, sobre todo para la Computación de alto rendimiento.
                         </p>
                     </div>
                 </div>
-                <div id="topicC" class="contenido">
-                    <h1>TEMA 2: Introduccion a CSS</h1>
+                <div id="topicCACHE" class="contenido">
+                    <h1>TEMA 2: Memoria Cache</h1>
                     <div class="introTema">
-                        <img class="imagenTema" src="../ej-images/CSS.png" alt="Tema1-Imagen" />
+                        <img class="imagenTema" src="../ej-images/cache.png" alt="Tema2-Imagen" />
                         <p>
-                            CSS son las siglas de Cascading Style Sheets - Hojas de Estilo en Cascada - que es un lenguaje que describe la presentación de los documentos estructurados en hojas de estilo para diferentes métodos de interpretación, es decir, describe como se va a mostrar
-                            un documento en pantalla, por impresora, por voz (cuando la información es pronunciada a través de un dispositivo de lectura) o en dispositivos táctiles basados en Braille
+                            En informática, una caché, antememoria1​ o memoria intermedia2​ es un componente de hardware o software que guarda datos para que las solicitudes futuras de esos datos se puedan atender con mayor rapidez; los datos almacenados en una caché pueden ser el resultado de un cálculo anterior o el duplicado de datos almacenados en otro lugar, generalmente, da velocidad de acceso más rápido. Se produce un acierto de caché cuando los datos solicitados se pueden encontrar en esta, mientras que un fallo de caché ocurre cuando no están dichos datos. La lectura de la caché es más rápida que volver a calcular un resultado o leer desde un almacén de datos más lento; por lo tanto, cuantas más solicitudes se puedan atender desde la memoria caché, más rápido funcionará el sistema.
                         </p>
                     </div>
                 </div>
-                <div id="topicConcurrencia" class="contenido">
-                    <h1>TEMA 3: Introduccion a JavaScript</h1>
+                <div id="topicCONCURRENCIA" class="contenido">
+                    <h1>TEMA 3: Concurrencia</h1>
                     <div class="introTema">
-                        <img class="imagenTema" src="../ej-images/javascript.png" alt="Tema1-Imagen" />
+                        <img class="imagenTema" src="../ej-images/concurrencia.png" alt="Tema3-Imagen" />
                         <p>
-                            JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas
-                            actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado.
+                            En ciencias de la computación, concurrencia se refiere a la habilidad de distintas partes de un programa, algoritmo, o problema de ser ejecutado en desorden o en orden parcial, sin afectar el resultado final. Los cálculos (operaciones) pueden ser ejecutados en múltiples procesadores, o ejecutados en procesadores separados físicamente o virtualmente en distintos hilos de ejecución. Un sin número de modelos matemáticos han sido desarrollados para cálculos de la concurrencia en general incluyendo redes de Petri, procesos Calculi, el modelo máquina de accesos random en paralelo, el Modelo Actor y el Lenguaje Reo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subTopics">
+                <div id="topicIPS" class="contenido">
+                    <h1> TEMA 1: Asignacion de IPS</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/ips.png" alt="Tema1-Imagen" />
+                        <p>
+                            IP es la sigla de Internet Protocol o, en nuestro idioma, Protocolo de Internet. Se trata de un estándar que se emplea para el envío y recepción de información mediante una red que reúne paquetes conmutados.
+                            El IP no cuenta con la posibilidad de confirmar si un paquete de datos llegó a su destino. Esto puede permitir que el paquete arribe duplicado, con daños, en un orden erróneo o que, simplemente, no llegue a destino.
+                        </p>
+                    </div>
+                </div>
+                <div id="topicROUTERS" class="contenido">
+                    <h1>TEMA 2: Routers y Switch</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/routers.png" alt="Tema2-Imagen" />
+                        <p>
+                            Un rúter,​ enrutador,​ (del inglés router) o encaminador, es un dispositivo que permite interconectar computadoras que funcionan en el marco de una red. Su función: se encarga de establecer la ruta que destinará a cada paquete de datos dentro de una red informática.
+                        </p>
+                    </div>
+                </div>
+                <div id="topicDNS" class="contenido">
+                    <h1>TEMA 3: DNS</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/dns.png" alt="Tema3-Imagen" />
+                        <p>
+                            El sistema de nombres de dominio (Domain Name System o DNS, por sus siglas en inglés)1​ es un sistema de nomenclatura jerárquico descentralizado para dispositivos conectados a redes IP como Internet o una red privada. Este sistema asocia información variada con nombres de dominio asignados a cada uno de los participantes. Su función más importante es "traducir" nombres inteligibles para las personas en identificadores binarios asociados con los equipos conectados a la red, esto con el propósito de poder localizar y direccionar estos equipos mundialmente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subTopics">
+                <div id="topicSIMPLEX" class="contenido">
+                    <h1> TEMA 1: Simplex</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/simplex.png" alt="Tema1-Imagen" />
+                        <p>
+                            En optimización matemática, el término algoritmo símplex habitualmente se refiere a un conjunto de métodos muy usados para resolver problemas de programación lineal, en los cuales de alguna manera se busca el máximo de una función lineal sobre un conjunto de variables que satisfaga un conjunto de inecuaciones lineales. El algoritmo símplex primal fue desarrollado por el matemático norteamericano George Dantzig en 1947, y procede examinando vértices adyacentes del poliedro de soluciones. Un algoritmo símplex es de alguna manera un algoritmo de pivote.
+                        </p>
+                    </div>
+                </div>
+                <div id="topicCSP" class="contenido">
+                    <h1>TEMA 2: CSP</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/csp.png" alt="Tema2-Imagen" />
+                        <p>
+                            Problemas de satisfacción de restricciones (CSP) por sus siglas en inglés, son problemas matemáticos definido como un conjunto de objetos tal que su estado debe satisfacer un número de restricciones o limitaciones. Los CSP representa las entidades de un problema como una colección homogénea finita de restricciones sobre variables, las que son resueltas por métodos de satisfacción de restricciones. Los CSP son el tema de una intensa investigación en Inteligencia Artificial e Investigación de operaciones, dado que la generalidad en su formulación provee un principio básico para analizar y resolver problemas de distintos tipos. Los CSP a menudo muestran gran complejidad, requiriendo una combinación de métodos heurísticos y búsqueda combinatoria para ser resueltos en un tiempo razonable. El Problema de satisfacibilidad booleana (SAT), el Satisfiability Modulo Theories (SMT) y answer set programming (ASP) pueden ser a grandes rasgos modelados como una forma de problema de satisfacción de restricciones.
+                        </p>
+                    </div>
+                </div>
+            <div id="topicBUSQUEDA" class="contenido">
+                    <h1>TEMA 3: Busqueda</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/busqueda.png" alt="Tema3-Imagen" />
+                        <p>
+                            Un algoritmo de búsqueda es un conjunto de instrucciones que están diseñadas para localizar un elemento con ciertas propiedades dentro de una estructura de datos; por ejemplo, ubicar el registro correspondiente a cierta persona en una base de datos, o el mejor movimiento en una partida de ajedrez.
+                            La variante más simple del problema es la búsqueda de un número en un vector.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subTopics">
+                <div id="topicREQUISITOS" class="contenido">
+                    <h1> TEMA 1: Requisitos</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/requisitos.png" alt="Tema1-Imagen" />
+                        <p>
+                            En la ingeniería de desarrollo de sistemas, un requisito es una necesidad documentada sobre el contenido, forma o funcionalidad de un producto o servicio. Se usa en un sentido formal en la ingeniería de sistemas, ingeniería de software e ingeniería de requisitos.
+                        </p>
+                    </div>
+                </div>
+                <div id="topicMODELADO" class="contenido">
+                    <h1>TEMA 2: Modelado</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/modelado.png" alt="Tema2-Imagen" />
+                        <p>
+                            Un modelo conceptual es una representación de un sistema, hecho de la composición de conceptos que se utilizan para ayudar a las personas a conocer, comprender o simular un tema que representa el modelo. También es un conjunto de conceptos. Algunos modelos son objetos físicos; por ejemplo, un modelo de juguete que se puede ensamblar y se puede hacer que funcione como el objeto que representa.
+                        </p>
+                    </div>
+                </div>
+            <div id="topicARQUITECTURA" class="contenido">
+                    <h1>TEMA 3: Arquitectura</h1>
+                    <div class="introTema">
+                        <img class="imagenTema" src="../ej-images/arquitectura.png" alt="Tema3-Imagen" />
+                        <p>
+                            En los inicios de la informática, la programación se consideraba un arte y se desarrollaba como tal debido a la dificultad que entrañaba para la mayoría de las personas, pero con el tiempo se han ido descubriendo y desarrollando formas y guías generales, con base a las cuales se puedan resolver los problemas. A estas, se les ha denominado arquitectura de software, porque, a semejanza de los planos de un edificio o construcción, estas indican la estructura, funcionamiento e interacción entre las partes del software. En el libro "An introduction to Software Architecture", David Garlan y Mary Shaw definen que la arquitectura es un nivel de diseño que hace foco en aspectos "más allá de los algoritmos y estructuras de datos de la computación; el diseño y especificación de la estructura global del sistema es un nuevo tipo de problema".
                         </p>
                     </div>
                 </div>
