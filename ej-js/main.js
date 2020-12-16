@@ -16,7 +16,6 @@ $(document).ready(function() {
 
 function loadAll() {
     cargaPagina();
-
     selectProfilePhoto();
     specificContent();
 }
@@ -63,6 +62,9 @@ function specificContent() {
         document.getElementById('calificaciones-link-burguer').style.display = "block";
         document.getElementById('calificaciones-alumnos-link-burguer').style.display = "none";
         document.getElementById('add-new-asignatura').style.display = "inline-block";
+        for (let index = 0; index < document.getElementsByClassName('delete-button').length; index++) {
+            document.getElementsByClassName('delete-button')[index].style.display = "inline-block";
+        }
     }
 }
 //funcion para seleccionar foto de perfil dependiendo del rol
@@ -170,8 +172,8 @@ document.getElementById("delete-al").onclick = function() {
     document.getElementById("algebra-carta").style.display = "none";
 }
 document.getElementById("delete-f").onclick = function() {
-        document.getElementById("fisica-carta").style.display = "none";
-    }
+    document.getElementById("fisica-carta").style.display = "none";
+}
 
 //añdir asignatura
 document.getElementById("add-iu").onclick = function() {
@@ -213,11 +215,11 @@ document.getElementById("add-al").onclick = function() {
 document.getElementById("add-f").onclick = function() {
     showElement("principal");
     document.getElementById("fisica-carta").style.display = "inline-block";
-   
+
 
 }
 
-    // Get the modal
+// Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
