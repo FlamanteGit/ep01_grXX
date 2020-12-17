@@ -157,7 +157,11 @@ function showElement(id) {
     // hideNewTopics();
     document.getElementById(id).style.display = "block";
 }
-
+function linkAzul(){
+    if (document.getElementById("interfacesTopic").style.display == "block") {
+        document.getElementById("interfaces-topic-subheader").style.color = "darkblue";
+    }
+}
 
 // $(function() {
 //     $("#delete-iu").click(function() {
