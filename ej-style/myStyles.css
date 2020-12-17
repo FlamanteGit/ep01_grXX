@@ -286,6 +286,83 @@
     color: #d80000;
 }
 
+#new-botones-interfaces {
+    grid-area: botones;
+    align-self: center;
+    justify-self: end;
+    padding: 20px;
+}
+
+#new-botones-interfaces a {
+    color: #000E78;
+}
+
+#new-botones-interfaces a:hover {
+    color: #d80000;
+}
+
+#new-botones-arquitectura {
+    grid-area: botones;
+    align-self: center;
+    justify-self: end;
+    padding: 20px;
+}
+
+#new-botones-arquitectura a {
+    color: #000E78;
+}
+
+#new-botones-arquitectura a:hover {
+    color: #d80000;
+}
+
+#new-botones-heuristica {
+    grid-area: botones;
+    align-self: center;
+    justify-self: end;
+    padding: 20px;
+}
+
+#new-botones-heuristica a {
+    color: #000E78;
+}
+
+#new-botones-heuristica a:hover {
+    color: #d80000;
+}
+
+#new-botones-redes {
+    grid-area: botones;
+    align-self: center;
+    justify-self: end;
+    padding: 20px;
+}
+
+#new-botones-redes a {
+    color: #000E78;
+}
+
+#new-botones-redes a:hover {
+    color: #d80000;
+}
+
+#new-botones-ingenieria {
+    grid-area: botones;
+    align-self: center;
+    justify-self: end;
+    padding: 20px;
+}
+
+#new-botones-ingenieria a {
+    color: #000E78;
+}
+
+#new-botones-ingenieria a:hover {
+    color: #d80000;
+}
+
+
+
 :focus {
     outline: none;
 }

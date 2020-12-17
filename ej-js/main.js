@@ -603,9 +603,7 @@ document.getElementsByClassName("far fa-comment")[9].onclick = function() {
     window.location = "mailto:xyz@loadAll.com";
 }
 
-$("#login").click(function() {
-    loadAll();
-});
+
 
 //a continuacion funciones encargadas de la descarga de calificaciones en excell
 $("#notas-global").click(function() {
